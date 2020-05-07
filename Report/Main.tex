@@ -1,0 +1,133 @@
+%Preambolo per documento generico
+%Per cambiare tipo di documento modificare
+%il documentclass.
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+
+%Mettere italian se si vuole scrivere in italiano
+\usepackage[english]{babel}
+
+
+%Aumento dell'interlinea
+\usepackage{setspace}
+\onehalfspacing
+
+%Pacchetti per simboli matematici
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\usepackage{amsmath}
+\usepackage{bm}
+
+
+%Pacchetti per figure e tabelle
+\usepackage{booktabs, caption, graphicx, subfig, float}
+\captionsetup{tableposition=top,figureposition=bottom,font=small}
+
+%Per inserire commenti in blocco
+%Usage: \begin{comment} ... \end{comment}
+\usepackage{comment}
+
+%Definisce colori dei link nel testo e altri parametri
+\usepackage{hyperref}
+\hypersetup{
+pdftitle={VSDProjectReport},%
+pdfauthor={Carrarini,Kieffer,Tantucci,Wrona},%
+pdfsubject={},%
+pdfkeywords={},%
+colorlinks=true,%
+linkcolor=black,%
+linktocpage=true,%
+pageanchor=true,
+citecolor=black
+}
+
+%Definisce in maniera simmetrica i margini di pagina
+\usepackage{geometry}
+\geometry{a4paper, top=3cm,bottom=3cm,left=3cm,right=3cm,%
+			heightrounded}
+
+%Per scrivere in maniera rapida norme e valori assoluti
+%Usage: y = \abs{x} ; y = \norma{x}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+
+%Testo a caso
+%Usage: \lipsum[a-b] | Esempio \lipsum[1-10]
+\usepackage{lipsum}
+
+%Cambia lo stile della pagina
+%In alto a dx mette numero di pagina
+%In alto a sinistra titolo e autore
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textit{\thepage}}
+\lhead{\textit{On KERS implementation}}
+
+%Per inserire codice nativo MATLAB e simili
+%Usage: guardare sotto
+\usepackage{fancyvrb}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{sapred}{RGB}{130,36,51} %colore sapienza per i titoli
+
+
+\begin{document}
+
+\title{\textcolor{sapred}{On KERS implementation}\\\small{Vehicle System Dynamics Project}}
+\author{Luca Carrarini\\Federico Kieffer\\Andrea Tantucci\\Andrea Wrona}
+%Optional: data. Se non si inserisce il campo data
+%LaTeX mette la data del PC automaticamente
+%\date{}
+\maketitle
+
+\thispagestyle{empty}
+
+%Inizio dei capitoli
+\section*{First section}
+
+%Testo a caso
+This is a dummy text
+
+\lipsum[1-10]
+
+%Codice per inserire le figure
+\begin{comment}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Charts/StepF1}
+\caption{Step response of the closed--loop relative to $F_1$}
+\label{StepF1}
+\end{figure}
+\end{comment}
+
+
+%Codice per inserire il codice
+\vspace{4cm}
+This is a fancy in--line code
+\singlespacing
+\begin{Verbatim}[tabsize = 4, frame = lines, numbers = left]
+code_here...
+	code_here...
+code_here...
+\end{Verbatim}
+\onehalfspacing
+
+
+\begin{thebibliography}{3}
+	
+	\bibitem{a}
+	First reference.
+	
+	\bibitem{b}
+	Second reference.
+	
+	\bibitem{c}
+	Third reference
+	
+\end{thebibliography}
+
+\end{document}
