@@ -102,6 +102,38 @@ In this section, we give a description and a comparison of the principle KERS sy
 
 \subsection{Mechanical KERS}
 
+\subsubsection{Architecture and working principle}
+
+The Flywheel Hybrid System (FHS) is a type of KERS which consists of a rotating mass, or flywheel, as the energy storage device, a continous variable transmission system (CVT) to control and transfer the energy to and from the driveline and a clutch which connects this system to the primary shaft of the transmission (\figurename\,\ref{fig: FHS}). 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Mechanical_KERS.png}
+\caption{Schematic of Flywheel Hybrid System}
+\label{fig: FHS}
+\end{figure}
+
+When the brakes are applied or the vehicle decelerates, the clutch connecting the flywheel system to the driveline/transmission is engaged, causing energy to be transferred to the flywheel via the CVT. \\
+The use of the CVT guarantees a smooth transfer of energy thanks to the fact that it has an infinite number of gear ratios between the maximum and minimum value of the speed. The Toroidal CVT must continuously adjust the ratio between the speed of the vehicle and the rotation of the flywheel. Any change in the CVT ratio can be viewed as the transfer of kinetic energy between the flywheel inertia and vehicle.\\
+The flywheel stores this energy as rotational energy and can rotate up to a maximum speed of $60000$ rpm. When the vehicle stops, or the flywheel reaches its maximum speed, the clutch disengages the flywheel unit from the transmission allowing the flywheel to rotate independently. Whenever this stored energy is required, the clutch is engaged and the flywheel transmits this energy back to the wheels, via the CVT. To optimise efficiency, the flywheel runs in a high vacuum and is enclosed within a housing that provides containment in the event of failure.
+The major function of the vacuum chamber is to minimize the air resistance as the flywheel rotates. Without the vacuum chamber, the friction caused by air resistance is enough to cause significant energy losses and heat the carbon fibre rim to its glass transition temperature. In \figurename\,\ref{fig: Flywheel} we can see the design of a flywheel.\\
+Another important part of the system are the bearings on which the flywheel is mounted. Magnetic bearings have replaced mechanical bearings as they greatly reduce losses due to friction. Further magnetic bearings are able to operate in vacuum which leads to even better efficiency. The magnetic bearings support the flywheel by the principle of magnetic levitation. It is important that the bearings are able to operate inside a vacuum because the flywheel in a flywheel-based KERS must rotate at high speeds for maximum efficiency. The best performing bearing is the high-temperature super-conducting (HTS) magnetic bearing.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Flywheel_Components.png}
+\caption{Section of the flywheel}
+\label{fig: Flywheel}
+\end{figure}
+
+We have also the presence of a step--up gearing system consisting of epicyclic gears is connected between the CVT and the flywheel unit. This system is used to reduce the speed of the flywheel to a manageable one outside the vacuum chamber, in order to have a smooth transfer of energy to the CVT.\\
+The clutch instead is used to couple the flywheel hybrid system to the transmission. It engages the system while the flywheel is accelerating from rest and disengaging while the flywheel is rotating and the vehicle is at rest. Torque is transferred through clutch between the flywheel and vehicle. Hence, the power transmitted in the flywheel system can be controlled by a clutch that could continuously manipulate the torque.
+
+\subsubsection{Advantages, disadvantages and fields of application}
+
+The advantages include high efficiency, low fuel consumption, and low cost compared to electric hybrids. Although the system has a few drawbacks, most of it can be outweighed by the benefits. One main advantage of this KERS system is its weight. Due to the lightweight design of the flywheel and accompanying components, the additional weight is insignificant when analysing fuel efficiency. Moreover, the system is contained in a compact package, making it easy to incorporate into the rear of a vehicle. Another advantage is the ability of the flywheel to store energy efficiently. This is because there is no transformation of energy from one form to another which greatly reduces energy losses in the system. Tests have proven that flywheel--based KERS can recover and store over $70\%$ of the vehicle’s energy. Probably the only losses that occur in the system might be due to friction and air resistance to the flywheels rotation. However, the magnetic bearings and vacuum chamber mentioned previously have been developed to minimize these effects. Cars with a flywheel based energy recovery system, though significantly more expensive than cars without this system, have more power and better fuel efficiency. It has been proved that the system could reduce fuel consumption by as much as $20$\% and give a four-cylinder engine acceleration like a six-cylinder unit.\\
+The system has low maintenance costs and it reduces break wear.\\
+As with any technology, the flywheel KERS system has its shortcomings as well. The flywheels found in a kinetic energy recovery system can store up to $400$ kJ of energy, which means that failure while rotating at $60000$ rpm could cause immense amounts of damage. The flywheel--based KERS is not designed to be a stand-alone source of power for a vehicle, like batteries are in electric cars. It is designed for temporary energy storage that is to be used frequently and in smaller amounts. Its purpose is to reduce fuel consumption by providing additional power during the acceleration of a vehicle. Periods of acceleration, especially from a stop, are when the efficiency of the vehicle is at its lowest.
 \subsection{Electric KERS}
 
 \subsection{Hydraulic KERS: Series Hydraulic Hybrid systems}
