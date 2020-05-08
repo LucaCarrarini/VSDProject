@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.7)  8 MAY 2020 12:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.7)  8 MAY 2020 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,7 +642,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -651,23 +651,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./Main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: 7A437AC324AC74BD1864715032972CA4;806.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 9923 strings out of 492649
- 148263 string characters out of 6129623
+ 9925 strings out of 492649
+ 148272 string characters out of 6129623
  371051 words of memory out of 5000000
- 13629 multiletter control sequences out of 15000+600000
+ 13630 multiletter control sequences out of 15000+600000
  14941 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,11n,43p,1812b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -679,10 +679,10 @@ r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Main.pdf (8 pages, 740970 bytes).
+Output written on Main.pdf (8 pages, 741170 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
