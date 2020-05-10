@@ -51,9 +51,9 @@ citecolor=black
 
 %Per scrivere in maniera rapida norme e valori assoluti
 %Usage: y = \abs{x} ; y = \norma{x}
+
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
-
 %Testo a caso
 %Usage: \lipsum[a-b] | Esempio \lipsum[1-10]
 \usepackage{lipsum}
@@ -134,7 +134,53 @@ The clutch instead is used to couple the flywheel hybrid system to the transmiss
 The advantages include high efficiency, low fuel consumption, and low cost compared to electric hybrids. Although the system has a few drawbacks, most of it can be outweighed by the benefits. One main advantage of this KERS system is its weight. Due to the lightweight design of the flywheel and accompanying components, the additional weight is insignificant when analysing fuel efficiency. Moreover, the system is contained in a compact package, making it easy to incorporate into the rear of a vehicle. Another advantage is the ability of the flywheel to store energy efficiently. This is because there is no transformation of energy from one form to another which greatly reduces energy losses in the system. Tests have proven that flywheel--based KERS can recover and store over $70\%$ of the vehicle’s energy. Probably the only losses that occur in the system might be due to friction and air resistance to the flywheels rotation. However, the magnetic bearings and vacuum chamber mentioned previously have been developed to minimize these effects. Cars with a flywheel based energy recovery system, though significantly more expensive than cars without this system, have more power and better fuel efficiency. It has been proved that the system could reduce fuel consumption by as much as $20$\% and give a four-cylinder engine acceleration like a six-cylinder unit.\\
 The system has low maintenance costs and it reduces break wear.\\
 As with any technology, the flywheel KERS system has its shortcomings as well. The flywheels found in a kinetic energy recovery system can store up to $400$ kJ of energy, which means that failure while rotating at $60000$ rpm could cause immense amounts of damage. The flywheel--based KERS is not designed to be a stand-alone source of power for a vehicle, like batteries are in electric cars. It is designed for temporary energy storage that is to be used frequently and in smaller amounts. Its purpose is to reduce fuel consumption by providing additional power during the acceleration of a vehicle. Periods of acceleration, especially from a stop, are when the efficiency of the vehicle is at its lowest.
+
+
 \subsection{Electric KERS}
+
+Electric KERS is a type of KERS which makes use of batteries or/and supercapacitors as storage system. This regenerative brake system can be used both in the case of internal combustion engine, electric vehicle and hybrid vehicle.
+
+\subsubsection{Architecture and working principle}
+
+There are different implementations in literature of electric KERS (e-KERS) and each architecture is more suitable for particular application. In Fig.\ref{ekersdrivetrainuc} e-KERS with supercapacitor as principal and unique storage system is described. The scheme is composed by: the supercapacitor (SC) which is the energy storage part of the system, it is electrically interfaced to the motor-generator unit (MGU) through power converter (PC). MGU is connected to drive shaft. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Electric_KERS_uconly.PNG}
+	\caption{Drivetrain layout with e-KERS}
+	\label{ekersdrivetrainuc}
+\end{figure}
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Electric_KERS_scheme_uconly.PNG}
+	\caption{E-kers scheme}
+	\label{ekersschemeuc}
+\end{figure}
+
+There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density(Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around 75–200Wh/kg) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. Li-Ion batteries cannot respond to high-dynamic power profiles resulting from an acceleration or a regenerativebraking since charge transfer occurs through reduction and oxidation reactions. These profiles, if happened, will overstress the batteries which negatively affect the longevity of their lifespan. It is convenient to implement in the energy storage system, a storage element characterized by its ability to provide the necessary power required by the traction and braking systems. This secondary storage element will substitute the battery during extreme power demand. Among all the existing storage elements, the supercapacitors are potential candidates to meet those requirements. This element has high power density and high cycle life. On the other hand, it presents a low energy density, a high acquisition cost and a high self-discharge. The hybrid energy storage system (HESS) will combine the high energy density storage element (Li-Ion battery), known as primary storage element, and the high power density storage element (supercapacitor). HESS implementation is described in Fig.\ref{ekersschemehybrid}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Electric_KERS_scheme_hybrid.PNG}
+	\caption{Hybrid e-kers scheme}
+	\label{ekersschemehybrid}
+\end{figure}
+
+It is possible to see in Fig.\ref{ekersschemepowerflow} the power flow from wheel to storage system during brake phase.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Electric_KERS_powerflow.PNG}
+	\caption{Hybrid e-kers scheme}
+	\label{ekersschemepowerflow}
+\end{figure}
+
+
+\subsubsection{Advantages, disadvantages and fields of application}
+
+It is possible to evaluate and to compare electrical energy storage system by using some performance metrics like the cycle efficiency, the cost per unit capacity(\$/kWh or \$/kW), specific energy (Wh/kg), specific power (W/kg) ,energy density (Wh/l), power density (W/l), cycle life. The battery has shorter cycle life due to unavoidable chemical deterioration. No single type of electrical energy storage element can simultaneously fulfill all the desired characteristics. There will be a need to combine higher energy density insured by the battery, as primary source, with a higher power density energy storage elements, like ultracapacitors or flywheel. This means that the best e-KERS implementation is the hibrid one which makes use of primary and secondary source. The use of supercapacitor as unique storage solution in electric vehicles remains limited since their energy density cannot compete with batteries. It is possible to use only supercapacitors as storage system if a low driving range can be accepted and if there is enough space available to install supercapacitors and when there are no weight constraints as in the case of electric city rail or hybrid city bus, where energy saving of about $40\%$ were obtained. Both HEV  and FCHEV  usually implement electric KERS, exploiting the main storage system used for the traction in conjunction with supercapacitors, which allow a reduction of batteries intervention during vehicle regenerative braking or startup, thus enhancing batteries life cycle and maintaining their capacity performance. Regenerative braking has been intensively studied and implemented on hybrid electric vehicles (HEV) and fuel cell hybrid electric vehicles (FCHEV) because the presence of powerful electric machines (generator and motor) interfaced to high capacity energy storage as batteries easily allows to convert and store vehicle kinetic energy into electric energy. Stored energy can be employed for vehicle propulsion or for electronic components supply.  Stationary flywheels have important dimensions and excessive weight. Onboard flywheels need space in the bogie requiring more space than ultracapacitors. After the diffusion of UCs, the use of flywheels in electrified railways has been reduced because of the superior properties of UCs in terms of maintenance, weight and size [21]. Other authors conclude that flywheel ensures a steady voltage and power level, which is independent of load, temperature and state of charge. In fact the combination battery/flywheel can achieve better performance, regarding voltage fluctuation, than other types of combinations (battery/UC or UC/flywheel), as reported by [46]. Unlike electrified vehicles, internal combustion engine vehicles are not equipped with generator, electric motor and batteries of adequate power and capacity to allow the conversion of the vehicle kinetic energy into electric energy. For this reason, the kinetic energy recovery systems successfully tested for ICEV application are mainly based on mechanical and hydraulic energy storage devices. Unfortunately, the energy recovered through the flywheel cannot be stored for a long time, due to mechanical and fluid dynamics friction on the flywheel.
+
 
 \subsection{Hydraulic KERS: Series Hydraulic Hybrid systems}
 
@@ -222,6 +268,13 @@ code_here...
 	D. Nishanth, T. Mathews "Flywheel based Kinetic Energy Recovery System(KERS) integrated in vehicles". International Journal of Engineering Science and Technology (IJEST), Vol. 5 No.09 Sep 2013.
 	
 	\bibitem{h}
+	Pipitone, Emiliano, and Gianpaolo Vitale. "A regenerative braking system for internal combustion engine vehicles using supercapacitors as energy storage elements-Part 1: System analysis and modelling." Journal of Power Sources 448 (2020): 227368.
+	
+	\bibitem{i}
+	Itani, Khaled, et al. "Comparative analysis of two hybrid energy storage systems used in a two front wheel driven electric vehicle during extreme start-up and regenerative braking operations." Energy Conversion and Management 144 (2017): 69-87.
+	
+	\bibitem{l}
+	
 	
 \end{thebibliography}
 

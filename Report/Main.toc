@@ -5,7 +5,9 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Architecture and working principle}{2}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Advantages, disadvantages and fields of application}{4}{subsubsection.2.1.2}
 \contentsline {subsection}{\numberline {2.2}Electric KERS}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Hydraulic KERS: Series Hydraulic Hybrid systems}{5}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Architecture and working principle}{5}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Advantages, disadvantages and fields of application}{6}{subsubsection.2.3.2}
-\contentsline {subsection}{\numberline {2.4}Hydro-electric KERS}{7}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.2.1}Architecture and working principle}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Advantages, disadvantages and fields of application}{7}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Hydraulic KERS: Series Hydraulic Hybrid systems}{8}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Architecture and working principle}{8}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Advantages, disadvantages and fields of application}{9}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}Hydro-electric KERS}{10}{subsection.2.4}
