@@ -1,2 +1,2 @@
 # Vehicle System Dynamic Project: KERS
-![](Report\Images\KERSgif)
+![](Report\Images\Porsche 919 Hybrid - wec2017.jpg)
