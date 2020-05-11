@@ -158,7 +158,8 @@ There are different implementations in literature of electric KERS (e-KERS) and 
 	\label{ekersschemeuc}
 \end{figure}
 
-There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density(Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around 75–200Wh/kg) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. Li-Ion batteries cannot respond to high-dynamic power profiles resulting from an acceleration or a regenerativebraking since charge transfer occurs through reduction and oxidation reactions. These profiles, if happened, will overstress the batteries which negatively affect the longevity of their lifespan. It is convenient to implement in the energy storage system, a storage element characterized by its ability to provide the necessary power required by the traction and braking systems. This secondary storage element will substitute the battery during extreme power demand. Among all the existing storage elements, the supercapacitors are potential candidates to meet those requirements. This element has high power density and high cycle life. On the other hand, it presents a low energy density, a high acquisition cost and a high self-discharge. The hybrid energy storage system (HESS) will combine the high energy density storage element (Li-Ion battery), known as primary storage element, and the high power density storage element (supercapacitor). HESS implementation is described in Fig.\ref{ekersschemehybrid}
+There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density(Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around 75–200Wh/kg) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. Li-Ion batteries cannot respond to high-dynamic power profiles resulting from an acceleration or a regenerative
+braking since charge transfer occurs through reduction and oxidation reactions. These profiles, if happened, will overstress the batteries which negatively affect the longevity of their lifespan. It is convenient to implement in the energy storage system, a storage element characterized by its ability to provide the necessary power required by the traction and braking systems. This secondary storage element will substitute the battery during extreme power demand. Among all the existing storage elements, the supercapacitors are potential candidates to meet those requirements. This element has high power density and high cycle life. On the other hand, it presents a low energy density, a high acquisition cost and a high self-discharge. The hybrid energy storage system (HESS) will combine the high energy density storage element (Li-Ion battery), known as primary storage element, and the high power density storage element (supercapacitor). HESS implementation is described in Fig.\ref{ekersschemehybrid}
 
 \begin{figure}[H]
 	\centering
@@ -180,7 +181,7 @@ It is possible to see in Fig.\ref{ekersschemepowerflow} the power flow from whee
 \subsubsection{Advantages, disadvantages and fields of application}
 
 It is possible to evaluate and to compare electrical energy storage system by using some performance metrics like the cycle efficiency, the cost per unit capacity(\$/kWh or \$/kW), specific energy (Wh/kg), specific power (W/kg) ,energy density (Wh/l), power density (W/l), cycle life. The battery has shorter cycle life due to unavoidable chemical deterioration. No single type of electrical energy storage element can simultaneously fulfill all the desired characteristics. There will be a need to combine higher energy density insured by the battery, as primary source, with a higher power density energy storage elements, like ultracapacitors or flywheel. This means that the best e-KERS implementation is the hibrid one which makes use of primary and secondary source. The use of supercapacitor as unique storage solution in electric vehicles remains limited since their energy density cannot compete with batteries. It is possible to use only supercapacitors as storage system if a low driving range can be accepted and if there is enough space available to install supercapacitors and when there are no weight constraints as in the case of electric city rail or hybrid city bus, where energy saving of about $40\%$ were obtained. Both HEV  and FCHEV  usually implement electric KERS, exploiting the main storage system used for the traction in conjunction with supercapacitors, which allow a reduction of batteries intervention during vehicle regenerative braking or startup, thus enhancing batteries life cycle and maintaining their capacity performance. Regenerative braking has been intensively studied and implemented on hybrid electric vehicles (HEV) and fuel cell hybrid electric vehicles (FCHEV) because the presence of powerful electric machines (generator and motor) interfaced to high capacity energy storage as batteries easily allows to convert and store vehicle kinetic energy into electric energy. Stored energy can be employed for vehicle propulsion or for electronic components supply.  Stationary flywheels have important dimensions and excessive weight. Onboard flywheels need space in the bogie requiring more space than ultracapacitors. After the diffusion of UCs, the use of flywheels in electrified railways has been reduced because of the superior properties of UCs in terms of maintenance, weight and size [21]. Other authors conclude that flywheel ensures a steady voltage and power level, which is independent of load, temperature and state of charge. In fact the combination battery/flywheel can achieve better performance, regarding voltage fluctuation, than other types of combinations (battery/UC or UC/flywheel), as reported by [46]. Unlike electrified vehicles, internal combustion engine vehicles are not equipped with generator, electric motor and batteries of adequate power and capacity to allow the conversion of the vehicle kinetic energy into electric energy. For this reason, the kinetic energy recovery systems successfully tested for ICEV application are mainly based on mechanical and hydraulic energy storage devices. Unfortunately, the energy recovered through the flywheel cannot be stored for a long time, due to mechanical and fluid dynamics friction on the flywheel.
-
+ 
 
 \subsection{Hydraulic KERS: Series Hydraulic Hybrid systems}
 
@@ -244,6 +245,16 @@ code_here...
 
 \begin{thebibliography}{3}
 	
+	%%%
+	
+	%GENERAL STRUCTURE FOR THE BIBLIOGRAPHY
+	
+	%Cognome, Nome appuntato, (Anno), Nome del paper o del libro, Editrice o rivista, città (Stato), pagine.
+	
+	%Esempio
+	%Kapoor R., Parveen C. M., (2013), \textit{Comparative %Study on Various KERS}, Proceedings of the World Congress %on Engineering 2013 Vol III, London.
+	
+	%%%
 	\bibitem{a}
 	J. Chibulka , “Kinetic Energy Recovery system by means of Flywheel Energy 		    storage device”. 
 	Advanced Engineering, vol. 3, issue 1, pp. 27-38, 2009.
@@ -274,6 +285,10 @@ code_here...
 	Itani, Khaled, et al. "Comparative analysis of two hybrid energy storage systems used in a two front wheel driven electric vehicle during extreme start-up and regenerative braking operations." Energy Conversion and Management 144 (2017): 69-87.
 	
 	\bibitem{l}
+	Kapoor R., Parveen C. M., (2013), \textit{Comparative Study on Various KERS}, Proceedings of the World Congress on Engineering 2013 Vol III, London.
+	
+	\bibitem{m}
+	Hui S., Lifu Y., Junqing J., (2010), \textit{Hydraulic/electric synergy system (HESS) design for heavy hybrid vehicles}, Energy 35, pp. 5328--5335.
 	
 	
 \end{thebibliography}
