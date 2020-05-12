@@ -202,9 +202,9 @@ The IC engine is mechanically coupled to the hydraulic pump/motor designated as 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.1\textwidth]{Images/Hydraulic Accumulator.png}
-\caption{Bladder-type hydraulic accumulator}
-\label{StepF1}
+\includegraphics[width=.4\textwidth]{Images/Hydraulic Accumulator}
+\caption{Commercial bladder-type hydraulic accumulator}
+\label{hydraulic_accumulator}
 \end{figure}
 
 The Reservoir is structurally similar to the accumulator but the gas that it contains is kept at low pressures and serves primarily to assist the transfer of fluid to-and-from the accumulator, with a minimal impact on the overall energy conversion. 
@@ -217,7 +217,53 @@ Additional costs, which may represent 10–15\% of the total for the vehicle, is
 
 \subsection{Hydro-electric KERS}
 
+This type of KERS is called also HESS (\textit{hydro electric synergy system}). It is an alternative of the above described pure hydraulic KERS, because of the introduction of a second energy storage system.
 
+\subsubsection{Architecture and working principle}
+
+The HESS is composed by two main parts:
+
+\begin{enumerate}
+	\item \textbf{Hydraulic System}. It is the main energy recovery system, characterized by high power density. It includes:
+	\begin{itemize}
+		\item Pump or motor (Fig.~\ref{hydraulic_pump}) (depending on the usage phase). During the acceleration phase, it behaves like a motor, providing torque to the shaft, whereas during deceleration it behaves like a pump, storing the fluid from the reservoir into the high--pressure accumulator;
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.3\textwidth]{Images/Hydraulic Pump}
+			\caption{Commercial hydraulic pump}
+			\label{hydraulic_pump}
+		\end{figure}
+		
+		\item Accumulator;
+		\item Reservoir.
+	\end{itemize}
+	\item \textbf{Electric System}. It constitutes the secondary energy recovery system, characterized by a high energy density. It is used only when a high amount of power is requested by the user or when there is a fault on the hydraulic machinery. This allows to maintain the battery around its optimal state of charge (SoC). It includes:
+	\begin{itemize}
+		\item Battery. Usually a nickel--metal--hydrid (Ni--MH) one is used. It is linked to the electric motor (EM) through a DC/DC converter;
+		\item Electric motor. It can be used as a motor or as a generator, depending on the usage phase;
+		\item DC/DC converter.
+	\end{itemize}	
+\end{enumerate}
+
+A typical realization scheme for the HESS can be seen in Fig.~\ref{HESS scheme}.
+
+The overall system is driven by a centralized controller which decides the action to be performed depending on the nature of the torque applied by the human (positive if the vehicle is accelerating). The primary task of the control action, as in all KERS, is to maximize the fuel economy.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/HESS scheme}
+\caption{HESS scheme}
+\label{HESS scheme}
+\end{figure}
+\subsubsection{Advantages, disadvantages and fields of application}
+
+HESS results to have better performances in the urban scenario because of the existence of a lot of braking conditions. In fact, in the city, the driver is obliged to stop many times, wasting a lot of thermal energy while slowing down the vehicle. This means that the amount of renewable energies in the city is much higher than, for instance, during a race. 
+
+Due to the presence of the hydraulic storage system, it should be used on heavy vehicles like trucks and buses, on which a high power is requested in a short amount of time to accelerate or to decelerate. Simulations and previous works shows that this hybrid system can save about 20\% of fuel.
+
+Furthermore, it has overall better performances than a full electric energy recovery system because it weights much lesser and it operates in an optimal region of the Ni--MH battery. On the contrary, a pure electric system with battery and ultra--capacitors tends to deteriorate the battery in a small amount of time, because the SoC continuously changes very rapidly.
+
+Eventually, it must be said that the main con is that this hybrid system is very expensive (it constitutes about 40\% of the cost of an entire vehicle). Moreover, it is quite difficult to model from a mathematical point of view due to the nonlinearities needed to represent the fluid and the gas movements in the accumulator chamber.
 
 
 %Codice per inserire le figure
@@ -243,7 +289,7 @@ code_here...
 \onehalfspacing
 
 
-\begin{thebibliography}{3}
+\begin{thebibliography}{60}
 	
 	%%%
 	
