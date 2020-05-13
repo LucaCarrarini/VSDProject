@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.1)  12 MAY 2020 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.1)  13 MAY 2020 16:04
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -534,22 +534,22 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )) (Main.aux)
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
@@ -586,7 +586,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 )
 \AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring ON on input line 78.
+Package hyperref Info: Link coloring ON on input line 88.
 
 ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -602,9 +602,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count301
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
  (Main.out) (Main.out)
 \@outlinefile=\write5
 \openout5 = `Main.out'.
@@ -644,12 +644,12 @@ LaTeX Info: Redefining \nameref on input line 78.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
 
 ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
 
 ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -663,7 +663,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Images/Mechanical_KERS.png, id=88, 690.58pt x 521.95pt>
 File: Images/Mechanical_KERS.png Graphic file (type png)
 <use Images/Mechanical_KERS.png>
-Package pdftex.def Info: Images/Mechanical_KERS.png  used on input line 111.
+Package pdftex.def Info: Images/Mechanical_KERS.png  used on input line 121.
 (pdftex.def)             Requested size: 256.07741pt x 193.54854pt.
 
 
@@ -676,21 +676,21 @@ This may cause the page layout to be inconsistent, however.
 <Images/Flywheel_Components.png, id=100, 738.76pt x 559.08875pt>
 File: Images/Flywheel_Components.png Graphic file (type png)
 <use Images/Flywheel_Components.png>
-Package pdftex.def Info: Images/Flywheel_Components.png  used on input line 124
+Package pdftex.def Info: Images/Flywheel_Components.png  used on input line 134
 .
 (pdftex.def)             Requested size: 256.07741pt x 193.79863pt.
  [3 <./Images/Mechanical_KERS.png>] [4 <./Images/Flywheel_Components.png>]
 <Images/Electric_KERS_uconly.PNG, id=113, 304.13625pt x 147.55125pt>
 File: Images/Electric_KERS_uconly.PNG Graphic file (type png)
 <use Images/Electric_KERS_uconly.PNG>
-Package pdftex.def Info: Images/Electric_KERS_uconly.PNG  used on input line 14
+Package pdftex.def Info: Images/Electric_KERS_uconly.PNG  used on input line 15
 9.
 (pdftex.def)             Requested size: 256.07741pt x 124.23938pt.
 <Images/Electric_KERS_scheme_uconly.PNG, id=114, 294.34969pt x 133.24782pt>
 File: Images/Electric_KERS_scheme_uconly.PNG Graphic file (type png)
 <use Images/Electric_KERS_scheme_uconly.PNG>
 Package pdftex.def Info: Images/Electric_KERS_scheme_uconly.PNG  used on input 
-line 156.
+line 166.
 (pdftex.def)             Requested size: 256.07741pt x 115.92262pt.
 
 [5 <./Images/Electric_KERS_uconly.PNG>]
@@ -698,58 +698,58 @@ line 156.
 File: Images/Electric_KERS_scheme_hybrid.PNG Graphic file (type png)
 <use Images/Electric_KERS_scheme_hybrid.PNG>
 Package pdftex.def Info: Images/Electric_KERS_scheme_hybrid.PNG  used on input 
-line 166.
+line 176.
 (pdftex.def)             Requested size: 256.07741pt x 114.50764pt.
 <Images/Electric_KERS_powerflow.PNG, id=124, 354.57469pt x 177.66376pt>
 File: Images/Electric_KERS_powerflow.PNG Graphic file (type png)
 <use Images/Electric_KERS_powerflow.PNG>
 Package pdftex.def Info: Images/Electric_KERS_powerflow.PNG  used on input line
- 175.
+ 185.
 (pdftex.def)             Requested size: 256.07741pt x 128.3136pt.
  [6 <./Images/Electric_KERS_scheme_uconly.PNG> <./Images/Electric_KERS_scheme_h
 ybrid.PNG>] [7 <./Images/Electric_KERS_powerflow.PNG>]
-<Images/Hydraulic KERS.png, id=142, 315.0972pt x 185.493pt>
+<Images/Hydraulic KERS.png, id=143, 315.0972pt x 185.493pt>
 File: Images/Hydraulic KERS.png Graphic file (type png)
 <use Images/Hydraulic KERS.png>
-Package pdftex.def Info: Images/Hydraulic KERS.png  used on input line 196.
+Package pdftex.def Info: Images/Hydraulic KERS.png  used on input line 206.
 (pdftex.def)             Requested size: 256.07741pt x 150.74948pt.
  [8 <./Images/Hydraulic KERS.png>]
-<Images/Hydraulic Accumulator.jpg, id=151, 361.35pt x 361.35pt>
+<Images/Hydraulic Accumulator.jpg, id=153, 361.35pt x 361.35pt>
 File: Images/Hydraulic Accumulator.jpg Graphic file (type jpg)
 <use Images/Hydraulic Accumulator.jpg>
 Package pdftex.def Info: Images/Hydraulic Accumulator.jpg  used on input line 2
-05.
+15.
 (pdftex.def)             Requested size: 170.71393pt x 170.71121pt.
  [9 <./Images/Hydraulic Accumulator.jpg>]
-<Images/Hydraulic Pump.jpg, id=161, 451.6875pt x 451.6875pt>
+<Images/Hydraulic Pump.jpg, id=163, 451.6875pt x 451.6875pt>
 File: Images/Hydraulic Pump.jpg Graphic file (type jpg)
 <use Images/Hydraulic Pump.jpg>
-Package pdftex.def Info: Images/Hydraulic Pump.jpg  used on input line 232.
+Package pdftex.def Info: Images/Hydraulic Pump.jpg  used on input line 242.
 (pdftex.def)             Requested size: 128.0387pt x 128.03615pt.
  [10 <./Images/Hydraulic Pump.jpg>]
-<Images/HESS scheme.png, id=169, 671.50874pt x 356.83313pt>
+<Images/HESS scheme.png, id=171, 671.50874pt x 356.83313pt>
 File: Images/HESS scheme.png Graphic file (type png)
 <use Images/HESS scheme.png>
-Package pdftex.def Info: Images/HESS scheme.png  used on input line 254.
+Package pdftex.def Info: Images/HESS scheme.png  used on input line 264.
 (pdftex.def)             Requested size: 256.07741pt x 136.07713pt.
  [11 <./Images/HESS scheme.png>]
-Excluding 'comment' comment. [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
+Excluding 'comment' comment. Excluding 'comment' comment. [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
  (Main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: 74140B9FCA4031DDDD49C1C14DFE05D9;1216.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 355.
  ) 
 Here is how much of TeX's memory you used:
- 10851 strings out of 480896
- 178095 string characters out of 2898166
+ 10849 strings out of 480896
+ 178075 string characters out of 2898166
  621635 words of memory out of 3000000
- 26451 multiletter control sequences out of 15000+200000
- 543980 words of font info for 66 fonts, out of 3000000 for 9000
+ 26450 multiletter control sequences out of 15000+200000
+ 543812 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,45p,3252b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\andre\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
@@ -759,13 +759,11 @@ s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/andre/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/andre/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/U
-sers/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Main.pdf (13 pages, 1192098 bytes).
+sers/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb>
+Output written on Main.pdf (13 pages, 1174464 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
+ 233 PDF objects out of 1000 (max. 8388607)
  53 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
