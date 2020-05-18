@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  18 MAY 2020 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  18 MAY 2020 21:53
 entering extended mode
 **./Main.tex
 (Main.tex
@@ -769,11 +769,11 @@ File: Images/Patent2.png Graphic file (type png)
 <use Images/Patent2.png>
 Package pdftex.def Info: Images/Patent2.png  used on input line 293.
 (pdftex.def)             Requested size: 256.07741pt x 275.42676pt.
-<Images/Patent3.jpg, id=199, 794.97pt x 300.1614pt>
+<Images/Patent3.jpg, id=199, 893.739pt x 300.1614pt>
 File: Images/Patent3.jpg Graphic file (type jpg)
 <use Images/Patent3.jpg>
 Package pdftex.def Info: Images/Patent3.jpg  used on input line 302.
-(pdftex.def)             Requested size: 341.43437pt x 128.92032pt.
+(pdftex.def)             Requested size: 384.1096pt x 129.00276pt.
  [13 <./Images/Patent2.png> <./Images/Patent3.jpg>]
 Excluding 'comment' comment. Excluding 'comment' comment. [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
@@ -804,10 +804,11 @@ m/cmbx12.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts
 ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Federico K
 ieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
 fb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb>
-Output written on Main.pdf (15 pages, 1540175 bytes).
+lic/amsfonts/cm/cmr8.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Main.pdf (15 pages, 1561195 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
+ 271 PDF objects out of 1000 (max. 8388607)
  60 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
