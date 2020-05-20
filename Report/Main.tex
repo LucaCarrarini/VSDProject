@@ -212,7 +212,7 @@ The IC engine is mechanically coupled to the hydraulic pump/motor designated as 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.4\textwidth]{Images/Hydraulic Accumulator}
+\includegraphics[width=.4\textwidth]{Images/Hydraulic Accumulator.jpg}
 \caption{Commercial bladder-type hydraulic accumulator}
 \label{hydraulic_accumulator}
 \end{figure}
@@ -239,7 +239,7 @@ The HESS is composed by two main parts:
 		\item Pump or motor (Fig.~\ref{hydraulic_pump}) (depending on the usage phase). During the acceleration phase, it behaves like a motor, providing torque to the shaft, whereas during deceleration it behaves like a pump, storing the fluid from the reservoir into the high--pressure accumulator;
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.3\textwidth]{Images/Hydraulic Pump}
+			\includegraphics[width=.3\textwidth]{Images/Hydraulic Pump.jpg}
 			\caption{Commercial hydraulic pump}
 			\label{hydraulic_pump}
 		\end{figure}
@@ -261,7 +261,7 @@ The overall system is driven by a centralized controller which decides the actio
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=.6\textwidth]{Images/HESS scheme}
+\includegraphics[width=.6\textwidth]{Images/HESS Scheme.PNG}
 \caption{HESS scheme}
 \label{HESS scheme}
 \end{figure}
@@ -306,6 +306,78 @@ As above illustrated (Fig.~\ref{Patent2}), the MKERS transmission includes a cas
 
 The CFT output is connected via transfer gears to a range extender (Fig.~\ref{Patent2}). This second component provides a second ratio set for increasing the number of MKERS selectable ratios. This second ratio set comprises a plurality of selectable ratios, each in parallel with one another. For example, an epicyclic gear train with two clutches would provide two selectable ratios. A range-extended CFT may offer marked performance enhancements over a non-range extended one in terms of efficiency of energy transfer from the wheels to the flywheel and back.  As shown in (Fig.~\ref{Patent1}), this second component may be excluded from the KERS transmission in the connection layout provided as first option. In fact, the number of available ratios to be exploited in the energy transfer process optimization is in this case already augmented by the ones provided by the conventional vehicle transmission (i.e. the gearbox).  An additional clutch may be as well included in the system to disconnect the MKERS from the vehicle powertrain under specific operating conditions.
 As far as the numerical guidelines are concerned, the flywheel should be designed to have a storage capacity of 210kJ and top rotational speeds of the order of 55.000 rpm. Moreover, the KERS transmission should be provided with a ratio spread (i.e. the maximum achievable ratio divided by the minimum one) of about 11, therefore outperforming the one offered by typical CVTs, which are usually characterized by a ratio spread ranging in the interval 4-7.  
+
+\section{Model}
+
+Relation between motor's speed and wheels' speed
+
+\begin{equation}	
+	w_{W} = \tau_{full} w_M
+\end{equation}
+
+Relation between vehicle's speed and wheels' speed
+
+\begin{equation}	
+	v = w_W R_W
+\end{equation}
+
+Power balance (from engine to wheel):
+
+\begin{equation}	
+	T(\omega_e)\omega_e + \delta T(\omega_F)\omega_F - P_{VF} - P_{RF} = \frac{d}{dt}(\tau)
+\end{equation}
+
+where:
+
+\begin{equation}
+	\delta=
+	\begin{cases}
+		1, & \text{if vehicle is accelerating (flywheel is in discharge phase)} \\
+		-1, & \text{if vehicle is braking (flywheel is in charge phase)}
+	\end{cases}
+\end{equation} 
+
+and $P_{VF}$ is the viscous friction and $P_{RF}$ is the roll friction. 
+
+\begin{equation}	
+	\tau=\frac{1}{2}mv^2+\frac{1}{2}\bar{J_e}\omega_e^2+4(\frac{1}{2}J_W\omega_W^2)
+\end{equation}
+
+Power balance (from/to engine to/from flywheel):
+
+\begin{equation}	
+	\label{eqn:PB_e-fw}
+	T(\omega_F)\omega_F = T(\omega_W)\omega_W - P_{clutches} - P_{fluidodynamic}
+\end{equation}
+ where both $P_{clutches}$ and $P_{fluidodynamic}$ are negligible.It is possible to rewrite Eq.\ref{eqn:PB_e-fw} substituting the torque:
+ 
+ \begin{equation}	
+ 	J_F\dot{\omega}_F\omega_F = J_W\dot{\omega}_W\omega_W - P_{friction}
+ \end{equation}
+ Equilibrium of momenta:
+ 
+ \begin{equation}	
+ 	J_F\dot{\omega}_F = M_W - M_{friction}
+ \end{equation}
+ 
+ \begin{equation}	
+ 	m_{eq}(\tau_k)\ddot{x} = T\left(\frac{x}{\tau_F\tau_kR_W}\right)\frac{1}{\tau_F\tau_kR_W} - \frac{1}{2}\rho S_v v^2 C_x - \beta_1\dot{x} - \beta_2\dot{x}^2
+ \end{equation}
+  where $m_{eq}$ is given by:
+ 
+ \begin{equation}	
+ 	m_{eq}(\tau_k, \tau_h) = m_v + \frac{\bar{J}_e}{(\tau_F\tau_kR_W)^2}+\frac{4J_W}{R_W^2}-\delta\frac{J_F}{(\tau_F\tau_k\tau_hR_W)^2}
+ \end{equation}
+ Is $\omega_F$ a state variable?
+ 
+ \begin{equation}	
+ 	J_W\dot{\omega} = M_{eq}
+ \end{equation}
+ 
+ \begin{equation}	
+ 	\omega_F = -\alpha\omega_W
+ \end{equation}
+ where $\alpha$ is the total transmission ratio between wheels and flywheel.
  
 %Codice per inserire le figure
 \begin{comment}
@@ -369,10 +441,10 @@ As far as the numerical guidelines are concerned, the flywheel should be designe
 	D. Nishanth, T. Mathews "Flywheel based Kinetic Energy Recovery System(KERS) 	    integrated in vehicles". International Journal of Engineering Science and      	Technology (IJEST), Vol. 5 No.09 Sep 2013.
 	
 	\bibitem{h}
-	Pipitone, Emiliano, and Gianpaolo Vitale. "A regenerative braking system for   	internal combustion engine vehicles using supercapacitors as energy storage    	elements-Part 1: System analysis and modelling." Journal of Power Sources 448     	(2020): 227368.
+	Pipitone E., Vitale G., (2020), \textit{A regenerative braking system for internal combustion engine vehicles using supercapacitors as energy storage elements-Part 1 and 2: System analysis and modelling}, Journal of Power Sources 448, Palermo (Italy)     	
 	
 	\bibitem{i}
-	Itani, Khaled, et al. "Comparative analysis of two hybrid energy storage   		    systems used in a two front wheel driven electric vehicle during extreme      	start-up and regenerative braking operations." Energy Conversion and      		    Management 144 (2017): 69-87.
+	Itani K., De Bernardinis A., Khatir Z, Jammal A., (2017),  \textit{Comparative analysis of two hybrid energy storage systems used in a two front wheel driven electric vehicle during extreme start-up and regenerative braking operations},  Energy Conversion and Management, Beirut (Lebanon), pp. 69-87.
 	
 	\bibitem{l}
 	Kapoor R., Parveen C. M., (2013), \textit{Comparative Study on Various KERS},   	Proceedings of the World Congress on Engineering 2013 Vol III, London.
