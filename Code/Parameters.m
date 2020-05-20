@@ -23,16 +23,33 @@ Beta2 = 0;
 %% Flywheel parameters
 Jf = 0.026; %[m^2*Kg]
 
-%% GearBox parameteres
-tau1 = 1/13.36;
-tau2 = 1/10.79;
-tau3 = 1/9.15;
-tau4 = 1/7.72;
-tau5 = 1/6.66;
-tau6 = 1/5.76;
-tau7 = 1/5;
-tau8 = 1/4.35;
-tauf = 1/3.73;
+%% GearBox parameters
+
+%These data are taken from La Ferrari datasheet
+%7 ratios transmission
+
+
+tau1 = 1/3.08;
+tau2 = 1/2.18;
+tau3 = 1/1.63;
+tau4 = 1/1.29;
+tau5 = 1/1.03;
+tau6 = 1/0.84;
+tau7 = 1/0.69;
+tauf = 1/4.38;
+
+
+
+
+%tau1 = 1/13.36;
+%tau2 = 1/10.79;
+%tau3 = 1/9.15;
+%tau4 = 1/7.72;
+%tau5 = 1/6.66;
+%tau6 = 1/5.76;
+%tau7 = 1/5;
+%tau8 = 1/4.35;
+%tauf = 1/3.73;
 Wmax = 1571; %[rad/s]
 V1max = tauf*tau1*Rw*Wmax; %[m/s]
 V2max = tauf*tau2*Rw*Wmax; %[m/s]
