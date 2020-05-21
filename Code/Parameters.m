@@ -10,10 +10,6 @@ Jw = 1/2*(Rw^2*Mw); %[m^2*Kg]
 
 %% Engine parameters
 Je = 0.3; %[m^2*Kg]
-a0 = 49;
-a1 = 1.94;
-a2 = -0.001;
-a3 = 3.3e-7;
 
 %% Other parameters
 rho = 1.2; %[Kg/m^3]
@@ -28,7 +24,6 @@ Jf = 0.026; %[m^2*Kg]
 %These data are taken from La Ferrari datasheet
 %7 ratios transmission
 
-
 tau1 = 1/3.08;
 tau2 = 1/2.18;
 tau3 = 1/1.63;
@@ -37,20 +32,7 @@ tau5 = 1/1.03;
 tau6 = 1/0.84;
 tau7 = 1/0.69;
 tauf = 1/4.38;
-
-
-
-
-%tau1 = 1/13.36;
-%tau2 = 1/10.79;
-%tau3 = 1/9.15;
-%tau4 = 1/7.72;
-%tau5 = 1/6.66;
-%tau6 = 1/5.76;
-%tau7 = 1/5;
-%tau8 = 1/4.35;
-%tauf = 1/3.73;
-Wmax = 1571; %[rad/s]
+Wmax = 942.4; %[rad/s]
 V1max = tauf*tau1*Rw*Wmax; %[m/s]
 V2max = tauf*tau2*Rw*Wmax; %[m/s]
 V3max = tauf*tau3*Rw*Wmax; %[m/s]
