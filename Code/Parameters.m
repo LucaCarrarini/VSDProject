@@ -22,6 +22,13 @@ Beta2 = 0;
 
 %% Flywheel parameters
 Jf = 0.026; %[m^2*Kg]
+w_fw_max = 6283; %[rad/s]
+rho_fw = 2267; %[kg/m^3]
+h = 0.1; %[m]
+r_o = 0.1; %[m]
+r_i = 0.05; %[m]
+% SOC_max = 0.25*pi*h*rho_mat*(r_o^4-r_i^4)
+k=0.01;
 
 %% GearBox parameters
 
@@ -50,7 +57,7 @@ tauf = 1/4.38;
 %tau7 = 1/5;
 %tau8 = 1/4.35;
 %tauf = 1/3.73;
-Wmax = 1571; %[rad/s]
+Wmax = 942.4; %[rad/s]
 V1max = tauf*tau1*Rw*Wmax; %[m/s]
 V2max = tauf*tau2*Rw*Wmax; %[m/s]
 V3max = tauf*tau3*Rw*Wmax; %[m/s]
