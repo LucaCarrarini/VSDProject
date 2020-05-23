@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%
 %Torque curve%
-% %%%%%%%%%%%%
+%%%%%%%%%%%%%%
 
 % Generate Torque Curve using polynomial fitting
 
