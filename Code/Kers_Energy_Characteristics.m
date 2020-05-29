@@ -106,7 +106,8 @@ omegaf = linspace(64500*0.3/9.55, 64500/9.55, 100);
 limit = (tauk*omegaf)/(taumax)*Rw;
 
 % Initial velocity definition
-v = 1*limit;
+%v = 1*limit;
+v = (250/3.6)*ones(1, 100);
 %Generate array with vehicle test speeds
 % Initial velocity = 0 m/s
 %v = zeros(1,100); %[m/s]
@@ -122,19 +123,19 @@ for i=1:length(gamma)
         if v(j)<V1max
             taugb = tau1;
         end    
-        if v(j)>V1max & v(j)<V2max
+        if v(j)>V1max && v(j)<V2max
             taugb = tau2;
         end    
-        if v(j)>V2max & v(j)<V3max
+        if v(j)>V2max && v(j)<V3max
             taugb = tau3;
         end    
-        if v(j)>V3max & v(j)<V4max
+        if v(j)>V3max && v(j)<V4max
             taugb = tau4;
         end    
-        if v(j)>V4max & v(j)<V5max
+        if v(j)>V4max && v(j)<V5max
             taugb = tau5;
         end    
-        if v(j)>V5max & v(j)<V6max
+        if v(j)>V5max && v(j)<V6max
             taugb = tau6;
         end    
         if v(j)>V6max
@@ -158,28 +159,28 @@ for i=1:length(gamma)
 end
 omega_f_min_rpm = 64500*0.3/9.55; %[rad(sec]
 Energy_min = 1/2*Jf*(omega_f_min_rpm)^2;
-xline(Energy_min, 'black--')
+xline(Energy_min, 'black--');
 title('Energy transfer during acceleration');
 xlabel('E_{0,Kers} [J]');
 ylabel('\DeltaE_{Vehicle} [J]');
-ylim([-200 E(1,100)])
+ylim([-300 4000])
 legend({num2str(gamma')})
 
 figure()
 for i=1:length(gamma)
-    vf = sqrt(2*E(i,:)/Jeq);
-    plot(omegaf*9.55, vf*3.6);
+    DeltaV = sqrt(2*E(i,:).*sign(E(i,:))*Rw^2/Jeq).*sign(E(i,:));
+    plot(omegaf*9.55, DeltaV*3.6);
 %   text(omegaf(100)*9.55, vf(100)*3.6, num2str(gamma(i)));
     hold on;
 end
 
 omega_f_min_rpm = 64500*0.3; %[rpm]
-xline(omega_f_min_rpm, 'black--')
-title('Velocity comparison during acceleration with non-zero v_{0,vehicle} (limit case)');
+xline(omega_f_min_rpm, 'black--');
+title('Velocity comparison during acceleration');
 xlabel('\omega_{f0} [rpm]');
 ylabel('\DeltaV_{f,Vehicle} [Km/h]');
-ylim([-10 50])
-legend({num2str(gamma')})
+ylim([-5 30]);
+legend({num2str(gamma')});
 
 % How to plot 3d surfaces
 % [X,Y] = meshgrid(-2:.02:2);                                
