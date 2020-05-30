@@ -1,7 +1,3 @@
-clc
-clear all
-close all
-
 %% Vehicle parameters
 M = 700; %[kg]
 %% Wheels parameters
@@ -38,88 +34,86 @@ V6max = tauf*tau6*Rw*Wmax; %[m/s]
 
 %% Energy transfer deceleration(bi-variate)
 
-V0 = 250/3.6;
-tauCVT = linspace(taumin, taumax, 100);
-%tauk = linspace(taukmin, taukmin*5, 8);
-tauk = ones(1, 8);
-for i=1:8
-    tauk(i) = (log(i+exp(1)))*taukmin;
-end
-
-
-%Generate energy curves
-E = ones(length(tauk),length(tauCVT));
-%E0 = ones(1, length(tauCVT));
-if V0<V1max
-   taugb = tau1;
-end    
-if V0>V1max && V0<V2max
-   taugb = tau2;
-end    
-if V0>V2max && V0<V3max
-   taugb = tau3;
-end    
-if V0>V3max && V0<V4max
-   taugb = tau4;
-end    
-if V0>V4max && V0<V5max
-   taugb = tau5;
-end    
-if V0>V5max && V0<V6max
-   taugb = tau6;
-end    
-if V0>V6max
-   taugb = tau7;   
-end
-for i=1:length(tauk)
-    for j=1:length(tauCVT)
-        Jeq = 0.5*(Je/(tauf*taugb)+M*Rw^2+4*Jw);
-        T0 = 0.5*Jeq*(V0/Rw)^2;
-        DeltaT = T0*Jf*Jeq/(Jc+Jeq)^2*(tauCVT(j)/tauk(i))^2;
-        E(i,j) = DeltaT;
-        %E0(j) = T0;
-    end
-end
-
-figure()
-for i=1:length(tauk)
-    plot(tauCVT, E(i,:));
-    %text(tauCVT(100), E(i, 100), num2str(tauk(i)));
-    hold on;
-end
-plot(tauCVT, 593*10^3*ones(1, 100), 'black--');
-ylim([0, 2.5*10^5]);
-xlim([taumin, taumax]);
-title('Energy transfer during deceleration');
-xlabel('\tau_{CVT} ');
-ylabel('\DeltaE_{Kers} [J]');
-legend({num2str(tauk')})
-
-figure()
-colormap('jet')
-[X,Y] = meshgrid(tauCVT,tauk);
-Z = T0*Jf*Jeq/(Jc+Jeq)^2*(X./Y).^2;
-surf(X,Y,Z)
-xlabel('\tau_{CVT}')
-ylabel('\tau_k')
-title('Energy transfer during deceleration');
-zlabel('\DeltaE_{Kers} [J]')
-
-
-figure()
-for i=1:length(tauk)
-    omegaf = sqrt(2*E(i,:)/Jf);
-    plot(tauCVT, omegaf*9.55);
-    %text(v(100)*3.6, omegaf(100)*9.55, num2str(gamma(i)));
-    hold on;
-end
-plot(tauCVT, 64.5*10^3*ones(1, 100), 'black--');
-%ylim([0, 8.5*10^4]);
-xlim([taumin, taumax]);
-title('Velocity comparison during deceleration');
-xlabel('\tau_{CVT}');
-ylabel('\omega_f [rpm]');
-legend({num2str(tauk')});
+% V0 = 250/3.6;
+% tauCVT = linspace(taumin, taumax, 100);
+% %tauk = linspace(taukmin, taukmin*5, 8);
+% tauk = ones(1, 8);
+% for i=1:8
+%     tauk(i) = (log(i+exp(1)))*taukmin;
+% end
+% 
+% 
+% %Generate energy curves
+% E = ones(length(tauk),length(tauCVT));
+% %E0 = ones(1, length(tauCVT));
+% if V0<V1max
+%    taugb = tau1;
+% end    
+% if V0>V1max && V0<V2max
+%    taugb = tau2;
+% end    
+% if V0>V2max && V0<V3max
+%    taugb = tau3;
+% end    
+% if V0>V3max && V0<V4max
+%    taugb = tau4;
+% end    
+% if V0>V4max && V0<V5max
+%    taugb = tau5;
+% end    
+% if V0>V5max && V0<V6max
+%    taugb = tau6;
+% end    
+% if V0>V6max
+%    taugb = tau7;   
+% end
+% for i=1:length(tauk)
+%     for j=1:length(tauCVT)
+%         Jeq = 0.5*(Je/(tauf*taugb)+M*Rw^2+4*Jw);
+%         T0 = 0.5*Jeq*(V0/Rw)^2;
+%         DeltaT = T0*Jf*Jeq/(Jc+Jeq)^2*(tauCVT(j)/tauk(i))^2;
+%         E(i,j) = DeltaT;
+%         %E0(j) = T0;
+%     end
+% end
+% 
+% for i=1:length(tauk)
+%     plot(tauCVT, E(i,:));
+%     %text(tauCVT(100), E(i, 100), num2str(tauk(i)));
+%     hold on;
+% end
+% plot(tauCVT, 593*10^3*ones(1, 100), 'black--');
+% ylim([0, 2.5*10^5]);
+% xlim([taumin, taumax]);
+% title('Energy transfer during deceleration');
+% xlabel('\tau_{CVT} ');
+% ylabel('\DeltaE_{Kers} [J]');
+% legend({num2str(tauk')})
+% 
+% figure()
+% colormap('jet')
+% [X,Y] = meshgrid(tauCVT,tauk);
+% Z = T0*Jf*Jeq/(Jc+Jeq)^2*(X./Y).^2;
+% surf(X,Y,Z)
+% xlabel('\tau_{CVT}')
+% ylabel('\tau_k')
+% zlabel('\DeltaE_{Kers} [J]')
+% 
+% 
+% figure()
+% for i=1:length(tauk)
+%     omegaf = sqrt(2*E(i,:)/Jf);
+%     plot(tauCVT, omegaf*9.55);
+%     %text(v(100)*3.6, omegaf(100)*9.55, num2str(gamma(i)));
+%     hold on;
+% end
+% plot(tauCVT, 64.5*10^3*ones(1, 100), 'black--');
+% %ylim([0, 8.5*10^4]);
+% xlim([taumin, taumax]);
+% title('Velocity comparison during deceleration');
+% xlabel('\tau_{CVT}');
+% ylabel('\omega_f [rpm]');
+% legend({num2str(tauk')});
 
 %% Energy transfer acceleration(Bi-Variate)
 
@@ -132,7 +126,7 @@ legend({num2str(tauk')});
 
 % Initial velocity definition
 %v = 1*limit;
-V0 = (250/3.6);
+v = (250/3.6);
 omegaf = 64.5*10^3/9.55;
 %Generate array with vehicle test speeds
 % Initial velocity = 0 m/s
@@ -177,13 +171,12 @@ for i=1:length(tauk)
         psi = Jeq/(Jf)*Jc^2/(Jc+Jeq)^2*(1/(tauCVT(j)/tauk(i))^2);
         rho = Jeq^2*Jc/((Jc+Jeq)^2*(tauCVT(j)/tauk(i)));
         E0kers = 0.5*Jf*omegaf^2;
-        DeltaE = phi*(V0/Rw)^2+psi*E0kers+rho*(V0/Rw)*omegaf;
+        DeltaE = phi*(v/Rw)^2+psi*E0kers+rho*(v/Rw)*omegaf;
         E(i,j) = DeltaE;
         %E0(j) = E0kers;
     end
 end
 
-figure()
 for i=1:length(tauk)
     plot(tauCVT, E(i,:));
     %text(E0(100), E(i, 100), num2str(gamma(i)));
@@ -202,14 +195,11 @@ legend({num2str(tauk')});
 figure()
 colormap('jet')
 [X,Y] = meshgrid(tauCVT,tauk);
-psi = Jeq/(Jf)*Jc^2/(Jc+Jeq)^2*((Y./X).^2);
-rho = (Jeq^2*Jc)/((Jc+Jeq)^2)*Y./X;
-Z = phi*(V0/Rw)^2+psi.*E0kers+rho.*(V0/Rw)*omegaf;
+Z = T0*Jf*Jeq/(Jc+Jeq)^2*(X./Y).^2;
 surf(X,Y,Z)
 xlabel('\tau_{CVT}')
 ylabel('\tau_k')
-title('Energy transfer with variables \tau_k,\tau_{CVT}')
-zlabel('\DeltaE_{Vehicle} [J]')
+zlabel('\DeltaE_{Kers} [J]')
 
 figure()
 for i=1:length(tauk)
