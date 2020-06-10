@@ -74,13 +74,14 @@ V7max = tauf*tau7*Rw*Wmax; %[m/s]
 %% LQR control
 
 %state: omega_cv, omega_cv-omega_ck, Fn
-Je = 0.2;
-Jeq = 1;
 A = [-b_cv/Je, 0, -k/Je;...
     -b_cv/Je+b_ck/Jeq, -b_ck/Jeq, -(k/Je+k/Jeq);...
     0 0 0];
 
 B = [0;0;1];
+
+% Initial condition
+x_0 = [90;90;0]; % [rad/s, rad/s, N]
 
 Q = [0, 0,    0;...
     0,  50000, 0;...
@@ -94,7 +95,32 @@ R = 1;
 Bd =  [1/Je, 0;...
        1/Je, 1/Jeq;...
        0,    0];
+   
 
-Kff = R\B'/(A'-P*B/(R)*B')*P*Bd;
+% Disturbance constant
+T_eq = -200; % [Nm]
+T_l = 0; % [Nm]
+d = [T_eq;T_l];
 
+Gamma = Bd*d;
 
+% Compute control
+control.P = flip(out.P,3);
+control.M = flip(out.M,1);
+control.h = flip(out.h,1);
+control.U = flip(out.U,3);
+control.F = flip(out.F,1);
+control.K = flip(out.K,1);
+v = (control.F(1))\(-control.U(:,:,1)*x_0 - control.K(1));
+
+sigP.time = out.tout;
+sigP.signals.values = control.P;
+sigP.signals.dimensions = [3,3];
+
+sigM.time = out.tout;
+sigM.signals.values = (control.M);
+sigM.signals.dimensions = 3;
+
+sigh.time = out.tout;
+sigh.signals.values = (control.h);
+sigh.signals.dimensions = 3;
