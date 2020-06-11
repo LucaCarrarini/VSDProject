@@ -74,37 +74,41 @@ V7max = tauf*tau7*Rw*Wmax; %[m/s]
 %% LQR control
 
 %state: omega_cv, omega_cv-omega_ck, Fn
-A = [-b_cv/Je, 0, -k/Je;...
-    -b_cv/Je+b_ck/Jeq, -b_ck/Jeq, -(k/Je+k/Jeq);...
+A = [-b_cv/Jeq, 0, -k/Jeq;...
+    -b_cv/Jeq+b_ck/Jc, -b_ck/Jc, -(k/Jeq+k/Jc);...
     0 0 0];
 
 B = [0;0;1];
 
 % Initial condition
-x_0 = [90;90;0]; % [rad/s, rad/s, N]
+x_0 = [210;210;0]; % [rad/s, rad/s, N]
 
-Q = [0, 0,    0;...
-    0,  50000, 0;...
+Q =[0, 0,    0;...
+    0,  10,   0;...
     0,  0,    0];
 
 R = 1;
 
-[K,P,e] = lqr(A,B,Q,R);
+%[K,P,e] = lqr(A,B,Q,R);
 
 % Disturbance vector field
-Bd =  [1/Je, 0;...
-       1/Je, 1/Jeq;...
-       0,    0];
-   
+% Bd =  [1/Jc, 0;...
+%        1/Jc, 1/Jeq;...
+%        0,    0];
+%
 
+Bd =  [1/Jeq;
+       1/Jeq; 
+       0];    
+   
 % Disturbance constant
-T_eq = -200; % [Nm]
-T_l = 0; % [Nm]
-d = [T_eq;T_l];
+T_eq = -3970; % [Nm]
+%T_l = 0; % [Nm]
+d = [T_eq];
 
 Gamma = Bd*d;
 
-% Compute control
+%% Compute control
 control.P = flip(out.P,3);
 control.M = flip(out.M,1);
 control.h = flip(out.h,1);
