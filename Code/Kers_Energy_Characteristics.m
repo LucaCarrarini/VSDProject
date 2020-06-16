@@ -9,7 +9,7 @@ Je = 0.3; %[m^2*Kg]
 Wmax = 942.4; %[rad/s]
 %% Flywheel parameters
 Jf = 0.026; %[m^2*Kg]
-tauk = 1/12;
+tauk = 1/3;
 %% Clutch parameters
 Jc = 0.01; %[m^2*Kg]
 %% CVT parameters
@@ -35,66 +35,78 @@ V6max = tauf*tau6*Rw*Wmax; %[m/s]
 
 %Generate array with test speeds
 v = linspace(1,100);
+%v = (250/3.6)*ones(1, 100);
 
 %Generate array with test ratios
-gamma = linspace(taumin/tauk, taumax/tauk, 10);
+%gamma = linspace(taumin/tauk, taumax/tauk, 10);
+tauCVT = linspace(taumin, taumax, 10);
 
 %Generate energy curves
-E = ones(length(gamma),length(v));
+E = ones(length(tauCVT),length(v));
 E0 = ones(1, length(v));
-for i=1:length(gamma)
+for i=1:length(tauCVT)
     for j=1:length(v)
         if v(j)<V1max
             taugb = tau1;
         end    
-        if v(j)>V1max & v(j)<V2max
+        if v(j)>V1max && v(j)<V2max
             taugb = tau2;
         end    
-        if v(j)>V2max & v(j)<V3max
+        if v(j)>V2max && v(j)<V3max
             taugb = tau3;
         end    
-        if v(j)>V3max & v(j)<V4max
+        if v(j)>V3max && v(j)<V4max
             taugb = tau4;
         end    
-        if v(j)>V4max & v(j)<V5max
+        if v(j)>V4max && v(j)<V5max
             taugb = tau5;
         end    
-        if v(j)>V5max & v(j)<V6max
+        if v(j)>V5max && v(j)<V6max
             taugb = tau6;
         end    
         if v(j)>V6max
             taugb = tau7;   
         end
-        Jeq = 0.5*(Je/(tauf*taugb)+M*Rw^2+4*Jw);
-        T0 = 0.5*Jeq*(v(j)/Rw)^2;
-        DeltaT = T0*Jf*Jeq/(Jc+Jeq)^2*gamma(i)^2;
+        %taugb = 1;
+        %tauf = 1;
+        Jeqv = M*(tauf*taugb*Rw/tauCVT(i))^2+Je/(tauCVT(i))^2+4*Jw*(tauf*taugb/tauCVT(i))^2+Jc;
+        %Jeqv = M*(Rw*tauf/tauCVT(i))^2+4*Jw*(tauf/tauCVT(i))^2+Jc;
+        Jeqk = (Jf/(tauk)^2)+Jc;
+        %T0 = 0.5*Jeqv*(tauCVT(i)/tauf*taugb*Rw)^2*v(j)^2;
+        T0 = 0.5*Jeqv*(tauCVT(i)/(tauf*Rw))^2*v(j)^2;
+        DeltaT = T0*(Jf*Jeqv/(Jeqv+Jeqk)^2)*(1/tauk^2);
         E(i,j) = DeltaT;
         E0(j) = T0;
     end
 end
 
-for i=1:length(gamma)
-    plot(E0, E(i,:));
-    text(E0(100), E(i, 100), num2str(gamma(i)));
+Emax = 593*10^3;
+
+for i=1:length(tauCVT)
+    plot(E0, E(i,:)./Emax);
+    text(E0(100), E(i, 100)./Emax, num2str(tauCVT(i)));
     hold on;
 end
-plot(E0, 593*10^3*ones(1, 100), 'black--');
+plot(E0, 1*ones(1, 100), 'black--');
 title('Energy transfer during deceleration');
 xlabel('E_0 [J]');
-ylabel('\DeltaE_{Kers} [J]');
+ylabel('\DeltaE_{Kers} [p.u.]');
+%legend({num2str(tauCVT')});
+
 
 figure()
-for i=1:length(gamma)
+for i=1:length(tauCVT)
     omegaf = sqrt(2*E(i,:)/Jf);
     plot(v*3.6, omegaf*9.55);
-    text(v(100)*3.6, omegaf(100)*9.55, num2str(gamma(i)));
+    text(v(100)*3.6, omegaf(100)*9.55, num2str(tauCVT(i)));
     hold on;
 end
 plot(v*3.6, 64.5*10^3*ones(1, 100), 'black--');
-ylim([0, 8.5*10^4]);
+%ylim([0, 8.5*10^4]);
 title('Velocity comparison during deceleration');
 xlabel('V_0 [Km/h]');
 ylabel('\omega_f [rpm]');
+%legend({num2str(tauCVT')});
 
 %% Energy transfer Acceleration
 
