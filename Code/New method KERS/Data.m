@@ -47,7 +47,7 @@ V7max = tauf*tau7*Rw*Wmax; %[m/s]
 % Efficiency
 eta = 1;
 
-Tmax = 600*0.9*0.33*9.81; %5*(0.1)^2*Delta(omegaf)/(4*9.55)
+Tmax = 1780; %5*(0.1)^2*Delta(omegaf)/(4*9.55)
 Tmax2 = -5504; %600*27.8*0.33 
 
 tau_trasm = 1/(tauk*tauf);
