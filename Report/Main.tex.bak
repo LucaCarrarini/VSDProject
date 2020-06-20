@@ -389,11 +389,7 @@ At this purpose, let's first of all consider all the kinematic constraints that 
 	\omega_s&=&\tau_{gb} \omega_e
 \end{eqnarray}
 
-Those equalities yield
-
-\begin{equation}
-\omega_{cv}=\frac{\omega_w}{\tau_f*\tau_{cvt}} \Leftrightarrow \omega_{cv}=\frac{v}{\tau_f*\tau_{cvt}*R_w}\\
-\end{equation}
+Those 
 
 \section{Static analysis}
 
