@@ -17,6 +17,7 @@
 \usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amsthm}
+\usepackage{amssymb}
 \newtheorem{theorem}{Theorem}
 \usepackage{amsmath}
 \usepackage{bm}
@@ -87,7 +88,7 @@ citecolor=black
 
 \begin{document}
 
-\title{\textcolor{sapred}{On KERS implementation}\\\small{Vehicle System Dynamics Project}}
+\title{\textcolor{sapred}{Design and analysis of a K.E.R.S. system for sports car}\\\small{Vehicle System Dynamics Project}}
 \author{Luca Carrarini\\Federico Kieffer\\Andrea Tantucci\\Andrea Wrona}
 %Optional: data. Se non si inserisce il campo data
 %LaTeX mette la data del PC automaticamente
@@ -104,7 +105,7 @@ citecolor=black
 
 The dependence of the transportation sector on non-renewable sources of energy as fossil fuels and the need for a rapid response to the global warming challenge has in the last two decades encouraged a strong effort for the development of fuel efficient vehicle propulsion systems. In this context, a particular attention has been devoted to the concept of regenerative breaking. A regenerative brake is a mechanism that reduces the vehicle speed by converting some of its kinetic energy into some other kind of useful forms of energy, such as mechanical, electrical or hydraulic energy \cite{a}. The core devices of regenerative brakes are therefore reversible energy conversion components like electric motors/generators and hydraulic pumps/motors. For example, an electric regenerative brake makes use of an electric motor that acts as a generator. This device, which is usually made integral with the vehicle wheel trough a gear train, is indeed able to generate electrical energy thanks to the inputted kinetic energy that is associated to the vehicle at the end of any acceleration phase. 
 A type of regenerative braking is called KERS. KERS, which stands for Kinetic Energy Recovery System, is an automotive system for recovering a moving vehicle's kinetic energy under braking. The recovered energy is stored in a reservoir, as for example a flywheel, a battery or a super capacitor, for later use under acceleration \cite{b}. 
-Embedding such a system in a vehicle allows several potential advantages. First of all, KERS systems may be included in the class of \textit{energy harvesting} devices \cite{c}, which are likely to have a consistent impact in the scenario of \textit{green technologies} and \textit{environment-friendly} solutions. In fact, the partial regeneration of the energy that is usually dissipated by the service brake in conventional systems may allow impactful fuel economy strategies, thus reducing the fossil fuel demand and the consequent green-house gases (CO2) emissions. Another important advantage that such a system introduces is the reduced service brake wear. In fact, since during regenerative brakes an electric/hydraulic motor is used to slow down the vehicle in place of the conventional disk brake, this component will benefit from a longer lifetime. 
+Embedding such a system in a vehicle allows several potential advantages. First of all, KERS systems may be included in the class of \textit{energy harvesting} devices \cite{c}, which are likely to have a consistent impact in the scenario of \textit{green technologies} and \textit{environment-friendly} solutions. In fact, the partial regeneration of the energy that is usually dissipated by the service brake in conventional systems may allow impactful fuel economy strategies, thus reducing the fossil fuel demand and the consequent green-house gases (CO2) emissions. Another important advantage that such a system introduces is the reduced service brake wear. In fact, since during regenerative brakes an electric/hydraulic motor is used to slow down the vehicle in place of the conventional disk brake, this component will as well benefit from a longer lifetime. 
 
 \section{Implementation alternatives}
 
@@ -369,9 +370,9 @@ In addition, three more simplifying assumptions have been considered. In particu
 
 \subsection{Equivalent model}
 
-In order to focus on the kers' clutch engagement process, an equivalent model can be associated to the one of fig. \ref{model}. In particular, the aim of this kind of analysis is finding two equivalent inertias that are respectively reduced to the two shafts that are connected to the two different sides of the kers' clutch.
+In order to focus on the kers' clutch engagement process, an equivalent model can be associated to the one of fig. \ref{model}. In particular, the aim of this kind of analysis is finding two equivalent inertias that are respectively reduced to the two shafts that are connected to the two different sides of the kers' clutch (Fig. \ref{eq_model}).
 From now on, we'll address to these equivalent inertias as $J_{eq,v}$ and $J_{eq,k}$, where \textit{v} and \textit{k} stands respectively for vehicle and kers sides'.
-In other words, the target model can be as follows represented (Fig. \ref{eq_model}):
+In other words, the target model can be as follows represented:
 
 \begin{figure}[H]
 \centering
@@ -384,9 +385,9 @@ At this purpose, let's first of all consider all the kinematic constraints that 
 
 \begin{eqnarray}
 	\omega_{ck}&=&\tau_k \omega_f\\
-	\omega_s=&=&\tau_{cvt} \omega_{cv}\\
-	\omega_w&=&\tau_f \omega_s\\
-	\omega_s&=&\tau_{gb} \omega_e
+	\omega_s &=&\tau_{cvt} \omega_{cv}\\
+	\omega_w &=&\tau_f \omega_s\\
+	\omega_s &=&\tau_{gb} \omega_e
 \end{eqnarray}
 
 Those equalities yield
@@ -394,18 +395,149 @@ Those equalities yield
 \begin{equation}
 \omega_{cv}=\frac{\omega_w}{\tau_f*\tau_{cvt}} \Leftrightarrow \omega_{cv}=\frac{v}{\tau_f*\tau_{cvt}*R_w}\\
 \end{equation}
+\vspace{1mm}
+
+The overall vehicle kinetic energy can be written as
+
+\begin{align}
+T_{vehicle}&=\frac{1}{2}Mv^2+\frac{1}{2}J_e\omega_e^2+ \frac{1}{2}(4J_w\omega_w^2)+\frac{1}{2}J_c\omega_{cv}^2 \\
+	 &=\frac{1}{2}M(\tau_f\tau_{cvt}Rw)^2\omega_{cv}^2+\frac{1}{2}J_e\left(\frac{\tau_{cvt}}{\tau_{gb}}\right)^2\omega_{cv}^2+\frac{1}{2}\left[4J_w\left(\tau_f \tau_{cvt}\right)^2\right]\omega_{cv}^2+\frac{1}{2}J_c\ \omega_{cv}^2\\
+	 &=\frac{1}{2}\left[M(\tau_f\tau_{cvt}Rw)^2+J_e\left(\frac{\tau_{cvt}}{\tau_{gb}}\right)^2+4J_w\left(\tau_f \tau_{cvt}\right)^2+J_c\right] \omega_{cv}^2\\
+	 & \triangleq \frac{1}{2}J_{eq,v}\omega_{cv}^2 
+\end{align}
+\vspace{1mm}
+
+The same kind of analysis can be performed on the kers' side
+
+\begin{eqnarray}
+	T_{kers}&=&\frac{1}{2}J_c\omega_{ck}^2+\frac{1}{2}J_f\omega_f^2\\
+	&=&\frac{1}{2}J_c\omega_{ck}^2+\frac{1}{2}\frac{J_f}{\tau_k^2}\omega_{ck}^2
+\end{eqnarray}
+
+\begin{eqnarray}
+	&=&\frac{1}{2}\left(J_c+\frac{J_f}{\tau_k^2}\right)\omega_{ck}^2\\
+	&\triangleq & \frac{1}{2}J_{eq,k}\omega_{ck}^2
+\end{eqnarray}
 
 \section{Static analysis}
 
-The overall energy transfer process consists of two phases:
+The complete energy transfer process consists of two main consecutive phases:
 
 \begin{enumerate}
-\item KERS' clutch engagement
-\item KERS charge/discharge
+\item Kers' clutch engagement process
+\item Kers charge/discharge process
 \end{enumerate}
 
-The bulk of the energy amount 
+The bulk of the energy flow process occurs during the second phase, which therefore represents the main systems dynamics to be modelled.
+In order to give evidence of this result, we will first of all perform a static analysis of the clutch engagement process. In particular, with reference to the equivalent model derived in section 4.1, it is possible to model the kers' clutch engagement as an inelastic collision between the two rotating bodies $J_{eq,v}$ and $J_{eq,k}$. In particular, if we denote by $\omega_c$ the clutch angular velocity after the collision, then we can write the following angular momentum conservation law:
 
+\begin{equation}
+J_{eq,v}\omega_{cv}+J_{eq,k}\omega_{ck}=(J_{eq,v}+J_{eq,k})\omega_c\ \Rightarrow\ \omega_c= \frac{J_{eq,v}\omega_{cv}+J_{eq,k}\omega_{ck}}{J_{eq,v}+J_{eq,k}}\\
+\end{equation}  
+
+\subsection{Kers discharge}
+
+Let's first of all focus on the kers' discharge process, which takes place during a vehicle's acceleration event. For the sake of simplicity, suppose that the initial vehicle's velocity $v_0$ is zero (i.e. the vehicle is initially at standstill). The variation of the vehicle's kinetic energy due to the clutch engagement can be calculated as
+
+\begin{eqnarray}
+	\Delta E_{vehicle}&=&\frac{1}{2}Mv_f^2-\frac{1}{2}Mv_0^2\\
+	                  &=&\frac{1}{2}M(\tau_f \tau_{cvt}Rw)^2\omega_c^2-\frac{1}							  {2}Mv_0^2\\
+	                  &=&\frac{1}{2}M\left(\frac{J_{eq,v}\omega_{cv}+J_{eq,k}       					  \omega_{ck}}{J_{eq,v}+J_{eq,k}}\right)^2(\tau_f \tau_{cvt}						  Rw)^2-\frac{1}{2}Mv_0^2
+\end{eqnarray}  
+
+Letting $v_0=0$, we get
+
+\begin{eqnarray}
+\Delta E_{vehicle}&=&\frac{1}{2}M\left(\frac{J_{eq,k}}{J_{eq,v}+J_{eq,k}}								 \right)^2(\tau_f \tau_{cvt}Rw)^2\omega_{ck}^2\\
+                  &=&\frac{T_{0,k}}{J_f}M\left(\frac{J_{eq,k}}{J_{eq,v}+J_{eq,k}}					     \right)^2(\tau_f \tau_{cvt}Rw)^2 \tau_k^2
+\end{eqnarray}
+
+Where
+
+\begin{equation}
+T_{0,k} = \frac{1}{2}J_f\omega_{f,0}^2
+\end{equation}
+
+Under the aforementioned assumptions, the vehicle's kinetic energy variation can be therefore simply written as a linear function of the kers' initial kinetic energy. Once the vehicle's energy profiles have been computed (Fig.\ref{en_comp_acc}), the vehicle's velocity profiles can be as well derived as follows
+
+\begin{equation}
+\Delta v_{vehicle} = v_f = \sqrt{\frac{2\Delta E_{vehicle}}{M}}
+\end{equation}
+
+\begin{figure}[H]
+\captionsetup{font=small, justification=centering}
+\centering
+\includegraphics[width=.49\textwidth]{Images/Results_new/Univariate_SteadyState/en_comp_acc.eps}\hfill
+\includegraphics[width=.49\textwidth]{Images/Results_new/Univariate_SteadyState/vel_comp_acc.eps}
+\caption{Energy (left) and velocity (right) gained by the vehicle thanks to the kers' clutch engagement}
+\label{en_comp_acc}
+\end{figure}
+
+In particular, the above profiles have been calculated by plugging into (19) the values of the kers initial energy for all the possible initial flywheel's angular velocities in the interval $[0.3*\omega_f^{max}, \omega_f^{max}]$, where the maximum admissible value for the flywheel angular velocity has been set to $\omega_f^{max}=64500\ rpm$. This value is in general upper-limited by the characteristics of the material that the flywheel is made of. In fact, increasing the flywheel velocity beyond the critical stress levels that material can withstand could result in flywheel damage and destruction.\\ Furthermore, the curves are parametrized with respect to $\tau_{cvt,f}$. In other words, we assumed that, at the beginning of the process, $\tau_{cvt,0} = \tau_{min} = 0.4$ and we also assume that $\tau_{cvt}$ is let free to evolve during the engagement process up to its maximum admissible value $\tau_{cvt,f} = \tau_{max} = 2.5$. In this respect, all the quantities "\textit{before}" the collision are calculated with respect to $\tau_{cvt,0}$ and all the quantities "\textit{after}" the collision are parametrized with respect to $\tau_{cvt,f}$. However, the most convenient choice from the energy transfer efficiency point of view is to keep $\tau_{cvt,f} = \tau_{cvt,0} = \tau_{min}$ during the whole engagement transient. In fact, the aim of the clutch engagement process is in this case to dissipate a certain amount of the kers' kinetic energy in such a way to "\textit{enter}" the CVT's admissibility range. In other words, the flywheel speed has to be reduced in such a way that 
+
+\begin{eqnarray}
+\tau_{min}&\leq & \tau_{cvt} \left(= \frac{\omega_w}{\omega_f}\tau_f \tau_k\right)\leq \tau_{max}
+\end{eqnarray}
+          
+Once this condition is met the clutch is completely engaged (i.e. the slipping between the clutch disks is zero) and the real energy transfer process can take place: the $\tau_{cvt}$ is now let free to change and opposite angular accelerations of the vehicle wheel and flywheel are established, which allows the mechanical energy transfer between the two components to take place. This aspect will be further clarified during the dynamic analysis. According to (Fig.\ref{en_comp_acc}), the vehicle's velocity variation corresponding to a fully-charged flywheel connection is in the order of $[10^0]\ km/h$.\\ For completeness, the same analysis has been repeated by considering the energy transfer also as a function of each of the eight selectable ratios $\tau_k$ of the 2x2x2 CFT. In particular, in Fig. \ref{en_comp_acc_3D} the results obtained for $\omega_{f,0} = \omega_f^{max}$ are reported. 
+
+\begin{figure}[H]
+\captionsetup{font=small, justification=centering}
+\centering
+\includegraphics[width=.7\textwidth]{Images/Results_new/Univariate_SteadyState/en_comp_acc_3D.eps}
+\caption{Energy gained by the vehicle thanks to the kers' clutch engagement}
+\label{en_comp_acc_3D}
+\end{figure}    
+
+This kind of bivariate analysis shows that the most convenient choice for $\tau_k$ is in this case $tau_{k,max}$. Note that, differently from $\tau_{cvt}$, $\tau_k$ remains fixed during the whole energy transfer process.
+
+\subsection{Kers charge}
+
+A similar study can be performed in the opposite situation, to which we've been referring as \textit{regenerative breaking}.\\Supposing now that $\omega_{f,0}=0$, we get
+
+\begin{eqnarray}
+\Delta E_{kers}&=&\frac{1}{2}J_f\omega_{f,f}^2\\
+               &=&\frac{1}{2}J_f\frac{\omega_{c}^2}{\tau_k^2}\\
+               &=&\frac{1}{2}J_f\left(\frac{J_{eq,v}}{J_{eq,v}+J_{eq,k}}					          \right)^2\frac{\omega_{cv}^2}{\tau_k^2}\\               
+               &=&\frac{T_{0,v}}{M}J_f\left(\frac{J_{eq,v}}{J_{eq,v}+J_{eq,k}}					     \right)^2\left(\frac{1}{\tau_f \tau_{cvt}Rw}\right)^2\frac{1}    						 {\tau_k^2} 
+\end{eqnarray}
+
+Where
+
+\begin{equation}
+T_{0,v} = \frac{1}{2}Mv^2
+\end{equation} 
+
+Once again the kers' speed variation can be calculated as 
+
+
+\begin{equation}
+\Delta \omega_{kers} = \omega f,f = \sqrt{\frac{2\Delta E_{kers}}{J_f}}
+\end{equation}
+
+\begin{figure}[H]
+\captionsetup{font=small, justification=centering}
+\centering
+\includegraphics[width=.49\textwidth]{Images/Results_new/Univariate_SteadyState/en_comp_dec.eps}\hfill
+\includegraphics[width=.49\textwidth]{Images/Results_new/Univariate_SteadyState/vel_comp_dec.eps}
+\caption{Energy (left) and velocity (right) gained by the kers thanks to the kers' clutch engagement}
+\label{en_comp_dec}
+\end{figure}
+
+The energy and velocity curves are this time computed considering all possible initial vehicle speeds in the range $[0, 360]\ Km/h$. For the same reasons above explained, the clutch engagement process should be this time carried out keeping $\tau_{cvt}$ constant at its maximum value $\tau_{cvt,max}$. The convenience of such a choice will be even more evident after the dynamic analysis of the process (section 6). In fact, as it can be noted in Fig. \ref{en_comp_dec}, if the $\tau_{cvt}$ excursion is fully exploited during the clutch engagement process, the kers will at most benefit from a 20-25\% of re-charge. Instead, it will be showed that the same $\tau_{cvt}$ excursion performed after that the clutch is fully engaged will allow a complete kers re-charge (starting from the same vehicle initial speed).
+A similar bivariate analysis to the one provided for the discharge process has been in this case as well performed:
+
+\begin{figure}[H]
+\captionsetup{font=small, justification=centering}
+\centering
+\includegraphics[width=.7\textwidth]{Images/Results_new/Univariate_SteadyState/en_comp_dec_3D.eps}
+\caption{Energy gained by the kers thanks to the kers' clutch engagement}
+\label{en_comp_dec_3D}
+\end{figure}  
+
+The obtained profiles show that the best-performing choice for the 2x2x2 CFT ratio is during the kers re-charge is $\tau_k=\tau_{k,min}$.
+
+\section{Dynamic analysis}
 %Codice per inserire le figure
 \begin{comment}
 \begin{figure}[H]
