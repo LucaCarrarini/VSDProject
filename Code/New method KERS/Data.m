@@ -33,7 +33,8 @@ tau5 = 1/1.03;
 tau6 = 1/0.84;
 tau7 = 1/0.69;
 tauf = 1/4.38;
-tauk = 1/12;
+tauk_charge = 1/12;
+tauk_discharge = 11*tauk_charge;
 
 Wmax = 942.4; %[rad/s]
 V1max = tauf*tau1*Rw*Wmax; %[m/s]
@@ -46,9 +47,20 @@ V7max = tauf*tau7*Rw*Wmax; %[m/s]
 
 % Efficiency
 eta = 1;
-in_cond = 0.00001/(3.6*Rw);
 
-Tmax = 1780; %5*(0.1)^2*Delta(omegaf)/(4*9.55)
-Tmax2 = -5504; %600*27.8*0.33 
+%% KERS clutch
 
-tau_trasm = 1/(tauk*tauf);
+R_clutch = 0.18;
+mi_d = 0.4;
+k = 4/3*mi_d*R_clutch;
+Fn_max = 10000; % [N]
+
+% Time at which the kers discharge starts
+time_push = 25; % [sec]
+
+Tmax = 240; %5*(0.1)^2*Delta(omegaf)/(4*9.55)
+Tmax2 = -2457; %700*9.8*0.33 
+
+tau_trasm_charge = 1/(tauk_charge*tauf);
+%tau_trasm_discharge = tau_trasm_charge/10;
+tau_trasm_discharge = 1/(tauk_discharge*tauf);
