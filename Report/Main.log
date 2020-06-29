@@ -1,15 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  23 JUN 2020 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.5.25)  29 JUN 2020 18:17
 entering extended mode
 **./Main.tex
 (Main.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-04-06>
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ar
-ticle.cls"
+L3 programming layer <2020-05-15>
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\si
-ze11.clo"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo"
 File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -23,25 +20,22 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-)
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\in
-putenc.sty"
+) ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel
-\babel.sty"
-Package: babel 2020/04/28 3.43 The Babel package
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel
-\babel.def"
-File: babel.def 2020/04/28 3.43 Babel common definitions
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/05/13 3.44 The Babel package
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/05/13 3.44 Babel common definitions
 \babel@savecnt=\count175
 \U@D=\dimen135
+\l@babelnohyphens=\language78
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel
-\txtbabel.def")
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
+ef")
 \bbl@readstream=\read2
 )
 \bbl@dirlevel=\count176
@@ -49,37 +43,33 @@ File: babel.def 2020/04/28 3.43 Babel common definitions
 *************************************
 * Local config file bblopts.cfg used
 *
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\b
-blopts.cfg"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-e
-nglish\english.ldf"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english\engl
+ish.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language76) on input line 105.
+(babel)             (\language72) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language76) on input line 108.
+(babel)             (\language72) on input line 108.
 ))
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspac
-e\setspace.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.
+sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtoo
-ls\mathtools.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtool
+s.sty"
 Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s\keyval.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\c
-alc.sty"
+) ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count177
 \calc@Bcount=\count178
@@ -92,34 +82,34 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count179
 \calc@Cskip=\skip51
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtoo
-ls\mhsetup.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.
+sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath
-\amsmath.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
+y"
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath
-\amstext.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
+y"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath
-\amsgen.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen138
 ))
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath
-\amsbsy.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen139
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath
-\amsopn.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
+"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count180
@@ -176,8 +166,8 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@box=\box47
 \xmathstrut@dim=\dimen154
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfont
-s\amsfonts.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
+sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -185,8 +175,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\
-amsthm.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -198,14 +187,12 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip58
 \dth@everypar=\toks28
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfont
-s\amssymb.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.s
+ty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 \c@theorem=\count193
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\b
-m.sty"
+ ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\bm.sty"
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
@@ -213,8 +200,8 @@ Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktab
-s\booktabs.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
+sty"
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen155
 \lightrulewidth=\dimen156
@@ -234,13 +221,13 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count197
 \@thisrulewidth=\dimen167
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption
-\caption.sty"
-Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
+Package: caption 2020/05/10 v3.4j Customizing captions (AR)
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption
-\caption3.sty"
-Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
+Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen168
 \captionmargin@=\dimen169
@@ -254,33 +241,31 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count198
 \c@continuedfloat=\count199
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s\graphicx.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s\graphics.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s\trig.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s-cfg\graphics.cfg"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s-def\pdftex.def"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\
-subfig.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@KVtest=\count266
 \sf@farskip=\skip59
@@ -295,9 +280,7 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@lotdepth=\count272
 \sf@top=\skip62
 \sf@bottom=\skip63
-)
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\f
-loat.sty"
+) ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count273
 \float@exts=\toks29
@@ -305,123 +288,120 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box49
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/comment
-\comment.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/comment\comment.st
+y"
 \CommentStream=\write3
  Excluding comment 'comment')
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperre
-f\hyperref.sty"
-Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.
+sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcm
-ds\ltxcmds.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.
+sty"
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex
-\iftex.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexc
-mds\pdftexcmds.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexc
+mds.sty"
 Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwa
-rerr\infwarerr.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwar
+err.sty"
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvset
-keys\kvsetkeys.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetk
+eys.sty"
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdef
-inekeys\kvdefinekeys.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\kvd
+efinekeys.sty"
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfes
-cape\pdfescape.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfesc
+ape.sty"
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor
-\hycolor.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hycolor.st
+y"
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxm
-acro\letltxmacro.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\letltx
+macro.sty"
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook
-\auxhook.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxhook.st
+y"
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptio
-ns\kvoptions.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoption
+s.sty"
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen178
 \Hy@linkcounter=\count274
 \Hy@pagecounter=\count275
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperre
-f\pd1enc.def"
-File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.de
+f"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intca
-lc\intcalc.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\intcalc.
+sty"
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexc
-mds\etexcmds.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexcmd
+s.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count276
-Package hyperref Info: Hyper figures OFF on input line 4547.
-Package hyperref Info: Link nesting OFF on input line 4552.
-Package hyperref Info: Hyper index ON on input line 4555.
-Package hyperref Info: Plain pages OFF on input line 4562.
-Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4800.
+Package hyperref Info: Bookmarks ON on input line 4717.
 \c@Hy@tempcnt=\count277
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url
-.sty"
+ ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5159.
+LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen179
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitse
-t\bitset.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.st
+y"
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigin
-tcalc\bigintcalc.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigin
+tcalc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count278
 \Field@Width=\dimen180
 \Fld@charsize=\dimen181
-Package hyperref Info: Hyper figures OFF on input line 6430.
-Package hyperref Info: Link nesting OFF on input line 6435.
-Package hyperref Info: Hyper index ON on input line 6438.
-Package hyperref Info: backreferencing OFF on input line 6445.
-Package hyperref Info: Link coloring OFF on input line 6450.
-Package hyperref Info: Link coloring with OCG OFF on input line 6455.
-Package hyperref Info: PDF/A mode OFF on input line 6460.
-LaTeX Info: Redefining \ref on input line 6500.
-LaTeX Info: Redefining \pageref on input line 6504.
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbeg
-shi\atbegshi.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegshi\atbegsh
+i.sty"
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
 \Hy@abspage=\count279
@@ -430,24 +410,24 @@ Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperre
-f\hpdftex.def"
-File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.d
+ef"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/atverye
-nd\atveryend.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/atveryend\atveryen
+d.sty"
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
 \Fld@listcount=\count282
 \c@bookmark@seq@number=\count283
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfi
-lecheck\rerunfilecheck.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\rer
+unfilecheck.sty"
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniqu
-ecounter\uniquecounter.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\un
+iquecounter.sty"
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -459,12 +439,12 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 46.
 Package hyperref Info: Option `linktocpage' set `true' on input line 46.
 Package hyperref Info: Option `pageanchor' set `true' on input line 46.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometr
-y\geometry.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex
-\ifvtex.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
+"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count284
@@ -480,36 +460,38 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen189
 \Gm@dimlist=\toks31
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometr
-y\geometry.cfg"))
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\
-lipsum.sty"
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kerne
-l\expl3.sty"
-Package: expl3 2020-04-06 L3 programming layer (loader) 
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+cfg"))
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty
+"
+Package: expl3 2020-05-15 L3 programming layer (loader) 
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backe
-nd\l3backend-pdfmode.def"
-File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-pdfmode.def"
+File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count287
 \l__pdf_internal_box=\box50
 ))
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packa
-ges/xparse\xparse.sty"
-Package: xparse 2020-03-06 L3 Experimental document command parser
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
+xparse.sty"
+Package: xparse 2020-05-15 L3 Experimental document command parser
+
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
+xparse-generic.tex"
 \l__xparse_current_arg_int=\count288
 \g__xparse_grabber_int=\count289
 \l__xparse_m_args_int=\count290
 \l__xparse_v_nesting_int=\count291
-)
+))
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\
-lipsum.ltd.tex"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.
+tex"
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhd
-r\fancyhdr.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.
+sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip65
@@ -522,8 +504,8 @@ s
 \f@nch@O@olf=\skip72
 \f@nch@O@orf=\skip73
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvr
-b\fancyvrb.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.
+sty"
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count292
 \FV@InFile=\read3
@@ -532,12 +514,11 @@ Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
 \FV@StepNumber=\count294
 \FV@OutFile=\write4
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\
-xcolor.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s-cfg\color.cfg"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -551,8 +532,8 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphic
-s\dvipsnam.def"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\dvipsnam.
+def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )) (Main.aux)
 \openout1 = `Main.aux'.
@@ -579,8 +560,8 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/
-mkii\supp-pdf.mkii"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count295
 \scratchdimen=\dimen190
@@ -594,12 +575,11 @@ mkii\supp-pdf.mkii"
 \makeMPintoPDFobject=\count300
 \everyMPtoPDFconversion=\toks33
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopd
-f-pkg\epstopdf-base.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grfext\
-grfext.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/grfext\grfext.sty"
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -612,16 +592,16 @@ G,.JBIG2,.JB2,.eps]
 \AtBeginShipoutBox=\box53
 Package hyperref Info: Link coloring ON on input line 89.
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperre
-f\nameref.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
+ty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcoun
-t\refcount.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.
+sty"
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/generic/getti
-tlestring\gettitlestring.sty"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\g
+ettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count301
@@ -670,16 +650,12 @@ LaTeX Info: Redefining \nameref on input line 89.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
 
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfont
-s\umsa.fd"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
 
-
-("C:\Users\Federico Kieffer\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfont
-s\umsb.fd"
+("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (Main.toc)
 \tf@toc=\write6
@@ -687,7 +663,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-{C:/Users/Federico Kieffer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/andre/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <Images/State_of_the_art/Mechanical_KERS.png, id=123, 690.58pt x 521.95pt>
 File: Images/State_of_the_art/Mechanical_KERS.png Graphic file (type png)
 <use Images/State_of_the_art/Mechanical_KERS.png>
@@ -812,11 +788,11 @@ Package pdftex.def Info: Images/Model/Equivalent_model.jpg  used on input line
  [16 <./Images/Model/Equivalent_model.jpg>] [17]
 Package epstopdf Info: Source file: <Images/Results_new/Univariate_SteadyState/
 en_comp_acc.eps>
-(epstopdf)                    date: 2020-06-23 11:59:35
-(epstopdf)                    size: 39905 bytes
+(epstopdf)                    date: 2020-06-23 18:58:35
+(epstopdf)                    size: 41088 bytes
 (epstopdf)             Output file: <Images/Results_new/Univariate_SteadyState/
 en_comp_acc-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-06-23 12:11:42
+(epstopdf)                    date: 2020-06-23 18:58:35
 (epstopdf)                    size: 15123 bytes
 (epstopdf)             Command: <epstopdf --outfile=Images/Results_new/Univaria
 te_SteadyState/en_comp_acc-eps-converted-to.pdf Images/Results_new/Univariate_S
@@ -839,11 +815,11 @@ eps-converted-to.pdf  used on input line 470.
 (pdftex.def)             Requested size: 209.1301pt x 156.85033pt.
 Package epstopdf Info: Source file: <Images/Results_new/Univariate_SteadyState/
 vel_comp_acc.eps>
-(epstopdf)                    date: 2020-06-23 11:56:53
-(epstopdf)                    size: 43435 bytes
+(epstopdf)                    date: 2020-06-23 18:58:35
+(epstopdf)                    size: 44691 bytes
 (epstopdf)             Output file: <Images/Results_new/Univariate_SteadyState/
 vel_comp_acc-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-06-23 12:11:43
+(epstopdf)                    date: 2020-06-23 18:58:35
 (epstopdf)                    size: 16565 bytes
 (epstopdf)             Command: <epstopdf --outfile=Images/Results_new/Univaria
 te_SteadyState/vel_comp_acc-eps-converted-to.pdf Images/Results_new/Univariate_
@@ -869,16 +845,16 @@ df> <./Images/Results_new/Univariate_SteadyState/vel_comp_acc-eps-converted-to.
 pdf>]
 Package epstopdf Info: Source file: <Images/Results_new/Univariate_SteadyState/
 en_comp_acc_3D.eps>
-(epstopdf)                    date: 2020-06-23 12:09:18
-(epstopdf)                    size: 73581 bytes
+(epstopdf)                    date: 2020-06-23 18:58:35
+(epstopdf)                    size: 74457 bytes
 (epstopdf)             Output file: <Images/Results_new/Univariate_SteadyState/
 en_comp_acc_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-06-23 12:11:44
+(epstopdf)                    date: 2020-06-23 18:58:35
 (epstopdf)                    size: 112992 bytes
 (epstopdf)             Command: <epstopdf --outfile=Images/Results_new/Univaria
 te_SteadyState/en_comp_acc_3D-eps-converted-to.pdf Images/Results_new/Univariat
 e_SteadyState/en_comp_acc_3D.eps>
-(epstopdf)             \includegraphics on input line 487.
+(epstopdf)             \includegraphics on input line 490.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -886,23 +862,23 @@ pdfTeX warning: pdflatex (file ./Images/Results_new/Univariate_SteadyState/en_c
 omp_acc_3D-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but a
 t most version <1.5> allowed
 <Images/Results_new/Univariate_SteadyState/en_comp_acc_3D-eps-converted-to.pdf,
- id=307, 421.575pt x 316.18124pt>
+ id=309, 421.575pt x 316.18124pt>
 File: Images/Results_new/Univariate_SteadyState/en_comp_acc_3D-eps-converted-to
 .pdf Graphic file (type pdf)
 <use Images/Results_new/Univariate_SteadyState/en_comp_acc_3D-eps-converted-to.
 pdf>
 Package pdftex.def Info: Images/Results_new/Univariate_SteadyState/en_comp_acc_
-3D-eps-converted-to.pdf  used on input line 487.
+3D-eps-converted-to.pdf  used on input line 490.
 (pdftex.def)             Requested size: 234.73654pt x 176.05678pt.
 [19 <./Images/Results_new/Univariate_SteadyState/en_comp_acc_3D-eps-converted-t
 o.pdf>]
 Package epstopdf Info: Source file: <Images/Results_new/Univariate_SteadyState/
 en_comp_dec.eps>
-(epstopdf)                    date: 2020-06-23 11:49:57
-(epstopdf)                    size: 35294 bytes
+(epstopdf)                    date: 2020-06-23 18:58:35
+(epstopdf)                    size: 36141 bytes
 (epstopdf)             Output file: <Images/Results_new/Univariate_SteadyState/
 en_comp_dec-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-06-23 12:11:45
+(epstopdf)                    date: 2020-06-23 18:58:35
 (epstopdf)                    size: 12777 bytes
 (epstopdf)             Command: <epstopdf --outfile=Images/Results_new/Univaria
 te_SteadyState/en_comp_dec-eps-converted-to.pdf Images/Results_new/Univariate_S
@@ -915,7 +891,7 @@ pdfTeX warning: pdflatex (file ./Images/Results_new/Univariate_SteadyState/en_c
 omp_dec-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at m
 ost version <1.5> allowed
 <Images/Results_new/Univariate_SteadyState/en_comp_dec-eps-converted-to.pdf, id
-=321, 421.575pt x 316.18124pt>
+=323, 421.575pt x 316.18124pt>
 File: Images/Results_new/Univariate_SteadyState/en_comp_dec-eps-converted-to.pd
 f Graphic file (type pdf)
 <use Images/Results_new/Univariate_SteadyState/en_comp_dec-eps-converted-to.pdf
@@ -925,11 +901,11 @@ eps-converted-to.pdf  used on input line 521.
 (pdftex.def)             Requested size: 209.1301pt x 156.85033pt.
 Package epstopdf Info: Source file: <Images/Results_new/Univariate_SteadyState/
 vel_comp_dec.eps>
-(epstopdf)                    date: 2020-06-23 11:52:29
-(epstopdf)                    size: 39972 bytes
+(epstopdf)                    date: 2020-06-23 18:58:35
+(epstopdf)                    size: 41164 bytes
 (epstopdf)             Output file: <Images/Results_new/Univariate_SteadyState/
 vel_comp_dec-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-06-23 12:11:46
+(epstopdf)                    date: 2020-06-23 18:58:35
 (epstopdf)                    size: 15178 bytes
 (epstopdf)             Command: <epstopdf --outfile=Images/Results_new/Univaria
 te_SteadyState/vel_comp_dec-eps-converted-to.pdf Images/Results_new/Univariate_
@@ -942,7 +918,7 @@ pdfTeX warning: pdflatex (file ./Images/Results_new/Univariate_SteadyState/vel_
 comp_dec-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at 
 most version <1.5> allowed
 <Images/Results_new/Univariate_SteadyState/vel_comp_dec-eps-converted-to.pdf, i
-d=322, 421.575pt x 316.18124pt>
+d=324, 421.575pt x 316.18124pt>
 File: Images/Results_new/Univariate_SteadyState/vel_comp_dec-eps-converted-to.p
 df Graphic file (type pdf)
 <use Images/Results_new/Univariate_SteadyState/vel_comp_dec-eps-converted-to.pd
@@ -955,11 +931,11 @@ df> <./Images/Results_new/Univariate_SteadyState/vel_comp_dec-eps-converted-to.
 pdf>]
 Package epstopdf Info: Source file: <Images/Results_new/Univariate_SteadyState/
 en_comp_dec_3D.eps>
-(epstopdf)                    date: 2020-06-16 13:13:12
-(epstopdf)                    size: 78564 bytes
+(epstopdf)                    date: 2020-06-22 11:03:27
+(epstopdf)                    size: 79501 bytes
 (epstopdf)             Output file: <Images/Results_new/Univariate_SteadyState/
 en_comp_dec_3D-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-06-21 20:49:02
+(epstopdf)                    date: 2020-06-22 11:03:27
 (epstopdf)                    size: 134506 bytes
 (epstopdf)             Command: <epstopdf --outfile=Images/Results_new/Univaria
 te_SteadyState/en_comp_dec_3D-eps-converted-to.pdf Images/Results_new/Univariat
@@ -972,7 +948,7 @@ pdfTeX warning: pdflatex (file ./Images/Results_new/Univariate_SteadyState/en_c
 omp_dec_3D-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but a
 t most version <1.5> allowed
 <Images/Results_new/Univariate_SteadyState/en_comp_dec_3D-eps-converted-to.pdf,
- id=342, 421.575pt x 316.18124pt>
+ id=344, 421.575pt x 316.18124pt>
 File: Images/Results_new/Univariate_SteadyState/en_comp_dec_3D-eps-converted-to
 .pdf Graphic file (type pdf)
 <use Images/Results_new/Univariate_SteadyState/en_comp_dec_3D-eps-converted-to.
@@ -990,40 +966,38 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 625.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 625.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 625.
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 37E27B1250480C3A1012DE7856064165;1614.
+(rerunfilecheck)             Checksum: 17C03668BF8B910B46906BE41100B446;1614.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 625.
  ) 
 Here is how much of TeX's memory you used:
- 11484 strings out of 480971
- 191260 string characters out of 2893968
- 624303 words of memory out of 3000000
- 26950 multiletter control sequences out of 15000+200000
+ 11534 strings out of 480799
+ 190147 string characters out of 2895784
+ 627463 words of memory out of 3000000
+ 27187 multiletter control sequences out of 15000+200000
  544149 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,45p,3252b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Federico Kieffer\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
-/ec/dpi600\tcrm0800.pk> <C:\Users\Federico Kieffer\AppData\Local\MiKTeX\2.9\fon
-ts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/Federico Kieffer/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/F
-ederico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Federico Kieffer/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Federico
- Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Federico Kieffer/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/U
-sers/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr8.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Federico Kieffer/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Feder
-ico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb><C:/Users/Federico Kieffer/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb>
-Output written on Main.pdf (22 pages, 2039744 bytes).
+ 38i,12n,45p,3252b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\andre\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm0800.pk> <C:\Users\andre\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm1095.pk><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/andre/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/andre/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/U
+sers/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/andre/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/andre/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/an
+dre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb>
+Output written on Main.pdf (22 pages, 2039291 bytes).
 PDF statistics:
- 437 PDF objects out of 1000 (max. 8388607)
+ 439 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
