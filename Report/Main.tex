@@ -538,6 +538,70 @@ A similar bivariate analysis to the one provided for the discharge process has b
 The obtained profiles show that the best-performing choice for the 2x2x2 CFT ratio during the KERS re-charge  is $\tau_k=\tau_{k,min}$.
 
 \section{Dynamic analysis}
+
+In order to understand in a proper way the dynamics of the regenerative braking, the lagrangian approach has been taken. It has many advantages with respect to the newton laws formulation, because it relies on the definition of generalized coordinates and on the expression of the total energy of the system which is evolving in time. 
+
+This aspect fits perfectly in the case of a KERS system, because the system is characterized just by the kinetic energy of the flywheel and the wheels. No potential field must be introduced, since it is assumed that the vehicle is traveling on a flat road (as it happens in F1 races).
+
+\subsection{Lagrangian mechanics}
+
+The lagrangian mechanics is an analytic way of describing the motion of a mechanical system using the results of calculus of variation. 
+
+First of all, one defines a set of generalized coordinates $\bm{q} = [q_1, q_2, \dots, q_N]$ and the derivative $\dot{\bm{q}}$. This two variables describe in a unique way the motion of the system. The second step is to define the so--called Lagrangian
+\begin{equation}
+L(\bm{q},\dot{\bm{q}}) = T(\bm{q},\dot{\bm{q}}) - U(\bm{q})
+\label{lagrangian}
+\end{equation}
+where $T(\cdot)$ represents the kinetic energy of the system, which depends only on the generalized velocities, and $U(\cdot)$ indicates the potential energy.
+
+In order to pass from the function $L$ to the equation of motion, one has to minimize the so called action, which is a functional of the following shape
+\begin{equation}
+S = \int_{t_1}^{t_2} L(\bm{q},\dot{\bm{q}}) \, dt
+\label{action_functional}
+\end{equation}
+where $t_1, t_2$ are the instants at which the evolution starts and ends, respectively.
+
+A general result in physics states that, in general, in a conservative field a particle will travel its path minimizing the action. This means that the dynamics of a certain system subject only to conservative forces respect the minimum action principle. From a mathematical point of view, it corresponds to find the minimum of the functional $S$, that is
+\begin{equation}
+dS = 0.
+\label{minimum_action}
+\end{equation}
+
+Due to the definition of $S$, the~\eqref{minimum_action} is equivalent to write
+\[
+dS = \int_{t_1}^{t_2} \Biggl( \dfrac{\partial L}{\partial \bm{q}}d\bm{q} + \dfrac{\partial L}{\partial \dot{\bm{q}}}d\dot{\bm{q}}\Biggr) \, dt.
+\]
+
+After applying integration by parts, the problem reduces to solving the Euler--Lagrange equations, i.e.
+\begin{equation}
+\dfrac{d}{dt} \dfrac{\partial L}{\partial \dot{\bm{q}}} - \dfrac{\partial L}{\partial \bm{q}} = 0.
+\label{euler_lagrange}
+\end{equation}
+
+Once having computed these equations\footnote{The number of Euler--Lagrange equations is exactly equal to the dimension of $\bm{q}$, i.e. each generalized coordinate is characterized by its own dynamics and it will evolve according to the conservative forces to which it is subject to.} one gets the dynamics of the system subject to the conservative forces. Since this approach does not take into account other contributions coming from non--conservative fields (friction, dissipations, external inputs or disturbances) it is necessary to introduce these elements (if any) directly as forces or torques. Note that modeling these quantities can be very difficult from a physical point of view and in many cases requires a lot of experiments, ending up sometimes with very complicated mathematical expressions.
+
+Depending on the nature of the physical system, the lagrangian mechanics will formulate torque equations for rotational elements (like a flywheel) and force equations for translational elements (like a mass changing its position in the space).
+
+\subsection{KERS dynamics}
+
+Using the lagrangian mechanics, the mathematical model of a KERS system has been built. This model needs to take into account the motion of the flywheel and the vehicle itself. Having this in mind, a straightforward choice is to pick $\omega_f$ and $\omega_w$ as generalized coordinates. In fact the system can be fully described using these two quantities, since the angular velocities of the other components can be obtained starting from the aforementioned two with some manipulations involving the transmission ratios and the efficiency. 
+
+Due to the hypothesis of flat road, the whole system does not have either mechanical potential energy. So the lagrangian is given by the two kinetic energy contibutions:
+\begin{equation}
+L = T_{\textup{vehicle}} + T_{\textup{flywheel}} = \dfrac{1}{2}J_{eq}\omega_w^2 + \dfrac{1}{2}J_f\omega_f^2. 
+\label{lagrangian_kers}
+\end{equation}
+
+As already explained, this particular lagrangian will result into two torque equations which will describe the dynamics of the KERS system.
+
+Applying~\eqref{euler_lagrange} to~\eqref{lagrangian_kers}, one gets the two equations
+\begin{equation}
+\begin{split}
+J_{eq} \dot{\omega}_w & = 0 \\
+J_f \dot{\omega}_f & = 0
+\end{split}
+\end{equation}   
+
 %Codice per inserire le figure
 \begin{comment}
 \begin{figure}[H]
