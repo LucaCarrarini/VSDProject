@@ -22,3 +22,6 @@
 \contentsline {section}{\numberline {6}Dynamic analysis}{22}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Lagrangian mechanics}{22}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}KERS dynamics}{24}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}KERS charge}{24}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}KERS Discharge}{25}{subsubsection.6.2.2}%
+\contentsline {section}{\numberline {7}Simulation and Results}{27}{section.7}%

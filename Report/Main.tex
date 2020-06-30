@@ -539,7 +539,7 @@ The obtained profiles show that the best-performing choice for the 2x2x2 CFT rat
 
 \section{Dynamic analysis}
 
-In order to understand in a proper way the dynamics of the regenerative braking, the lagrangian approach has been taken. It has many advantages with respect to the newton laws formulation, because it relies on the definition of generalized coordinates and on the expression of the total energy of the system which is evolving in time. 
+In order to understand in a proper way the dynamics of the regenerative braking, the lagrangian approach has been taken. It has many advantages with respect to the Newton laws formulation, because it relies on the definition of generalized coordinates and on the expression of the total energy of the system which is evolving in time. 
 
 This aspect fits perfectly in the case of a KERS system, because the system is characterized just by the kinetic energy of the flywheel and the wheels. No potential field must be introduced, since it is assumed that the vehicle is traveling on a flat road (as it happens in F1 races).
 
@@ -547,12 +547,12 @@ This aspect fits perfectly in the case of a KERS system, because the system is c
 
 The lagrangian mechanics is an analytic way of describing the motion of a mechanical system using the results of calculus of variation. 
 
-First of all, one defines a set of generalized coordinates $\bm{q} = [q_1, q_2, \dots, q_N]$ and the derivative $\dot{\bm{q}}$. This two variables describe in a unique way the motion of the system. The second step is to define the so--called Lagrangian
+First of all, one defines a set of generalized coordinates $\bm{q} = [q_1, q_2, \dots, q_N]$ and the derivative $\dot{\bm{q}}$. These two variables describe in a unique way the motion of the system. The second step is to define the so--called Lagrangian
 \begin{equation}
 L(\bm{q},\dot{\bm{q}}) = T(\bm{q},\dot{\bm{q}}) - U(\bm{q})
 \label{lagrangian}
 \end{equation}
-where $T(\cdot)$ represents the kinetic energy of the system, which depends only on the generalized velocities, and $U(\cdot)$ indicates the potential energy.
+where $T(\cdot)$ represents the kinetic energy of the system, and $U(\cdot)$ indicates the potential energy.
 
 In order to pass from the function $L$ to the equation of motion, one has to minimize the so called action, which is a functional of the following shape
 \begin{equation}
@@ -584,9 +584,9 @@ Depending on the nature of the physical system, the lagrangian mechanics will fo
 
 \subsection{KERS dynamics}
 
-Using the lagrangian mechanics, the mathematical model of a KERS system has been built. This model needs to take into account the motion of the flywheel and the vehicle itself. Having this in mind, a straightforward choice is to pick $\omega_f$ and $\omega_w$ as generalized coordinates. In fact the system can be fully described using these two quantities, since the angular velocities of the other components can be obtained starting from the aforementioned two with some manipulations involving the transmission ratios and the efficiency. 
+Using the lagrangian mechanics, the mathematical model of a KERS system has been built. This model needs to take into account the motion of the flywheel and the vehicle itself. Having this in mind, a straightforward choice is to pick $\omega_f$ and $\omega_w$ as generalized coordinates. Indeed, the system can be fully described using these two quantities, since the angular velocities of the other components can be obtained starting from the aforementioned two with some manipulations involving the transmission ratios and the efficiency. 
 
-Due to the hypothesis of flat road, the whole system does not have either mechanical potential energy. So the lagrangian is given by the two kinetic energy contibutions:
+Under the hypothesis of flat road, the whole system does not have mechanical potential energy. So the lagrangian is given by the two kinetic energy contributions:
 \begin{equation}
 L = T_{\textup{vehicle}} + T_{\textup{flywheel}} = \dfrac{1}{2}J_{eq}\omega_w^2 + \dfrac{1}{2}J_f\omega_f^2. 
 \label{lagrangian_kers}
@@ -597,10 +597,135 @@ As already explained, this particular lagrangian will result into two torque equ
 Applying~\eqref{euler_lagrange} to~\eqref{lagrangian_kers}, one gets the two equations
 \begin{equation}
 \begin{split}
-J_{eq} \dot{\omega}_w & = 0 \\
-J_f \dot{\omega}_f & = 0
+J_{eq}\, \dot{\omega}_w & = 0 \\
+J_f\, \dot{\omega}_f & = 0.
 \end{split}
-\end{equation}   
+\label{free_dynamics}
+\end{equation}
+
+Now it is necessary to introduce the non--conservative torques, which will complete the dynamics of the regenerative braking. To do this, it is needed to split the model according to the phase in which the KERS is used.
+
+\subsubsection{KERS charge}
+
+In the charge phase, the KERS brakes the vehicle, which is traveling at a certain speed $v_0$. This means that the clutch engages the flywheel which will absorb the kinetic energy lost by the vehicle by changing the transmission ratio of the Torotrak, which from now on will be denoted simply as $\tau$. Since $\tau = \dfrac{\omega_w}{\omega_f \tau_f \tau_k}$, during the charge $\tau$ will decrease and at the very beginning of the process will be saturated at his maximum value $\tau_{max}$, since the difference between the two angular velocities is too big, especially when the flywheel is at rest ($\omega_f = 0$ [rpm]). During the amount of time in which $\tau = \tau_{max}$ the clutch engages the flywheel with slipping: the clutch engagement can be exploited to reduce the transient of the charge by using an active element (actuator) which should be able to vary the normal force $F_N$ exerted on the clutch plates. The flywheel will be ruled out when it reaches the maximum velocity or when $\tau = \tau_{min}$, i.e. the CVT is not able to transfer the energy from the vehicle to the flywheel.
+
+Having in mind the physics of the system, the non--conservative contributions to be included are:
+\begin{itemize}
+\item the braking torque $T_b$. It is assumed that the braking action is abrupt, and so it is computed as the weight unloaded on the wheels (a constant signal acting during the whole dynamics)
+\begin{equation}
+T_b = - 0.9 M g R_w; 
+\label{braking_torque}
+\end{equation}
+    
+\item the clutch engagement slipping torque $T_{cl}$. It contributes to the dynamics only when $\tau = \tau_{max}$: afterwards, it is zeroed since the clutch is completely engaged. It can be expressed as a function of the normal force applied to the plates in the following way \cite{clutch}
+\begin{equation}
+T_{cl} = kF_N \textup{sgn} (\omega_{cv} - \omega_{ck})
+\label{clutch_torque}
+\end{equation}
+where $k = \frac{4}{3}R_{cl} \mu_d$ is the equivalent clutch radius, $\mu_d$ is the dynamic friction coefficient, $R_{cl}$ is the radius of the clutch plates, and, as already said, $F_N$ is the normal force applied to the clutch plates, which in the case of passive process, is a constant fixed by the manufacturer;
+\item the aerodynamic torque which decelerates the vehicle $T_{aero}$. It has a standard expression and it depends on the air density $\rho$, the surface exposed $S_f$ and the drag coefficient $C_x$:
+\begin{equation}
+T_{aero} = \dfrac{1}{2}\rho C_x S_f \omega_w^2 R_w^3 = d\omega_w^2.
+\label{aero_torque}
+\end{equation}
+\end{itemize}
+
+In this dissertation, the rolling resistance has been neglected for the sake of simplicity.
+
+Taking into account these contributions, and defining $\tau_{t} = \dfrac{1}{\tau_f \tau_k}$ the~\eqref{free_dynamics} is transformed into 
+\begin{equation}
+\begin{split}
+J_{eq} \dot{\omega}_w & = T_b - T_{aero} - \dfrac{T_{cl}}{\tau \tau_f} \\
+J_f \dot{\omega}_f & = -\dfrac{\tau}{\tau_{t}} T_b + T_{cl} \tau_k
+\end{split}
+\label{kers_full_dynamics_charge}
+\end{equation}
+
+It is worth noting that, due to the presence of $T_{aero}$ and $T_{cl}$, this is a nonlinear driftless system of the form
+\[
+\dot{x} = g(x)u + p(x)w 
+\]
+where $g(x) = k \, \textup{sgn} (\omega_{cv} - \omega_{ck}) [-\frac{1}{\tau \tau_f} , \tau_k]^T$, $u = F_N$ (control action), $p(x) =\left[  \begin{smallmatrix}
+1 & -\omega_w^2 \\
+-\frac{\tau}{\tau_t} & 0
+\end{smallmatrix}\right] $
+and $w = [T_b, d]^T$. Note that, due to the definition of $\tau$, it can be considered a forced saturated control, whose variation realizes the passage of energy from the vehicle to the flywheel. It follows that $\tau$ is not a free user--defined signal, but it is a state--dependent control obliged to be
+\[
+\tau = \dfrac{\omega_w}{\omega_f} \tau_t.
+\]
+
+\subsubsection{KERS Discharge}
+
+The next step is modeling the discharge phase. In this scenario, the flywheel is supposed to be fully charged ($\omega_f = \omega_f^{max}$) and the driver, through a button on the steering wheel, triggers the KERS, causing the passage of energy from the flywheel to the vehicle wheels. During the discharge of the flywheel, $\tau$ is increasing (symmetric with respect to the charge phase, as expected). As before, during the whole period in which $\tau = \tau_min$ the clutch is in the slipping condition and $\tau$ does not vary until the clutch engagement is completed. Again, it can be performed an engagement control which will decrease the discharge transient, so increasing the vehicle acceleration in a short period.
+
+Eventually, as also suggested in the patent which has been taken as a reference, the flywheel will be ruled out when it reaches the 30\% of its maximum charge\footnote{This is convenient for two reason. Firstly, many full charges and discharges of the flywheel during a race will deteriorate the component which has, in any case, a high cost. Secondly, excluding the KERS when $\omega_f = 0.3\,\omega_f^{max}$ allows a more efficient and rapid charge in the next phase.} or when $\tau = \tau_{max}$.
+
+Having in mind the physics of the system, the main non--conservative contributions to be added are:
+
+\begin{itemize}
+\item accelerating torque $T_a$. It is a constant signal that represents the torque that the KERS gives to the vehicle. It is given by the following expression
+\begin{equation}
+T_a = M_{K} g R_w
+\label{accelerating_torque}
+\end{equation}
+where $M_K$ is the mass of the whole KERS system, including not only the flywheel but also the mass of the other components (Torotrak, transmission lines, ...);
+\item aerodynamic torque $T_{aero}$. Same as charge case (see~\eqref{aero_torque});
+\item clutch engagement torque $T_{cl}$. Same as charge case (see~\eqref{clutch_torque}), but with inverted signs (in this scenario, the clutch engagement improves the performances of the wheels and not those of the flywheel);
+\item engine torque $T_e$. During the discharge case, of course, the vehicle keeps using the engine, which is ruled out during the charge case. It means that the torque exerted by the KERS system is added to the one provided by the engine\footnote{The engine continues working during the KERS discharge. The contribution of the KERS is providing more torque, increasing the wheels angular velocity which in the most common scenario could be saturated at the maximum velocity that the vehicle can reach thanks to the engine characteristics (about 315 [km/h])}, so increasing the vehicle maximum velocity. 
+
+The engine torque depends on many different parameters, but in general it can be considered as a function of the engine crankshaft angular velocity $\omega_e$. Usually, the manufacturer provides the engine curve from which one can derive a polynomial law through curve fitting. The easiest choice is to approximate the torque curve with a second degree polynomial. In this work, the torque has been fitted starting from the curves available, related to F1 engines. The expression of the engine torque is the following
+\begin{equation}
+T_e = a_0 + a_1\,\omega_e + a_2 \, \omega_e^2 = 88.5 + 1.4 \,\omega_e -8.36 \times 10^{-4}\,\omega_e^2.
+\label{engine_torque}
+\end{equation}
+
+Note that, in general, when using a second degree polynomial fitting, the coefficient $a_2$ must be negative, because the torque curve concavity is facing down.  
+\end{itemize}
+
+Also in this case, the rolling resistance has been neglected.
+
+Taking into account these contributions, and defining again $\tau_{t} = \dfrac{1}{\tau_f \tau_k}$ the~\eqref{free_dynamics} is transformed into 
+\begin{equation}
+\begin{split}
+J_{eq} \dot{\omega}_w & = T_a + T_e - T_{aero} + \dfrac{T_{cl}}{\tau \tau_f}  \\
+J_f \dot{\omega}_f & = -\dfrac{\tau}{\tau_{t}} T_a - T_{cl} \tau_k
+\end{split}
+\label{kers_full_dynamics_discharge}
+\end{equation}
+
+This second model results into a nonlinear system\footnote{Note that the system is no more driftless, as it happens for the one used in the charge case, since the engine torque depends directly from the state variables $omega_w$.} of the form
+\[
+\dot{x} = f(x) + g(x)u + p(x)w 
+\]
+where $f(x) = [T_e(\omega_w), 0]^T$, $g(x) = k \, \textup{sgn} (\omega_{cv} - \omega_{ck}) [\frac{1}{\tau \tau_f} , -\tau_k]^T$, $u = F_N$ (control action), $p(x) =\left[  \begin{smallmatrix}
+1 & -\omega_w^2 \\
+-\frac{\tau}{\tau_t} & 0
+\end{smallmatrix}\right] $
+and $w = [T_a, d]^T$. Note that $T_e(\cdot)$ can be written as a function of $\omega_w$ taking into account the driveline relation between the crankshaft and the wheels angular velocities, i.e.
+\begin{equation}
+\omega_w = \tau_{\textup{GB}} \tau_f \omega_e
+\label{driveline_relation}
+\end{equation}
+where $\tau_{\textup{GB}}$ is one of the seven ratios which will depend on the gear inserted during the acceleration phase.
+
+\section{Simulation and Results}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %Codice per inserire le figure
 \begin{comment}
@@ -641,27 +766,26 @@ J_f \dot{\omega}_f & = 0
 	
 	%%%
 	\bibitem{a}
-	J. Chibulka , “Kinetic Energy Recovery system by means of Flywheel Energy 		    storage device”. 
-	Advanced Engineering, vol. 3, issue 1, pp. 27-38, 2009.
+	Chibulka J., (2009), \textit{Kinetic Energy Recovery system by means of Flywheel Energy 		    storage device}, Advanced Engineering, vol. 3, issue 1, pp. 27-38.
 	
 	\bibitem{b}
-	R. Chicurel, “A Compromise Solution for Energy Recovery in Vehicle Braking”.      	Energy, vol.24, pp. 1029-1034, 2009.
+	Chicurel R., (2009),  \textit{A Compromise Solution for Energy Recovery in Vehicle Braking}, Energy, vol.24, pp. 1029-1034.
 	
 	\bibitem{c}
-	A. Harb. “Energy harvesting: State-of-the-art”. 
+	Harb A., (2011), \textit{Energy harvesting: State-of-the-art}, 
 	Renewable energy, vol. 36, pp. 2641-2654, 2011.
 	
 	\bibitem{d}
-	K. Baer et Al. “Robustness and performance evaluations for simulation-based 		control and component parameter optimization for a series hydraulic hybrid 			vehicle”,  Engineering Optimization 2020, VOL. 52, NO. 3, 446–464.	
+	Baer K. et al., (2020) \textit{Robustness and performance evaluations for simulation-based 		control and component parameter optimization for a series hydraulic hybrid vehicle}, Engineering Optimization, vol. 52, no. 3, pp. 446–464.	
 	
 	\bibitem{e}
-	Y. J. Kim et Al., “Simulation Study of a Series Hydraulic Hybrid Propulsion 		System for a Light Truck”. SAE International, 2007.
+	Kim Y. J. et al., (2007), \textit{Simulation Study of a Series Hydraulic Hybrid Propulsion 					System for a Light Truck}, SAE International.
 	
 	\bibitem{f}
-	M. Shan “Modelling and Control Strategy for Series Hydraulic Hybrid 				Vehicles”.  PhD thesis, 2009.
+	Shan M., (2009), \textit{Modelling and Control Strategy for Series Hydraulic Hybrid 				Vehicles}, PhD thesis.
 	
 	\bibitem{g}
-	D. Nishanth, T. Mathews "Flywheel based Kinetic Energy Recovery System(KERS) 	    integrated in vehicles". International Journal of Engineering Science and      	Technology (IJEST), Vol. 5 No.09 Sep 2013.
+	Nishanth D., Mathews T., (2013), \textit{Flywheel based Kinetic Energy Recovery System(KERS) 	    integrated in vehicles}, International Journal of Engineering Science and Technology (IJEST), vol. 5 no.09.
 	
 	\bibitem{h}
 	Pipitone E., Vitale G., (2020), \textit{A regenerative braking system for 			internal combustion engine vehicles using supercapacitors as energy storage 		elements-Part 1 and 2: System analysis and modelling}, Journal of Power 			Sources 448, Palermo (Italy)     	
@@ -676,12 +800,15 @@ J_f \dot{\omega}_f & = 0
 	Hui S., Lifu Y., Junqing J., (2010), \textit{Hydraulic/electric synergy   	 	    system (HESS) design for heavy hybrid vehicles}, Energy 35, pp. 5328--5335.
 	
 	\bibitem{n}
-	D.R. Jones, "Kinetic energy recovery system".
-	UK Patent, Jan 2016.  
+	Jones D. R., (2016), \textit{Kinetic energy recovery system},
+	UK Patent.  
 	
 	\bibitem{o}
-	H.Lee, H.Kim, "CVT Ratio Control for Improvement of Fuel Economy
-	by Considering Powertrain Response Lag", KSME International Journal VoL 17 			No. 11, pp. 1725~1731, 2003 
+	Lee H., Kim H., (2003), \textit{CVT Ratio Control for Improvement of Fuel Economy
+	by Considering Powertrain Response Lag}, KSME International Journal, vol. 17, no. 11, pp. 1725--1731. 
+	
+	\bibitem{clutch}
+	Glielmo L., Vasca F., (2000), \textit{Engagement Control for Automotive Dry Clutch}, Proceedings of the American Control Conference, Chicago, Illinois, pp. 1016--1017.
 	
 	
 \end{thebibliography}
