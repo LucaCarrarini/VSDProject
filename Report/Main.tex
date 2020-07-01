@@ -635,8 +635,8 @@ In this dissertation, the rolling resistance has been neglected for the sake of 
 Taking into account these contributions, and defining $\tau_{t} = \dfrac{1}{\tau_f \tau_k}$ the~\eqref{free_dynamics} is transformed into 
 \begin{equation}
 \begin{split}
-J_{eq} \dot{\omega}_w & = T_b - T_{aero} - \dfrac{T_{cl}}{\tau \tau_f} \\
-J_f \dot{\omega}_f & = -\dfrac{\tau}{\tau_{t}} T_b + T_{cl} \tau_k
+J_{eq\,} \dot{\omega}_w & = T_b - T_{aero} - \dfrac{T_{cl}}{\tau \tau_f} \\
+J_f\, \dot{\omega}_f & = -\dfrac{\tau}{\tau_{t}} T_b + T_{cl} \tau_k
 \end{split}
 \label{kers_full_dynamics_charge}
 \end{equation}
@@ -656,7 +656,7 @@ and $w = [T_b, d]^T$. Note that, due to the definition of $\tau$, it can be cons
 
 \subsubsection{KERS Discharge}
 
-The next step is modeling the discharge phase. In this scenario, the flywheel is supposed to be fully charged ($\omega_f = \omega_f^{max}$) and the driver, through a button on the steering wheel, triggers the KERS, causing the passage of energy from the flywheel to the vehicle wheels. During the discharge of the flywheel, $\tau$ is increasing (symmetric with respect to the charge phase, as expected). As before, during the whole period in which $\tau = \tau_min$ the clutch is in the slipping condition and $\tau$ does not vary until the clutch engagement is completed. Again, it can be performed an engagement control which will decrease the discharge transient, so increasing the vehicle acceleration in a short period.
+The next step is modeling the discharge phase. In this scenario, the flywheel is supposed to be fully charged ($\omega_f = \omega_f^{max}$) and the driver, through a button on the steering wheel, triggers the KERS, causing the passage of energy from the flywheel to the vehicle wheels. During the discharge of the flywheel, $\tau$ is increasing (symmetric with respect to the charge phase, as expected). As before, during the whole period in which $\tau = \tau_{min}$ the clutch is in the slipping condition and $\tau$ does not vary until the clutch engagement is completed. Again, it can be performed an engagement control which will decrease the discharge transient, so increasing the vehicle acceleration in a short period.
 
 Eventually, as also suggested in the patent which has been taken as a reference, the flywheel will be ruled out when it reaches the 30\% of its maximum charge\footnote{This is convenient for two reason. Firstly, many full charges and discharges of the flywheel during a race will deteriorate the component which has, in any case, a high cost. Secondly, excluding the KERS when $\omega_f = 0.3\,\omega_f^{max}$ allows a more efficient and rapid charge in the next phase.} or when $\tau = \tau_{max}$.
 
@@ -670,7 +670,7 @@ T_a = M_{K} g R_w
 \end{equation}
 where $M_K$ is the mass of the whole KERS system, including not only the flywheel but also the mass of the other components (Torotrak, transmission lines, ...);
 \item aerodynamic torque $T_{aero}$. Same as charge case (see~\eqref{aero_torque});
-\item clutch engagement torque $T_{cl}$. Same as charge case (see~\eqref{clutch_torque}), but with inverted signs (in this scenario, the clutch engagement improves the performances of the wheels and not those of the flywheel);
+\item clutch engagement torque $T_{cl}$. Same as charge case (see~\eqref{clutch_torque}), but with inverted signs (in this scenario, the energy transfer happens in the opposite direction through the same clutch);
 \item engine torque $T_e$. During the discharge case, of course, the vehicle keeps using the engine, which is ruled out during the charge case. It means that the torque exerted by the KERS system is added to the one provided by the engine\footnote{The engine continues working during the KERS discharge. The contribution of the KERS is providing more torque, increasing the wheels angular velocity which in the most common scenario could be saturated at the maximum velocity that the vehicle can reach thanks to the engine characteristics (about 315 [km/h])}, so increasing the vehicle maximum velocity. 
 
 The engine torque depends on many different parameters, but in general it can be considered as a function of the engine crankshaft angular velocity $\omega_e$. Usually, the manufacturer provides the engine curve from which one can derive a polynomial law through curve fitting. The easiest choice is to approximate the torque curve with a second degree polynomial. In this work, the torque has been fitted starting from the curves available, related to F1 engines. The expression of the engine torque is the following
@@ -687,13 +687,13 @@ Also in this case, the rolling resistance has been neglected.
 Taking into account these contributions, and defining again $\tau_{t} = \dfrac{1}{\tau_f \tau_k}$ the~\eqref{free_dynamics} is transformed into 
 \begin{equation}
 \begin{split}
-J_{eq} \dot{\omega}_w & = T_a + T_e - T_{aero} + \dfrac{T_{cl}}{\tau \tau_f}  \\
-J_f \dot{\omega}_f & = -\dfrac{\tau}{\tau_{t}} T_a - T_{cl} \tau_k
+J_{eq}\, \dot{\omega}_w & = T_a + T_e - T_{aero} + \dfrac{T_{cl}}{\tau \tau_f}  \\
+J_f\, \dot{\omega}_f & = -\dfrac{\tau}{\tau_{t}} T_a - T_{cl} \tau_k
 \end{split}
 \label{kers_full_dynamics_discharge}
 \end{equation}
 
-This second model results into a nonlinear system\footnote{Note that the system is no more driftless, as it happens for the one used in the charge case, since the engine torque depends directly from the state variables $omega_w$.} of the form
+This second model results into a nonlinear system\footnote{Note that the system is no more driftless, as it happens for the one used in the charge case, since the engine torque depends directly from the state variables $\omega_w$.} of the form
 \[
 \dot{x} = f(x) + g(x)u + p(x)w 
 \]
