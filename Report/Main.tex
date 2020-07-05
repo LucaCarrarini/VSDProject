@@ -710,23 +710,113 @@ where $\tau_{\textup{GB}}$ is one of the seven ratios which will depend on the g
 
 \section{Simulation and Results}
 
+In this section will be presented various simulations for both cases which validate the proposed dynamics. Moreover there will be shown some results in the case a constant force is applied to the cluch plates and this will be compared with a PID control approach.
+\subsection{KERS charge}
 
+For this scenario the initial velocity of the vehicle has been chosen as $v_0 = 300$ km/h and the F1 car is in the proximity of a curve. The control law which has been applied is a PID with only a proportional gain. In particular $K_p = 50$. In Fig.\,\ref{fig: Engagement_plus_KERS_Vel_Charge} how the engagement process works. When the Torotrak ratio $\tau$ is saturated, the two angular velocities $\omega_{c,v}$ and $\omega_{c,k}$ have their own independent behaviour. Then at ca. $0.6$ seconds the clutch engages the flywheel, so the two angular velocities are constrained to have the same behaviour. This is mantained until the transmission ratio, which is decreasing in time, reaches zero. Note also that during the interval in which the angular velocities are constant, there is a linear behaviour for the $\tau$, which is consistent with its definition. On the KERS side, the full charge happens in $1.2$ seconds. After the charge is complete the value of the angular velocities $\omega_{c,v}$ and $\omega_{c,k}$ remains the same because the energy which is exchanged between the vehicle and the flywheel remains constant. The behaviour of the $\tau$ is shown in Fig.\,\ref{fig: CVT_ratio_charge}.
 
+\begin{figure}[H]
+\centering
+\subfloat[][\emph{} \label{fig: ClutchEng}]
+{\includegraphics[width=.45\textwidth]{Images/Results_Dynamics/Charge/Clutch.eps}} \quad
+\subfloat[][\emph{} \label{fig: ClutchVel}]
+{\includegraphics[width=.44\textwidth]{Images/Results_Dynamics/Charge/KERS_Vel.eps}} \\
+\caption{Comparison between Clutch Engagement \protect\subref{fig: ClutchEng} and KERS angular velocity \protect\subref{fig: ClutchVel}}
+\label{fig: Engagement_plus_KERS_Vel_Charge}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge/Torotrak_ratio.eps}
+\caption{Behaviour of the transmission ratio of the Torotrak}
+\label{fig: CVT_ratio_charge}
+\end{figure}
 
+In Fig.\,\ref{fig: Vehicel_Vel_Charge} is represented the velocity of the vehicle in time. It can be noticed how there is a faster decrease of the speed in the first $1.2$ seconds, while after that the decrease in speed becomes linear. 
 
+The control effort is shown in Fig.\,\ref{fig: Contro_Effort_Charge}. The control action contributes until the clutch is engaged, i.e. $0.6$ s, then the behaviour of the system depends only on the transmission ratio of the Torotrak. So the role of the control action is to engage the clutch plates in minimum time.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge/Vehicle_Vel.eps}
+\caption{Velocity of the vehicle in the KERS charge phase}
+\label{fig: Vehicel_Vel_Charge}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge/Control.eps}
+\caption{Control effort in the KERS charge phase}
+\label{fig: Contro_Effort_Charge}
+\end{figure}
 
+\subsubsection{KERS charge comparison}
 
+Starting from the previous analysis, some simulations on the effect of the KERS system in a vehicle and some comparisons on different kind of controllers have been performed.
 
+In Fig.\,\ref{fig: Comparison_KERS_brake} is shown how the presence of the KERS system is a great improvement during the deceleration phase in particular at the beginning where the slope of the curve is very different. The presence of the KERS allows the car to have a deceleration gain of about $30$ km/h after $1$ second.
 
+In Fig.\,\ref{fig: Comparison_KERS_brake_Control} can be seen how the behaviour of the velocity changes if, instead of applying a PID control, a constant control is applied with different magnitudes. In the latter situation the velocity decreases linearly which is not what happens in real scenarios where there is a strong initial deceleration but then it will become much slower in time.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/brake_kers_vs_nokers.eps}
+\caption{Velocity of the vehicle during deceleration phase with and without KERS}
+\label{fig: Comparison_KERS_brake}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/regenerative_brake_constantforce.eps}
+\caption{Velocity comparison between a PID control and a constant force control}
+\label{fig: Comparison_KERS_brake_Control}
+\end{figure}
 
+So the use of a PID control reflects well the behaviour of the car in the deceleration phase. 
 
+In Fig.\,\ref{fig: Comparison_KERS_Charge_PID_Prop} is shown how the KERS charge behaviour changes as we change the proportional gain of the controller. It can be seen that the choice of $K_p = 50$ which has been used in the previous section represents a good solution which is also a reasonable one in terms of time of charge. Instead in Fig.\,\ref{fig: Comparison_KERS_Charge_Control} it can be seen the difference if one wants to apply a constant force as a control action. The greater the force the faster is the charge, however these behaviours are not applicable in real scenarios because the time needed for a complete charge of the flywheel cannot be less than 1 second.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/kers_charge_comp_PropGain.eps}
+\caption{Comparison of KERS charge behaviour with different proportional gains}
+\label{fig: Comparison_KERS_Charge_PID_Prop}
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/kers_charge_constantforce.eps}
+\caption{Comparison of KERS charge behaviour between a PID control or a constant force control }
+\label{fig: Comparison_KERS_Charge_Control}
+\end{figure}
 
+Below are presented some simulations in the case of a PI controller, so there is an additional integral term. In particular in Fig.\,\ref{fig: Comparison_KERS_Charge_PI} is shown how the greater this term is the faster is the charge of the flywheel. With $K_i = 1$ the behavuour is the same as the one in Fig.\,\ref{fig: ClutchVel}. Naturally a faster charge implies a greater control effort, in particular in the initial phase of the charge as it can be seen in Fig.\,\ref{fig: Comparison_Control_Effort_PI}. 
+
+Since the velocity if the charge is more or less the same, it is preferrable to choose the one which needs the less control effort to be performed, so the one with $K_i = 1$.
+
+The last simulation which has been done is comparing the charge by changing the input of the controller, i.e. by changing the error. Until now the error was a linear one and was defined as the difference between the clutch angular velocities $\omega_{c,v}$ and $\omega_{c,k}$. 
+
+In Fig.\,\ref{fig: Comparison_KERS_charge_error} are presented the behaviours in the case of non--linear errors, in particular the square and the cube of the error. The controller which has been used is the PID with only a proportional gain $K_p = 10$. for simplicity. It can be seen how in this case the controller manages to perform the charge of the flywheel, however it is nearly instantaneous which is obviously not possible. So the PID controller is not a good choice if we want to analyze non--linear errors but we need a more complicated controller, possibly non--linear.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/kers_charge_comp_IntGain.eps}
+\caption{Comparison of KERS charge behaviour by using different values of the integral gain $K_i$}
+\label{fig: Comparison_KERS_Charge_PI}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/control_effort_charge_comp_IntGain.eps}
+\caption{Comparison of control effort by using different values of the integral gain $K_i$}
+\label{fig: Comparison_Control_Effort_PI}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge_comparison/kers_charge_comp_controller.eps}
+\caption{Comparison of KERS charge by using different expressions for the error}
+\label{fig: Comparison_KERS_charge_error}
+\end{figure}
 %Codice per inserire le figure
 \begin{comment}
 \begin{figure}[H]
@@ -737,7 +827,7 @@ where $\tau_{\textup{GB}}$ is one of the seven ratios which will depend on the g
 \end{figure}
 \end{comment}
 
-
+\subsection{KERS Discharge}
 %Codice per inserire il codice
 \begin{comment}
 \vspace{4cm}
