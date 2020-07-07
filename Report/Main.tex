@@ -53,11 +53,12 @@ citecolor=black
 %Per scrivere in maniera rapida norme e valori assoluti
 %Usage: y = \abs{x} ; y = \norma{x}
 
-\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
-\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}					********************
+%\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}				********************
+
 %Testo a caso
 %Usage: \lipsum[a-b] | Esempio \lipsum[1-10]
-\usepackage{lipsum}
+%\usepackage{lipsum}											********************
 
 %Cambia lo stile della pagina
 %In alto a dx mette numero di pagina
@@ -828,6 +829,91 @@ In Fig.\,\ref{fig: Comparison_KERS_charge_error} are presented the behaviours in
 \end{comment}
 
 \subsection{KERS Discharge}
+
+In order to simulate the joint power contribution of both KERS and engine, it is assumed the KERS to be fully charged at the maximum angular speed $ \omega_f^{max}=64000$ rpm. In order to appreciate the KERS contribution, it is assumed that the vehicle is proceeding at the maximum speed $ v = 315$ km/h. KERS is triggered at $30$ s so it starts to give power contribution from that instant on. This could be a realistic scenario because in Formula 1 steering wheel it is present a button that the pilot could press in order to activate "overtake modality" in order to have maximum acceleration contribution from KERS to overtake the opponent's vehicle. The control law used for the clutch engagement control is a PID with only proportional gain ($K_p = 50$). In Fig.\ref{fig: clutchengdis} it is shown the clutch engagement process.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge/Clutch_zoom.eps}
+	\caption{Clutch engagement in KERS discharge scenario}
+	\label{fig: clutchengdis}
+\end{figure}
+
+It is possible to clearly see how the two clutch's plates start with angular velocities $\omega_{c,k} \neq \omega_{c,v}$ and then at the end of the transient the no slipping condition is achieved. From the engagement instant on, the two plates will rotate at the same angular speed until the flywheel reaches $30\%$ of the maximum speed $w_f^{max}=64000$ rpm. At this point the KERS will be disingaged. From the control viewpoint it is important to look at the control effort in order to check if the requested control action is feasible and if it is coherent with respect to what it is expected.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge/Control.eps}
+	\caption{Control}
+	\label{fig: controldis}
+\end{figure}
+
+From Fig.\,\ref{fig: controldis} it is possible to see that the control acts only during the clutch engagement transient. Infact the control action is given by a orthogonal force over the plate which aims to minimize the transient time. It is also important to check that the control action is within the limits and it is. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge/Torotrak_ratio.eps}
+	\caption{Torotrak ratio}
+	\label{fig: tororatiodis}
+\end{figure}
+
+In Fig.\,\ref{fig: tororatiodis} it is shown the torotrak transmission ratio. Considering that the KERS is triggered by the pilot at $30$s, during the transient $\tau_{cvt}$ stays constant. Then it starts to increase in order to guarantee the correct power flow from KERS to the wheel after the cluth engagement transient. In Fig.\,\ref{fig: kers vel plus vehicle vel} KERS and vehicle velocity profiles are shown.
+ 
+\begin{figure}[H]
+	\centering
+	\subfloat[][\emph{} \label{fig: kersveldiss}]
+	{\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge/KERS_Vel.eps}} \\
+	\subfloat[][\emph{} \label{fig: vehicleveldisl}]
+	{\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge/Vehicle_Vel.eps}} \\
+	\caption{Comparison between KERS velocity \protect\subref{fig: kersveldiss} and vehicle velocity \protect\subref{fig: vehicleveldisl}}
+	\label{fig: kers vel plus vehicle vel}
+\end{figure}
+
+It is clear how the KERS contribution makes possible to reach higher velocities with respect to the case in which the only power source was the engine.
+In the following section different comparison are shown.
+
+\subsubsection{KERS discharge comparison}
+
+In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle's velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge_comparison/acceleration_kers_vs_nokers.eps}
+	\caption{Comparison between vehicle's velocity profile when KERS is active and when do not.}
+	\label{fig: k vs nok}
+\end{figure}
+
+It is clear from Fig.\,\ref{fig: k vs nok} that using KERS it is possible to reach velocities that otherwise, with the only engine contribution, it would be impossible to reach. Once the importance of the KERS is confirmed through simulation data, then it could be interesting to investigate how different control strategies affect performances.
+
+\begin{figure}[H]
+	\centering
+	\subfloat[][\emph{} \label{fig: varyPdisdis}]
+	{\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge_comparison/kers_discharge_comp_PropGain.eps}} \\
+	\subfloat[][\emph{} \label{fig: varyPaccdis}]
+	{\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge_comparison/vehicle_acc_comp_PropGain.eps}} \\
+	\caption{Comparison between KERS velocity \protect\subref{fig: varyPdisdis} and vehicle velocity in discharge scenario when proportional gain is changed \protect\subref{fig: varyPaccdis}}
+	\label{fig: kers vel plus vehicle vel comp}
+\end{figure}
+
+In Fig.\,\ref{fig: kers vel plus vehicle vel comp} it is shown how KERS' discharge process changes when PID's proportional term changes. The higher $K_p$ the faster is the discharge and the higher the peak vehicle's velocity.
+
+\begin{figure}[H]
+	\centering
+	\subfloat[][\emph{} \label{fig: kforcedisdis}]
+	{\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge_comparison/kers_discharge_constantforce.eps}} \\
+	\subfloat[][\emph{} \label{fig: kforceaccdis}]
+	{\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge_comparison/regenerative_acc_constantforce.eps}} \\
+	\caption{Comparison between KERS velocity \protect\subref{fig: kforcedisdis} and vehicle velocity  \protect\subref{fig: varyPaccdis} in discharge scenario when constant force acting on clutch's plates is changed.}
+	\label{fig: kforcediscomp}
+\end{figure}
+
+Until now it was only considered PID strategy with only proportional component for the clutch engagement control. What if clutch's plates are engaged with constant forces? In Fig.\,\ref{fig: kforcediscomp} it is possible to find the answer. From simulations it is possible to see that, if constant force is applied, in order to have results similar or better with respect to the PID, higher force is needed. The higher is the force the faster is the discharge and the higher is the maximum velocity reached by the vehicle. 
+
+\section{Conclusions}
+
+In this work Kinetic Energy Recovery System (KERS) was studied. Different implementations were taken into account and mechanical KERS was chosen to be investigated in more detail. KERS patent used as reference is the one developed by Flybrid\textsuperscript\textregistered. Analysis, modeling, simulation and control of KERS was developed in this work. In first approximation, static analysis was performed. Then a more complete model was considered, introducing clutch engagement dynamics and consistency between static and dynamic analysis was shown. Dynamic model was implemented in Simulink and different control strategies were applied to the cluth engagement process like PID and constant forces applied to clutch's plates.
+
+
 %Codice per inserire il codice
 \begin{comment}
 \vspace{4cm}
