@@ -53,12 +53,12 @@ citecolor=black
 %Per scrivere in maniera rapida norme e valori assoluti
 %Usage: y = \abs{x} ; y = \norma{x}
 
-%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}					********************
-%\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}				********************
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}					%********************
+\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}				%********************
 
 %Testo a caso
 %Usage: \lipsum[a-b] | Esempio \lipsum[1-10]
-%\usepackage{lipsum}											********************
+\usepackage{lipsum}											%********************
 
 %Cambia lo stile della pagina
 %In alto a dx mette numero di pagina
@@ -874,7 +874,7 @@ In the following section different comparison are shown.
 
 \subsubsection{KERS discharge comparison}
 
-In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle's velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
+In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
 
 \begin{figure}[H]
 	\centering
@@ -895,7 +895,7 @@ It is clear from Fig.\,\ref{fig: k vs nok} that using KERS it is possible to rea
 	\label{fig: kers vel plus vehicle vel comp}
 \end{figure}
 
-In Fig.\,\ref{fig: kers vel plus vehicle vel comp} it is shown how KERS' discharge process changes when PID's proportional term changes. The higher $K_p$ the faster is the discharge and the higher the peak vehicle's velocity.
+In Fig.\,\ref{fig: kers vel plus vehicle vel comp} it is shown how KERS' discharge process changes when PID proportional term changes. The higher $K_p$ the faster is the discharge and the higher the peak vehicle's velocity.
 
 \begin{figure}[H]
 	\centering
@@ -911,7 +911,7 @@ Until now it was only considered PID strategy with only proportional component f
 
 \section{Conclusions}
 
-In this work Kinetic Energy Recovery System (KERS) was studied. Different implementations were taken into account and mechanical KERS was chosen to be investigated in more detail. KERS patent used as reference is the one developed by Flybrid\textsuperscript\textregistered. Analysis, modeling, simulation and control of KERS was developed in this work. In first approximation, static analysis was performed. Then a more complete model was considered, introducing clutch engagement dynamics and consistency between static and dynamic analysis was shown. Dynamic model was implemented in Simulink and different control strategies were applied to the cluth engagement process like PID and constant forces applied to clutch's plates.
+In this work Kinetic Energy Recovery System (KERS) was studied. Different implementations were taken into account and mechanical KERS was chosen to be investigated in more detail. KERS patent used as reference is the one developed by Flybrid\textsuperscript\textregistered. Analysis, modeling, simulation and control of KERS was developed in this work. In first approximation, static analysis was performed. Then a more complete model was considered, introducing clutch engagement dynamics and consistency between static and dynamic analysis was shown. Dynamic model was implemented in Simulink and different control strategies were applied to the clutch engagement process like PID and constant forces applied to clutch's plates.
 
 
 %Codice per inserire il codice
@@ -985,8 +985,6 @@ In this work Kinetic Energy Recovery System (KERS) was studied. Different implem
 	
 	\bibitem{clutch}
 	Glielmo L., Vasca F., (2000), \textit{Engagement Control for Automotive Dry Clutch}, Proceedings of the American Control Conference, Chicago, Illinois, pp. 1016--1017.
-	
-	
 \end{thebibliography}
 
 \end{document}
