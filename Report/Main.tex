@@ -53,12 +53,12 @@ citecolor=black
 %Per scrivere in maniera rapida norme e valori assoluti
 %Usage: y = \abs{x} ; y = \norma{x}
 
-\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}					%********************
-\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}				%********************
-
-%Testo a caso
-%Usage: \lipsum[a-b] | Esempio \lipsum[1-10]
-\usepackage{lipsum}											%********************
+%\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}					%********************
+%\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}				%********************
+%
+%%Testo a caso
+%%Usage: \lipsum[a-b] | Esempio \lipsum[1-10]
+%\usepackage{lipsum}											%********************
 
 %Cambia lo stile della pagina
 %In alto a dx mette numero di pagina
@@ -830,7 +830,7 @@ In Fig.\,\ref{fig: Comparison_KERS_charge_error} are presented the behaviours in
 
 \subsection{KERS Discharge}
 
-In order to simulate the joint power contribution of both KERS and engine, it is assumed the KERS to be fully charged at the maximum angular speed $ \omega_f^{max}=64000$ rpm. In order to appreciate the KERS contribution, it is assumed that the vehicle is proceeding at the maximum speed $ v = 315$ km/h. KERS is triggered at $30$ s so it starts to give power contribution from that instant on. This could be a realistic scenario because in Formula 1 steering wheel it is present a button that the pilot could press in order to activate "overtake modality" in order to have maximum acceleration contribution from KERS to overtake the opponent's vehicle. The control law used for the clutch engagement control is a PID with only proportional gain ($K_p = 50$). In Fig.\ref{fig: clutchengdis} it is shown the clutch engagement process.
+In order to simulate the joint power contribution of both KERS and internal combustion engine, it is assumed the KERS to be fully charged at the maximum angular speed $ \omega_f^{max}=64000$ rpm. In order to appreciate the KERS contribution, it is assumed that the vehicle is proceeding at the maximum speed $ v = 315$ km/h. KERS is triggered at $30$ s so it starts to give power contribution from that instant on. This could be a realistic scenario because in Formula 1 steering wheel it is present a button that the pilot could press in order to activate "overtake modality" in order to have maximum acceleration contribution from KERS to overtake the opponent's vehicle. The control law used for the clutch engagement control is a PID with only proportional gain ($K_p = 50$). In Fig.\ref{fig: clutchengdis} it is shown the clutch engagement process.
 
 \begin{figure}[H]
 	\centering
@@ -839,7 +839,7 @@ In order to simulate the joint power contribution of both KERS and engine, it is
 	\label{fig: clutchengdis}
 \end{figure}
 
-It is possible to clearly see how the two clutch's plates start with angular velocities $\omega_{c,k} \neq \omega_{c,v}$ and then at the end of the transient the no slipping condition is achieved. From the engagement instant on, the two plates will rotate at the same angular speed until the flywheel reaches $30\%$ of the maximum speed $w_f^{max}=64000$ rpm. At this point the KERS will be disingaged. From the control viewpoint it is important to look at the control effort in order to check if the requested control action is feasible and if it is coherent with respect to what it is expected.
+It is possible to clearly see how the two clutch's plates start with angular velocities $\omega_{c,k} \neq \omega_{c,v}$ .At the end of the transient the no slipping condition is achieved and the engagement is completed. From the engagement instant on, the two plates will rotate at the same angular speed until the flywheel reaches $30\%$ of the maximum speed $w_f^{max}=64000$ rpm. At this point the KERS will be disingaged for efficiency reason (as it is also suggested in the patent taken as reference). Clutch's plates' engagement is controlled applying a suitable normal force to the clutch's disks. From control viewpoint it is important to look at the control effort in order to check if the requested control action is feasible otherwise, when control action would be applied, the system would fail.
 
 \begin{figure}[H]
 	\centering
@@ -848,7 +848,7 @@ It is possible to clearly see how the two clutch's plates start with angular vel
 	\label{fig: controldis}
 \end{figure}
 
-From Fig.\,\ref{fig: controldis} it is possible to see that the control acts only during the clutch engagement transient. Infact the control action is given by a orthogonal force over the plate which aims to minimize the transient time. It is also important to check that the control action is within the limits and it is. 
+In Fig.\,\ref{fig: controldis} control effort is shown and it is possible to see that the control acts only during the clutch engagement transient as it is expected. Infact the the orthogonal force over the plates aims to minimize the transient time, so once the transient end, the control action is null. Moreover, it is possible to note that the control effort is within the limits given by $u^{max} = 5000$ N.
 
 \begin{figure}[H]
 	\centering
@@ -857,7 +857,14 @@ From Fig.\,\ref{fig: controldis} it is possible to see that the control acts onl
 	\label{fig: tororatiodis}
 \end{figure}
 
-In Fig.\,\ref{fig: tororatiodis} it is shown the torotrak transmission ratio. Considering that the KERS is triggered by the pilot at $30$s, during the transient $\tau_{cvt}$ stays constant. Then it starts to increase in order to guarantee the correct power flow from KERS to the wheel after the cluth engagement transient. In Fig.\,\ref{fig: kers vel plus vehicle vel} KERS and vehicle velocity profiles are shown.
+In Fig.\,\ref{fig: tororatiodis} it is shown the torotrak transmission ratio $\tau_{cvt}$. From the moment in which the KERS is triggered by the pilot at $30$s, for all the duration of the transient $\tau_{cvt}$ stays constant. Then it starts to increase in order to guarantee the correct power flow from KERS to the wheel after the cluth engagement transient. For the sake of completeness also the gearbox transmission ratio is shown in Fig.\,\ref{fig: gbratiodis}. It is possible to see how as the vehicle's velocity increase the gear are shifted in order to have the best performances. In Fig.\,\ref{fig: kers vel plus vehicle vel} KERS' and vehicle's velocity profiles are shown.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Discharge/Gearbox_ratio.eps}
+	\caption{Gearbox ratio}
+	\label{fig: gbratiodis}
+\end{figure}
  
 \begin{figure}[H]
 	\centering
@@ -869,12 +876,11 @@ In Fig.\,\ref{fig: tororatiodis} it is shown the torotrak transmission ratio. Co
 	\label{fig: kers vel plus vehicle vel}
 \end{figure}
 
-It is clear how the KERS contribution makes possible to reach higher velocities with respect to the case in which the only power source was the engine.
-In the following section different comparison are shown.
+From these velocities profiles it is possible to see that as the flywheel's angular speed decreases, the vehicle gains extra velocity. This confirms the power exchange from the flywheel to the wheels. As it is expected the KERS stops to give power contribution when it reaches $30\%$ of maximum speed.
 
 \subsubsection{KERS discharge comparison}
 
-In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
+In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle's velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
 
 \begin{figure}[H]
 	\centering
