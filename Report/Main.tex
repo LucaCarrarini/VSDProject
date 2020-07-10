@@ -67,7 +67,7 @@ citecolor=black
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\textit{\thepage}}
-\lhead{\textit{Design and analysis of a K.E.R.S. system for sports car}}
+\lhead{\textit{Design and analysis of a KERS system for a F1 vehicle}}
 
 %Per inserire codice nativo MATLAB e simili
 %Usage: guardare sotto
@@ -89,7 +89,7 @@ citecolor=black
 
 \begin{document}
 
-\title{\textcolor{sapred}{Design and analysis of a K.E.R.S. system for sports car}\\\small{Vehicle System Dynamics Project}}
+\title{\textcolor{sapred}{Design and analysis of a KERS system for a F1 vehicle}\\\small{Vehicle System Dynamics Project}}
 \author{Luca Carrarini\\Federico Kieffer\\Andrea Tantucci\\Andrea Wrona}
 %Optional: data. Se non si inserisce il campo data
 %LaTeX mette la data del PC automaticamente
@@ -104,9 +104,16 @@ citecolor=black
 %Inizio dei capitoli
 \section{Introduction}
 
-The dependence of the transportation sector on non-renewable sources of energy as fossil fuels and the need for a rapid response to the global warming challenge has in the last two decades encouraged a strong effort for the development of fuel efficient vehicle propulsion systems. In this context, a particular attention has been devoted to the concept of regenerative breaking. A regenerative brake is a mechanism that reduces the vehicle speed by converting some of its kinetic energy into some other kind of useful forms of energy, such as mechanical, electrical or hydraulic energy \cite{a}. The core devices of regenerative brakes are therefore reversible energy conversion components like electric motors/generators and hydraulic pumps/motors. For example, an electric regenerative brake makes use of an electric motor that acts as a generator. This device, which is usually made integral with the vehicle wheel trough a gear train, is indeed able to generate electrical energy thanks to the inputted kinetic energy that is associated to the vehicle at the end of any acceleration phase. 
-A type of regenerative braking is called KERS. KERS, which stands for Kinetic Energy Recovery System, is an automotive system for recovering a moving vehicle's kinetic energy under braking. The recovered energy is stored in a reservoir, as for example a flywheel, a battery or a super capacitor, for later use under acceleration \cite{b}. 
-Embedding such a system in a vehicle allows several potential advantages. First of all, KERS systems may be included in the class of \textit{energy harvesting} devices \cite{c}, which are likely to have a consistent impact in the scenario of \textit{green technologies} and \textit{environment-friendly} solutions. In fact, the partial regeneration of the energy that is usually dissipated by the service brake in conventional systems may allow impactful fuel economy strategies, thus reducing the fossil fuel demand and the consequent green-house gases (CO2) emissions. Another important advantage that such a system introduces is the reduced service brake wear. In fact, since during regenerative brakes an electric/hydraulic motor is used to slow down the vehicle in place of the conventional disk brake, this component will as well benefit from a longer lifetime. 
+The dependence of the transportation sector on non-renewable sources of energy as fossil fuels and the need for a rapid response to the global warming challenge has in the last two decades encouraged a strong effort for the development of fuel efficient vehicle propulsion systems. In this context, a particular attention has been devoted to the concept of regenerative breaking. 
+
+A regenerative brake is a mechanism that reduces the vehicle speed by converting some of its kinetic energy into some other kind of useful forms of energy, such as mechanical, electrical or hydraulic energy \cite{a}. The core devices of regenerative brakes are therefore reversible energy conversion components like electric motors/generators and hydraulic pumps/motors. For example, an electric regenerative brake makes use of an electric motor that acts as a generator. This device, which is usually connected to the vehicle wheels trough a gear train, is indeed able to generate electrical energy thanks to the previously received kinetic energy that is associated to the vehicle at the end of any acceleration phase. 
+A type of regenerative braking is called \textit{KERS}. 
+
+KERS, which stands for \textit{Kinetic Energy Recovery System}, is an automotive system for recovering a moving vehicle kinetic energy under braking. The recovered energy is stored in a reservoir, as for example a flywheel, a battery or a super capacitor, for later use under acceleration \cite{b}. 
+
+Embedding such a system in a vehicle allows several potential advantages. First of all, KERS systems may be included in the class of \textit{energy harvesting} devices \cite{c}, which are likely to have a consistent impact in the scenario of \textit{green technologies} and \textit{environment-friendly} solutions. In fact, the partial regeneration of the energy that is usually dissipated by the service brake in conventional systems may allow impactful fuel economy strategies, thus reducing the fossil fuel demand and the consequent green-house gases (CO2) emissions. 
+
+Another important advantage that such a system introduces is the reduced service brakes wear. In fact, since during regenerative braking an electric/hydraulic motor is used to slow down the vehicle in place of the conventional disk brake, this component will as well benefit from a longer lifetime. 
 
 \section{Implementation alternatives}
 
@@ -125,11 +132,15 @@ The Flywheel Hybrid System (FHS) is a type of KERS which consists of a rotating 
 \label{fig: FHS}
 \end{figure}
 
-When the brakes are applied or the vehicle decelerates, the clutch connecting the flywheel system to the driveline/transmission is engaged, causing energy to be transferred to the flywheel via the CVT. \\
-The use of the CVT guarantees a smooth transfer of energy thanks to the fact that it has an infinite number of gear ratios between the maximum and minimum value of the speed. The Toroidal CVT must continuously adjust the ratio between the speed of the vehicle and the rotation of the flywheel. Any change in the CVT ratio can be viewed as the transfer of kinetic energy between the flywheel inertia and vehicle.\\
-The flywheel stores this energy as rotational energy and can rotate up to a maximum speed of $60000$ [rpm]. When the vehicle stops, or the flywheel reaches its maximum speed, the clutch disengages the flywheel unit from the transmission allowing the flywheel to rotate independently. Whenever this stored energy is required, the clutch is engaged and the flywheel transmits this energy back to the wheels, via the CVT. To optimise efficiency, the flywheel runs in a high vacuum and is enclosed within a housing that provides containment in the event of failure.
-The major function of the vacuum chamber is to minimize the air resistance as the flywheel rotates. Without the vacuum chamber, the friction caused by air resistance is enough to cause significant energy losses and heat the carbon fibre rim to its glass transition temperature. In Fig. \ref{fig: Flywheel} we can see the design of a flywheel.\\
-Another important part of the system are the bearings on which the flywheel is mounted. Magnetic bearings have replaced mechanical bearings as they greatly reduce losses due to friction. Further magnetic bearings are able to operate in vacuum which leads to even better efficiency. The magnetic bearings support the flywheel by the principle of magnetic levitation. It is important that the bearings are able to operate inside a vacuum because the flywheel in a flywheel-based KERS must rotate at high speeds for maximum efficiency. The best performing bearing is the high-temperature super-conducting (HTS) magnetic bearing.
+When the brakes are applied or the vehicle decelerates, the clutch connecting the flywheel system to the driveline/transmission is engaged, causing energy to be transferred to the flywheel via the CVT. 
+
+The use of the CVT guarantees a smooth transfer of energy thanks to the fact that it has an infinite number of gear ratios between the maximum and minimum value of the speed. The Toroidal CVT must continuously adjust the ratio between the speed of the vehicle and the rotation of the flywheel. Any change in the CVT ratio can be viewed as the transfer of kinetic energy between the flywheel inertia and vehicle.
+
+The flywheel stores this energy as rotational energy and can rotate up to a maximum speed of (usually) $60000$ [rpm]. When the vehicle stops, or the flywheel reaches its maximum speed, the clutch disengages the flywheel unit from the transmission allowing the flywheel to rotate independently. Whenever this stored energy is required, the clutch is engaged and the flywheel transmits this energy back to the wheels, via the CVT. To optimize efficiency, the flywheel runs in a high vacuum and is enclosed within a housing that provides containment in the event of failure.
+
+The major function of the vacuum chamber is to minimize the air resistance as the flywheel rotates. Without the vacuum chamber, the friction caused by air resistance is enough to cause significant energy losses and heat the carbon fibre rim to its glass transition temperature. In Fig. \ref{fig: Flywheel} we can see the design of a flywheel.
+
+Another important part of the system is the bearings on which the flywheel is mounted. Magnetic bearings have replaced mechanical bearings as they greatly reduce losses due to friction. Further magnetic bearings are able to operate in vacuum which leads to even better efficiency. The magnetic bearings support the flywheel by the principle of magnetic levitation. It is important that the bearings are able to operate inside a vacuum because the flywheel in a flywheel-based KERS must rotate at high speeds for maximum efficiency. The best performing bearing is the high-temperature super-conducting (HTS) magnetic bearing.
 
 \begin{figure}[H]
 \centering
@@ -138,23 +149,26 @@ Another important part of the system are the bearings on which the flywheel is m
 \label{fig: Flywheel}
 \end{figure}
 
-We have also the presence of a step--up gearing system consisting of epicyclic gears is connected between the CVT and the flywheel unit. This system is used to reduce the speed of the flywheel to a manageable one outside the vacuum chamber, in order to have a smooth transfer of energy to the CVT.\\
+There is also a step--up gearing system consisting of epicyclic gears, connected between the CVT and the flywheel unit. This system is used to reduce the speed of the flywheel to a manageable one outside the vacuum chamber, in order to have a smooth transfer of energy to the CVT.
+
 The clutch instead is used to couple the flywheel hybrid system to the transmission. It engages the system while the flywheel is accelerating from rest and disengaging while the flywheel is rotating and the vehicle is at rest. Torque is transferred through clutch between the flywheel and vehicle. Hence, the power transmitted in the flywheel system can be controlled by a clutch that could continuously manipulate the torque.
 
 \subsubsection{Advantages, disadvantages and fields of application}
 
-The advantages include high efficiency, low fuel consumption, and low cost compared to electric hybrids. Although the system has a few drawbacks, most of it can be outweighed by the benefits. One main advantage of this KERS system is its weight. Due to the lightweight design of the flywheel and accompanying components, the additional weight is insignificant when analysing fuel efficiency. Moreover, the system is contained in a compact package, making it easy to incorporate into the rear of a vehicle. Another advantage is the ability of the flywheel to store energy efficiently. This is because there is no transformation of energy from one form to another which greatly reduces energy losses in the system. Tests have proven that flywheel--based KERS can recover and store over $70\%$ of the vehicle’s energy. Probably the only losses that occur in the system might be due to friction and air resistance to the flywheels rotation. However, the magnetic bearings and vacuum chamber mentioned previously have been developed to minimize these effects. Cars with a flywheel based energy recovery system, though significantly more expensive than cars without this system, have more power and better fuel efficiency. It has been proved that the system could reduce fuel consumption by as much as $20$\% and give a four-cylinder engine acceleration like a six-cylinder unit.\\
-The system has low maintenance costs and it reduces break wear.\\
-As with any technology, the flywheel KERS system has its shortcomings as well. The flywheels found in a kinetic energy recovery system can store up to $400$ kJ of energy, which means that failure while rotating at $60000$ [rpm] could cause immense amounts of damage. The flywheel--based KERS is not designed to be a stand-alone source of power for a vehicle, like batteries are in electric cars. It is designed for temporary energy storage that is to be used frequently and in smaller amounts. Its purpose is to reduce fuel consumption by providing additional power during the acceleration of a vehicle. Periods of acceleration, especially from a stop, are when the efficiency of the vehicle is at its lowest.
+The advantages include high efficiency, low fuel consumption, and low cost compared to electric hybrids. Although the system has a few drawbacks, most of it can be outweighed by the benefits. 
+
+One main advantage of this KERS system is its weight. Due to the lightweight design of the flywheel and accompanying components, the additional weight is insignificant when analyzing fuel efficiency. Moreover, the system is contained in a compact package, making it easy to incorporate into the rear of a vehicle. Another advantage is the ability of the flywheel to store energy efficiently. This is because there is no transformation of energy from one form to another which greatly reduces energy losses in the system. Tests have proven that flywheel--based KERS can recover and store over $70\%$ of vehicle energy. Probably the only losses that occur in the system might be due to friction and air resistance to the flywheels rotation. However, the magnetic bearings and vacuum chamber mentioned previously have been developed to minimize these effects. Cars with a flywheel based energy recovery system, though significantly more expensive than cars without this system, have more power and better fuel efficiency. It has been proved that the system could reduce fuel consumption by as much as $20$\% and give a four-cylinder engine acceleration like a six-cylinder unit.
+
+The system has low maintenance costs and it reduces break wear. As with any technology, the flywheel KERS system has its shortcomings as well. The flywheels found in a kinetic energy recovery system can store up to $400$ kJ of energy, which means that failure while rotating at $60000$ [rpm] could cause immense amounts of damage. The flywheel--based KERS is not designed to be a stand-alone source of power for a vehicle, like batteries are in electric cars. It is designed for temporary energy storage that is to be used frequently and in smaller amounts. Its purpose is to reduce fuel consumption by providing additional power during the acceleration of a vehicle. Periods of acceleration, especially from a stop, are when the efficiency of the vehicle is at its lowest.
 
 
 \subsection{Electric KERS}
 
-Electric KERS is a type of KERS which makes use of batteries or/and supercapacitors as storage system. This regenerative brake system can be used both in the case of internal combustion engine, electric vehicle and hybrid vehicle.
+Electric KERS is a type of KERS which makes use of batteries or/and supercapacitors as storage system. This regenerative braking system can be used both in the case of internal combustion engine, electric vehicle and hybrid vehicle.
 
 \subsubsection{Architecture and working principle}
 
-There are different implementations in literature of electric KERS (e-KERS) and each architecture is more suitable for particular application. In Fig. \ref{ekersdrivetrainuc} e-KERS with supercapacitor as principal and unique storage system is described. The scheme is composed by: the supercapacitor (SC) which is the energy storage part of the system, it is electrically interfaced to the motor-generator unit (MGU) through power converter (PC). MGU is connected to drive shaft. 
+There are different implementations in literature of electric KERS (e-KERS) and each architecture is more suitable for particular application. In Fig.~\ref{ekersdrivetrainuc} e-KERS with supercapacitor as principal and unique storage system is described. The scheme is composed by: the supercapacitor (SC) which is the energy storage part of the system; it is electrically interfaced to the motor-generator unit (MGU) through power converter (PC). MGU is connected to drive shaft. 
 
 \begin{figure}[H]
 	\centering
@@ -170,8 +184,9 @@ There are different implementations in literature of electric KERS (e-KERS) and 
 	\label{ekersschemeuc}
 \end{figure}
 
-There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density(Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around 75–200Wh/kg) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. Li-Ion batteries cannot respond to high-dynamic power profiles resulting from an acceleration or a regenerative
-braking since charge transfer occurs through reduction and oxidation reactions. These profiles, if happened, will overstress the batteries which negatively affect the longevity of their lifespan. It is convenient to implement in the energy storage system, a storage element characterized by its ability to provide the necessary power required by the traction and braking systems. This secondary storage element will substitute the battery during extreme power demand. Among all the existing storage elements, the supercapacitors are potential candidates to meet those requirements. This element has high power density and high cycle life. On the other hand, it presents a low energy density, a high acquisition cost and a high self-discharge. The hybrid energy storage system (HESS) will combine the high energy density storage element (Li-Ion battery), known as primary storage element, and the high power density storage element (supercapacitor). HESS implementation is described in Fig. \ref{ekersschemehybrid}
+There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density(Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around $75–200$ [Wh/kg]) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. 
+
+Li-Ion batteries cannot respond to high-dynamic power profiles resulting from an acceleration or a regenerative braking since charge transfer occurs through reduction and oxidation reactions. These profiles, if happened, will overstress the batteries which negatively affect the longevity of their lifespan. It is convenient to implement in the system a storage element characterized by its ability to provide the necessary power required by the traction and braking systems. This secondary storage element will substitute the battery during extreme power demand. Among all the existing storage elements, the supercapacitors are potential candidates to meet those requirements. This element has high power density and high cycle life. On the other hand, it presents a low energy density, a high acquisition cost and a high self-discharge. The hybrid energy storage system (HESS) will combine the high energy density storage element (Li-Ion battery), known as primary storage element, and the high power density storage element (supercapacitor). HESS implementation is described in Fig. \ref{ekersschemehybrid}
 
 \begin{figure}[H]
 	\centering
@@ -180,7 +195,7 @@ braking since charge transfer occurs through reduction and oxidation reactions. 
 	\label{ekersschemehybrid}
 \end{figure}
 
-It is possible to see in Fig. \ref{ekersschemepowerflow} the power flow from wheel to storage system during brake phase.
+It is possible to see in Fig. \ref{ekersschemepowerflow} the power flow from wheels to storage system during brake phase.
 
 \begin{figure}[H]
 	\centering
@@ -192,7 +207,13 @@ It is possible to see in Fig. \ref{ekersschemepowerflow} the power flow from whe
 
 \subsubsection{Advantages, disadvantages and fields of application}
 
-It is possible to evaluate and to compare electrical energy storage system by using some performance metrics like the cycle efficiency, the cost per unit capacity(\$/kWh or \$/kW), specific energy (Wh/kg), specific power (W/kg) ,energy density (Wh/l), power density (W/l), cycle life. The battery has shorter cycle life due to unavoidable chemical deterioration. No single type of electrical energy storage element can simultaneously fulfill all the desired characteristics. There will be a need to combine higher energy density insured by the battery, as primary source, with a higher power density energy storage elements, like ultracapacitors or flywheel. This means that the best e-KERS implementation is the hybrid one which makes use of primary and secondary source. The use of supercapacitor as unique storage solution in electric vehicles remains limited since their energy density cannot compete with batteries. It is possible to use only supercapacitors as storage system if a low driving range can be accepted and if there is enough space available to install supercapacitors and when there are no weight constraints as in the case of electric city rail or hybrid city bus, where energy saving of about $40\%$ were obtained. Both HEV  and FCHEV  usually implement electric KERS, exploiting the main storage system used for the traction in conjunction with supercapacitors, which allow a reduction of batteries intervention during vehicle regenerative braking or startup, thus enhancing batteries life cycle and maintaining their capacity performance. Regenerative braking has been intensively studied and implemented on hybrid electric vehicles (HEV) and fuel cell hybrid electric vehicles (FCHEV) because the presence of powerful electric machines (generator and motor) interfaced to high capacity energy storage as batteries easily allows to convert and store vehicle kinetic energy into electric energy. Stored energy can be employed for vehicle propulsion or for electronic components supply.  Stationary flywheels have important dimensions and excessive weight. Onboard flywheels need space in the bogie requiring more space than ultracapacitors. After the diffusion of UCs, the use of flywheels in electrified railways has been reduced because of the superior properties of UCs in terms of maintenance, weight and size [21]. Other authors conclude that flywheel ensures a steady voltage and power level, which is independent of load, temperature and state of charge. In fact the combination battery/flywheel can achieve better performance, regarding voltage fluctuation, than other types of combinations (battery/UC or UC/flywheel), as reported by [46]. Unlike electrified vehicles, internal combustion engine vehicles are not equipped with generator, electric motor and batteries of adequate power and capacity to allow the conversion of the vehicle kinetic energy into electric energy. For this reason, the kinetic energy recovery systems successfully tested for ICEV application are mainly based on mechanical and hydraulic energy storage devices. Unfortunately, the energy recovered through the flywheel cannot be stored for a long time, due to mechanical and fluid dynamics friction on the flywheel.
+It is possible to evaluate and to compare electrical energy storage system by using some performance metrics like the cycle efficiency, the cost per unit capacity(\$/[kWh] or \$/[kW]), specific energy ([Wh/kg]), specific power ([W/kg]) ,energy density ([Wh/l]), power density ([W/l]), cycle life. 
+
+The battery has shorter cycle life due to unavoidable chemical deterioration. No single type of electrical energy storage element can simultaneously fulfill all the desired characteristics. There will be a need to combine higher energy density insured by the battery, as primary source, with a higher power density energy storage elements, like ultracapacitors or flywheel. This means that the best e-KERS implementation is the hybrid one which makes use of primary and secondary source. The use of supercapacitor as unique storage solution in electric vehicles remains limited since their energy density cannot compete with batteries. 
+
+It is possible to use only supercapacitors as storage system if a low driving range can be accepted and if there is enough space available to install supercapacitors and when there are no weight constraints as in the case of electric city rail or hybrid city bus, where energy saving of about $40\%$ were obtained. Both HEV and FCHEV usually implement electric KERS, exploiting the main storage system used for the traction in conjunction with supercapacitors, which allow a reduction of batteries intervention during vehicle regenerative braking or startup, thus enhancing batteries life cycle and maintaining their capacity performance. Regenerative braking has been intensively studied and implemented on hybrid electric vehicles (HEV) and fuel cell hybrid electric vehicles (FCHEV) because the presence of powerful electric machines (generator and motor) interfaced to high capacity energy storage as batteries easily allows to convert and store vehicle kinetic energy into electric energy. Stored energy can be employed for vehicle propulsion or for electronic components supply.  Stationary flywheels have important dimensions and excessive weight. On--board flywheels need space in the bogie requiring more space than ultracapacitors. After the diffusion of UCs, the use of flywheels in electrified railways has been reduced because of the superior properties of UCs in terms of maintenance, weight and size.
+
+Other authors conclude that flywheel ensures a steady voltage and power level, which is independent of load, temperature and state of charge. In fact, the combination battery/flywheel can achieve better performance, regarding voltage fluctuation, than other types of combinations (battery/UC or UC/flywheel). Unlike electrified vehicles, internal combustion engine vehicles are not equipped with generator, electric motor and batteries of adequate power and capacity to allow the conversion of the vehicle kinetic energy into electric energy. For this reason, the kinetic energy recovery systems successfully tested for ICEV application are mainly based on mechanical and hydraulic energy storage devices. Unfortunately, the energy recovered through the flywheel cannot be stored for a long time, due to mechanical and fluid dynamics friction on the flywheel.
  
 
 \subsection{Hydraulic KERS: Series Hydraulic Hybrid systems}
@@ -201,7 +222,7 @@ Series Hydraulic Hybrid Systems(SHH) represent a type of KERS that makes use of 
 
 \subsubsection{Architecture and working principle}
 
-The system (Fig. \ref{SHH_scheme}) is made of four principal components \cite{d} the working fluid (usually oil), the ICE, hydro-pneumatic accumulators and pumps/motors, which are often variable displacement axial piston machines.
+The system (Fig.~\ref{SHH_scheme}) is made of four principal components \cite{d} the working fluid (usually oil), the ICE, hydro-pneumatic accumulators and pumps/motors, which are often variable displacement axial piston machines.
 
 \begin{figure}[H]
 \centering
@@ -210,7 +231,9 @@ The system (Fig. \ref{SHH_scheme}) is made of four principal components \cite{d}
 \label{SHH_scheme}
 \end{figure}
 
-The IC engine is mechanically coupled to the hydraulic pump/motor designated as P/M(gen). The P/M(gen) is used as a motor only when starting the engine. In all the other working conditions, the fluid pumped by P/M(gen) flows towards the P/M(prop-s) and the high pressure accumulator. Traction pumps/motors (P/Mprop-s) are connected to the wheels through a differential to provide propulsion. The pump/motor is a reversible energy conversion component. In particular, operating the P/M(prop) in the motor mode propels the vehicle, while regenerative braking requires switching to the pump mode. During the breaking phase, the hydro-pneumatic accumulator allows energy storage: as the P/M(prop), working as a pump, transfers the hydraulic fluid from the reservoir into the accumulator, the pressure of the gas sealed inside it increases, thus storing energy \cite{e}. In the accumulator (Fig. \ref{hydraulic_accumulator}), a bladder is used to separate the working fluid from the pressurized inert gas (e.g. nitrogen), which can be thus treated as a closed system. In a later acceleration event, the energy stored in the high pressure fluid contained in the accumulator is used, together with an amount delivered by the P/M(gen), to provide torque to the wheels. The pressure difference between the accumulator and the reservoir determines the maximum torque available from the hydraulic motor. In this phase, the working fluid is at least partially returned to the reservoir. 
+The IC engine is mechanically coupled to the hydraulic pump/motor designated as P/M(gen). The P/M(gen) is used as a motor only when starting the engine. In all the other working conditions, the fluid pumped by P/M(gen) flows towards the P/M(prop-s) and the high pressure accumulator. Traction pumps/motors (P/Mprop-s) are connected to the wheels through a differential to provide propulsion. The pump/motor is a reversible energy conversion component. In particular, operating the P/M(prop) in the motor mode propels the vehicle, while regenerative braking requires switching to the pump mode. During the breaking phase, the hydro-pneumatic accumulator allows energy storage: as the P/M(prop), working as a pump, transfers the hydraulic fluid from the reservoir into the accumulator, the pressure of the gas sealed inside it increases, thus storing energy \cite{e}. 
+
+In the accumulator (Fig.~\ref{hydraulic_accumulator}), a bladder is used to separate the working fluid from the pressurized inert gas (e.g. nitrogen), which can be thus treated as a closed system. In a later acceleration event, the energy stored in the high pressure fluid contained in the accumulator is used, together with an amount delivered by the P/M(gen), to provide torque to the wheels. The pressure difference between the accumulator and the reservoir determines the maximum torque available from the hydraulic motor. In this phase, the working fluid is at least partially returned to the reservoir. 
 
 \begin{figure}[H]
 \centering
@@ -219,11 +242,16 @@ The IC engine is mechanically coupled to the hydraulic pump/motor designated as 
 \label{hydraulic_accumulator}
 \end{figure}
 
-The Reservoir is structurally similar to the accumulator but the gas that it contains is kept at low pressures and serves primarily to assist the transfer of fluid to-and-from the accumulator, with a minimal impact on the overall energy conversion. 
+The reservoir is structurally similar to the accumulator but the gas that it contains is kept at low pressures and serves primarily to assist the transfer of fluid to-and-from the accumulator, with a minimal impact on the overall energy conversion. 
 
 \subsubsection{Advantages, disadvantages and fields of application}
 
-In contrast to its electric counterpart, fluid power technology is characterized by a higher power density and lower energy density \cite{f}. Energy density, which is also known as specific energy, represents the amount of energy that can be stored in a given mass of the system. On the other hand, energy density does not give information on how quickly this energy can be used: this knowledge is contained in the system's power density, which describes the rate at which its energy can be outputted. Moreover, since they release their energy more quickly, higher power density systems can also recharge more quickly. This feature makes hydraulic hybridization particularly interesting for applications with high and fast power transients.  In particular, utilization of hydraulic propulsion and energy storage components can offer significant advantages for those heavy vehicles that are required frequent start-stop operations, such as city buses, delivery vehicles and refuse trucks. It’s worth noticing that, in those fields of application, the stored energy is not necessarily limited to aid subsequent acceleration events, but can potentially represent a power source for the activation of ancillary equipment, as for example the compacting and packing mechanisms of refuse trucks. In addition, hydraulic KERS are also likely to have a longer operating life than battery-powered systems.  Another remarkable advantage of those systems is their high energy conversion efficiency: the state-of-the art bladder type accumulators with elastomeric foam can reach a round-trip efficiency of about 95\%. Once again, the combination of high efficiency and high charging-discharging rates enables particularly effective regeneration and re-use of hydraulic energy in heavy vehicles.
+In contrast to its electric counterpart, fluid power technology is characterized by a higher power density and lower energy density \cite{f}. Energy density, which is also known as specific energy, represents the amount of energy that can be stored in a given mass of the system. On the other hand, energy density does not give information on how quickly this energy can be used: this knowledge is contained in the system power density, which describes the rate at which its energy can be outputted. 
+
+Moreover, since they release their energy more quickly, higher power density systems can also recharge more quickly. This feature makes hydraulic hybridization particularly interesting for applications with high and fast power transients. In particular, utilization of hydraulic propulsion and energy storage components can offer significant advantages for the heavy vehicles that require frequent start-stop operations, such as city buses, delivery vehicles and refuse trucks. It is worth noticing that, in those fields of application, the stored energy is not necessarily limited to aid subsequent acceleration events, but can potentially represent a power source for the activation of ancillary equipment, as for example the compacting and packing mechanisms of refuse trucks. In addition, hydraulic KERS are also likely to have a longer operating life than battery-powered systems.  
+
+Another remarkable advantage of those systems is their high energy conversion efficiency: the state-of-the art bladder type accumulators with elastomeric foam can reach a round-trip efficiency of about 95\%. Once again, the combination of high efficiency and high charging-discharging rates enables particularly effective regeneration and re-use of hydraulic energy in heavy vehicles.
+
 The main disadvantage of hydro-pneumatic KERS is represented by their high weight, which is mainly due to the presence of the working fluid and accumulators. This causes the specific energy of those systems to be relatively low. As a result, hydraulic hybrid systems encounter important limitations where consistent levels of power are required for extended periods at near constant speeds, such as in long-distance cruising.
 Additional costs, which may represent 10–15\% of the total for the vehicle, is undoubtedly a further important drawback.
 
@@ -251,7 +279,7 @@ The HESS is composed by two main parts:
 	\end{itemize}
 	\item \textbf{Electric System}. It constitutes the secondary energy recovery system, characterized by a high energy density. It is used only when a high amount of power is requested by the user or when there is a fault on the hydraulic machinery. This allows to maintain the battery around its optimal state of charge (SoC). It includes:
 	\begin{itemize}
-		\item Battery. Usually a nickel--metal--hydrid (Ni--MH) one is used. It is linked to the electric motor (EM) through a DC/DC converter;
+		\item Battery. Usually a nickel--metal--hybrid (Ni--MH) one is used. It is linked to the electric motor (EM) through a DC/DC converter;
 		\item Electric motor. It can be used as a motor or as a generator, depending on the usage phase;
 		\item DC/DC converter.
 	\end{itemize}	
@@ -370,15 +398,15 @@ In addition, four more simplifying assumptions have been considered. In particul
 	\item Instantaneous CVT ratio variation ($\dot{\tau}_{cvt}=\infty$).
 \end{itemize}
 
-This last assumption is justified by the fact that the time constants that characterize a typical CVT dynamic behaviour are of the order of $[10^{-1}] s$ \cite{o}, whereas the overall energy transfer transient has a duration in the order of $[10^0] s$. In this respect, the CVT ratio variation can be considered instantaneous at a first approximation.  
+This last assumption is justified by the fact that the time constants that characterize a typical CVT dynamic behaviour are of the order of $0.1$ [s] \cite{o}, whereas the overall energy transfer transient has a duration in the order of $1$ [s]. In this respect, the CVT ratio variation can be considered instantaneous at a first approximation.  
  
 \newpage
  
 \subsection{Equivalent model}
 
-In order to focus on the KERS clutch engagement process, an equivalent model can be associated to the one of fig. \ref{model}. In particular, the aim of this kind of analysis is finding two equivalent inertias that are respectively reduced to the two shafts that are connected to the two different sides of the KERS clutch (Fig. \ref{eq_model}).
+In order to focus on the KERS clutch engagement process, an equivalent model can be associated to the one of Fig.~\ref{model}. In particular, the aim of this kind of analysis is finding two equivalent inertias that are respectively reduced to the two shafts that are connected to the two different sides of the KERS clutch (Fig.~\ref{eq_model}).
 From now on, we will address to these equivalent inertias as $J_{eq,v}$ and $J_{eq,k}$, where \textit{v} and \textit{k} stands respectively for vehicle and kers sides.
-In other words, the target model can be as follows represented:
+In other words, the target model can be represented as follows:
 
 \begin{figure}[H]
 \centering
@@ -439,7 +467,7 @@ J_{eq,v}\omega_{cv}+J_{eq,k}\omega_{ck}=(J_{eq,v}+J_{eq,k})\omega_c\ \Rightarrow
 
 \subsection{KERS discharge}
 
-Let's first of all focus on the KERS discharge process, which takes place during a vehicle acceleration event. For the sake of simplicity, suppose that the initial vehicle velocity $v_0$ is zero (i.e. the vehicle is initially at standstill). The variation of the vehicle kinetic energy due to the clutch engagement can be calculated as
+Let us first of all focus on the KERS discharge process, which takes place during a vehicle acceleration event. For the sake of simplicity, suppose that the initial vehicle velocity $v_0$ is zero (i.e. the vehicle is initially at standstill). The variation of the vehicle kinetic energy due to the clutch engagement can be calculated as
 
 \begin{eqnarray}
 	\Delta E_{vehicle}&=&\frac{1}{2}Mv_f^2-\frac{1}{2}Mv_0^2\\
@@ -474,7 +502,7 @@ Under the aforementioned assumptions, the vehicle kinetic energy variation can b
 \label{en_comp_acc}
 \end{figure}
 
-In particular, the above profiles have been calculated by plugging into \eqref{energy_vehicle} the values of the KERS initial energy for all the possible initial flywheel angular velocities in the interval $[0.3 \omega_f^{max}, \omega_f^{max}]$, where the maximum admissible value for the flywheel angular velocity has been set to $\omega_f^{max}=64500$ [rpm]. This value is in general upper-limited by the characteristics of the material that the flywheel is made of. In fact, increasing the flywheel velocity beyond the critical stress levels that material can withstand could result in flywheel damage and destruction.
+In particular, the above profiles have been calculated by plugging into \eqref{energy_vehicle} the values of the KERS initial energy for all the possible initial flywheel angular velocities in the interval $[0.3 \, \omega_f^{max}, \omega_f^{max}]$, where the maximum admissible value for the flywheel angular velocity has been set to $\omega_f^{max}=64500$ [rpm]. This value is in general upper-limited by the characteristics of the material that the flywheel is made of. In fact, increasing the flywheel velocity beyond the critical stress levels that material can withstand could result in flywheel damage and destruction.
 
 Furthermore, the curves are parameterized with respect to $\tau_{cvt,f}$. In other words, we assumed that, at the beginning of the process, $\tau_{cvt,0} = \tau_{min} = 0.4$ and we also assumed that $\tau_{cvt}$ is let free to evolve during the engagement process up to its maximum admissible value $\tau_{cvt,f} = \tau_{max} = 2.5$. In this respect, all the quantities \textit{before} the collision are calculated with respect to $\tau_{cvt,0}$ and all the quantities \textit{after} the collision are parameterized with respect to $\tau_{cvt,f}$.\\ However, the only really feasible choice is to keep $\tau_{cvt,f} = \tau_{cvt,0} = \tau_{min}$ during the whole engagement transient. In fact, the aim of the clutch engagement process is in this case to dissipate a certain amount of the KERS kinetic energy in such a way to \textit{enter} the CVT admissibility range. In other words, the flywheel speed has to be reduced (and the vehicle one has to be increased) in such a way that 
 
@@ -493,11 +521,11 @@ Once this condition is met, the clutch can be considered as completely engaged (
 \label{en_comp_acc_3D}
 \end{figure}    
 
-This kind of bivariate analysis shows that the most convenient choice for $\tau_k$ is in this case $tau_{k,max}$. Note that, differently from $\tau_{cvt}$, $\tau_k$ remains fixed during the whole energy transfer process.
+This kind of bivariate analysis shows that the most convenient choice for $\tau_k$ is in this case $\tau_{k,max}$. Note that, differently from $\tau_{cvt}$, $\tau_k$ remains fixed during the whole energy transfer process.
 
 \subsection{KERS charge}
 
-A similar study can be performed in the opposite situation, to which we have been referring as \textit{regenerative breaking}. Supposing now that $\omega_{f,0}=0$ [rpm], we get
+A similar study can be performed in the opposite situation, to which we have been referring as \textit{regenerative braking}. Supposing now that $\omega_{f,0}=0$ [rpm], we get
 
 \begin{eqnarray}
 \Delta E_{kers}&=&\frac{1}{2}J_f\omega_{f,f}^2\\
@@ -657,7 +685,7 @@ and $w = [T_b, d]^T$. Note that, due to the definition of $\tau$, it can be cons
 
 \subsubsection{KERS Discharge}
 
-The next step is modeling the discharge phase. In this scenario, the flywheel is supposed to be fully charged ($\omega_f = \omega_f^{max}$) and the driver, through a button on the steering wheel, triggers the KERS, causing the passage of energy from the flywheel to the vehicle wheels. During the discharge of the flywheel, $\tau$ is increasing (symmetric with respect to the charge phase, as expected). As before, during the whole period in which $\tau = \tau_{min}$ the clutch is in the slipping condition and $\tau$ does not vary until the clutch engagement is completed. Again, it can be performed an engagement control which will decrease the discharge transient, so increasing the vehicle acceleration in a short period.
+The next step is modeling the discharge phase. In this scenario, the flywheel is supposed to be fully charged ($\omega_f = \omega_f^{max}$) and the driver, through a button on the steering wheel, triggers the KERS, causing the passage of energy from the flywheel to the vehicle wheels. During the discharge of the flywheel, $\tau$ is increasing (symmetric with respect to the charge phase, as expected). As before, during the whole period in which $\tau = \tau_{min}$ the clutch is in the slipping condition and $\tau$ does not vary until the clutch engagement is completed. Again, an engagement control can be performed, decreasing the discharge transient and increasing the vehicle acceleration in a short period.
 
 Eventually, as also suggested in the patent which has been taken as a reference, the flywheel will be ruled out when it reaches the 30\% of its maximum charge\footnote{This is convenient for two reason. Firstly, many full charges and discharges of the flywheel during a race will deteriorate the component which has, in any case, a high cost. Secondly, excluding the KERS when $\omega_f = 0.3\,\omega_f^{max}$ allows a more efficient and rapid charge in the next phase.} or when $\tau = \tau_{max}$.
 
@@ -711,10 +739,12 @@ where $\tau_{\textup{GB}}$ is one of the seven ratios which will depend on the g
 
 \section{Simulation and Results}
 
-In this section will be presented various simulations for both cases which validate the proposed dynamics. Moreover there will be shown some results in the case a constant force is applied to the cluch plates and this will be compared with a PID control approach.
+In this section various simulations for both cases will be presented so validating the proposed dynamics. Moreover some results in the case a constant force is applied to the cluch plates will be shown and this will be compared with a PID control approach.
 \subsection{KERS charge}
 
-For this scenario the initial velocity of the vehicle has been chosen as $v_0 = 300$ km/h and the F1 car is in the proximity of a curve. The control law which has been applied is a PID with only a proportional gain. In particular $K_p = 50$. In Fig.\,\ref{fig: Engagement_plus_KERS_Vel_Charge} how the engagement process works. When the Torotrak ratio $\tau$ is saturated, the two angular velocities $\omega_{c,v}$ and $\omega_{c,k}$ have their own independent behaviour. Then at ca. $0.6$ seconds the clutch engages the flywheel, so the two angular velocities are constrained to have the same behaviour. This is mantained until the transmission ratio, which is decreasing in time, reaches zero. Note also that during the interval in which the angular velocities are constant, there is a linear behaviour for the $\tau$, which is consistent with its definition. On the KERS side, the full charge happens in $1.2$ seconds. After the charge is complete the value of the angular velocities $\omega_{c,v}$ and $\omega_{c,k}$ remains the same because the energy which is exchanged between the vehicle and the flywheel remains constant. The behaviour of the $\tau$ is shown in Fig.\,\ref{fig: CVT_ratio_charge}.
+For this scenario the initial velocity of the vehicle has been chosen as $v_0 = 300$ km/h and the F1 car is in the proximity of a curve. The control law which has been applied is a PID with only a proportional gain. In particular $K_p = 50$. In Fig.~\ref{fig: Engagement_plus_KERS_Vel_Charge} it is shown how the engagement process works. When the Torotrak ratio $\tau$ is saturated, the two angular velocities $\omega_{c,v}$ and $\omega_{c,k}$ have their own independent behavior. Then at about $0.6$ seconds the clutch engages the flywheel, so the two angular velocities are constrained to have the same behavior. This is maintained until the transmission ratio, which is decreasing in time, reaches its minimum value. 
+
+Note also that during the interval in which the angular velocities are constant, there is a linear behavior for the $\tau$, which is consistent with its definition. On the KERS side, the full charge happens in $1.2$ seconds. After the charge is complete the value of the angular velocities $\omega_{c,v}$ and $\omega_{c,k}$ remains the same because the energy which is exchanged between the vehicle and the flywheel remains constant\footnote{This actually means that when $\omega_f = \omega_f^{max}$ the Torotrak ratio $\tau$ does not have reached its minimum value yet.}. The behavior of the $\tau$ is shown in Fig.\,\ref{fig: CVT_ratio_charge}.
 
 \begin{figure}[H]
 \centering
@@ -733,9 +763,10 @@ For this scenario the initial velocity of the vehicle has been chosen as $v_0 = 
 \label{fig: CVT_ratio_charge}
 \end{figure}
 
-In Fig.\,\ref{fig: Vehicel_Vel_Charge} is represented the velocity of the vehicle in time. It can be noticed how there is a faster decrease of the speed in the first $1.2$ seconds, while after that the decrease in speed becomes linear. 
+In Fig.~\ref{fig: Vehicel_Vel_Charge} is represented the velocity of the vehicle in time. It can be noticed how there is a faster decrease of the speed in the first $1.2$ seconds, whereas after that the decrease in speed becomes almost linear\footnote{The presence of the aerodynamic force gives a small nonlinear contribution.}. 
 
-The control effort is shown in Fig.\,\ref{fig: Contro_Effort_Charge}. The control action contributes until the clutch is engaged, i.e. $0.6$ s, then the behaviour of the system depends only on the transmission ratio of the Torotrak. So the role of the control action is to engage the clutch plates in minimum time.
+The control effort is shown in Fig.~\ref{fig: Contro_Effort_Charge}. The control action contributes until the clutch is engaged, i.e. $0.6$ [s], then the behavior of the system depends only on the transmission ratio of the Torotrak. Of course, if one increases the proportional gain of the $PID$ controller (actually, the only used here), then the charge transient will reduce and the control effort will rise. This property of the control law can be exploited until reaching the physical upper limit of the actuator, which cannot bear huge magnitude in control, also because if the normal force applied to clutch plates $F_N$ is too high there could be problems and damages to the clutch itself.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=.6\textwidth]{Images/Results_Dynamics/Charge/Vehicle_Vel.eps}
@@ -752,11 +783,11 @@ The control effort is shown in Fig.\,\ref{fig: Contro_Effort_Charge}. The contro
 
 \subsubsection{KERS charge comparison}
 
-Starting from the previous analysis, some simulations on the effect of the KERS system in a vehicle and some comparisons on different kind of controllers have been performed.
+Now, the results obtained in the charge phase are presented.
 
-In Fig.\,\ref{fig: Comparison_KERS_brake} is shown how the presence of the KERS system is a great improvement during the deceleration phase in particular at the beginning where the slope of the curve is very different. The presence of the KERS allows the car to have a deceleration gain of about $30$ km/h after $1$ second.
+In Fig.~\ref{fig: Comparison_KERS_brake} it is shown how the presence of the KERS system is a great improvement during the deceleration phase and in particular at the beginning where the slope of the curve is very different. The presence of the KERS allows the car to have a deceleration gain of about $30$ [km/h] after $1$ [s].
 
-In Fig.\,\ref{fig: Comparison_KERS_brake_Control} can be seen how the behaviour of the velocity changes if, instead of applying a PID control, a constant control is applied with different magnitudes. In the latter situation the velocity decreases linearly which is not what happens in real scenarios where there is a strong initial deceleration but then it will become much slower in time.
+In Fig.~\ref{fig: Comparison_KERS_brake_Control} it can be seen how the behavior of the velocity changes if, instead of applying a PID control, a constant control is applied with different magnitudes. In the latter situation the velocity decreases linearly which is not what happens in real scenarios where there is a strong initial deceleration but then it will become much slower in time.
 
 \begin{figure}[H]
 \centering
@@ -774,7 +805,7 @@ In Fig.\,\ref{fig: Comparison_KERS_brake_Control} can be seen how the behaviour 
 
 So the use of a PID control reflects well the behaviour of the car in the deceleration phase. 
 
-In Fig.\,\ref{fig: Comparison_KERS_Charge_PID_Prop} is shown how the KERS charge behaviour changes as we change the proportional gain of the controller. It can be seen that the choice of $K_p = 50$ which has been used in the previous section represents a good solution which is also a reasonable one in terms of time of charge. Instead in Fig.\,\ref{fig: Comparison_KERS_Charge_Control} it can be seen the difference if one wants to apply a constant force as a control action. The greater the force the faster is the charge, however these behaviours are not applicable in real scenarios because the time needed for a complete charge of the flywheel cannot be less than 1 second.
+In Fig.~\ref{fig: Comparison_KERS_Charge_PID_Prop} it is shown how the KERS charge behavior changes as we change the proportional gain of the controller. It can be seen that the choice of $K_p = 50$ which has been used in the previous section represents a good solution which is also a reasonable one in terms of time of charge and actuation stress. Instead in Fig.~\ref{fig: Comparison_KERS_Charge_Control} it can be seen the case in which a constant force or a PID control is applied. The greater the force the faster is the charge, however these behaviors are not so realistic because the time needed for a complete charge of the flywheel cannot be less than 1 second due to fact that really fast charge periods can deteriorate rapidly the KERS system.
 
 \begin{figure}[H]
 \centering
@@ -790,13 +821,18 @@ In Fig.\,\ref{fig: Comparison_KERS_Charge_PID_Prop} is shown how the KERS charge
 \label{fig: Comparison_KERS_Charge_Control}
 \end{figure}
 
-Below are presented some simulations in the case of a PI controller, so there is an additional integral term. In particular in Fig.\,\ref{fig: Comparison_KERS_Charge_PI} is shown how the greater this term is the faster is the charge of the flywheel. With $K_i = 1$ the behavuour is the same as the one in Fig.\,\ref{fig: ClutchVel}. Naturally a faster charge implies a greater control effort, in particular in the initial phase of the charge as it can be seen in Fig.\,\ref{fig: Comparison_Control_Effort_PI}. 
+Below are presented some simulations in the case of a PI controller, so there is an additional integral term. In particular in Fig.~\ref{fig: Comparison_KERS_Charge_PI} it is shown how the greater this term is the faster is the charge of the flywheel. With $K_i = 1$ the behavior is the same as the one in Fig.~\ref{fig: ClutchVel}. Of course, a faster charge implies a greater control effort, in particular in the initial phase of the charge as it can be seen in Fig.\,\ref{fig: Comparison_Control_Effort_PI}. 
 
-Since the velocity if the charge is more or less the same, it is preferrable to choose the one which needs the less control effort to be performed, so the one with $K_i = 1$.
+Since the velocity of the charge is more or less the same, it is preferable to choose the one which needs the less control effort to be performed, so the one with $K_i = 1$.
 
-The last simulation which has been done is comparing the charge by changing the input of the controller, i.e. by changing the error. Until now the error was a linear one and was defined as the difference between the clutch angular velocities $\omega_{c,v}$ and $\omega_{c,k}$. 
+The last simulation which has been done is comparing the charge by changing the input of the controller, i.e. the feedback error signal. Until now the error was a linear one and was defined as the difference between the desired signal (trivially, zero) and the difference between the clutch angular velocities $\omega_{c,v}$ and $\omega_{c,k}$. This results into a final error of the type
 
-In Fig.\,\ref{fig: Comparison_KERS_charge_error} are presented the behaviours in the case of non--linear errors, in particular the square and the cube of the error. The controller which has been used is the PID with only a proportional gain $K_p = 10$. for simplicity. It can be seen how in this case the controller manages to perform the charge of the flywheel, however it is nearly instantaneous which is obviously not possible. So the PID controller is not a good choice if we want to analyze non--linear errors but we need a more complicated controller, possibly non--linear.
+\begin{equation}
+e = \omega_{c,v} - \omega_{c,k}
+\label{linear_error}
+\end{equation}
+
+In Fig.~\ref{fig: Comparison_KERS_charge_error} are presented the behaviors in the case of non--linear errors, in particular the square and the cube of the error in~\eqref{linear_error}. The controller which has been used is the PID with only a proportional gain $K_p = 10$ for the sake of simplicity. It can be seen how in this case the controller manages to perform the charge of the flywheel, however it is nearly instantaneous which is strongly unrealistic. So the PID controller is not a good choice if we want to analyze non--linear errors but we need a more complicated controller, possibly non--linear.
 
 \begin{figure}[H]
 \centering
@@ -830,7 +866,7 @@ In Fig.\,\ref{fig: Comparison_KERS_charge_error} are presented the behaviours in
 
 \subsection{KERS Discharge}
 
-In order to simulate the joint power contribution of both KERS and internal combustion engine, it is assumed the KERS to be fully charged at the maximum angular speed $ \omega_f^{max}=64000$ rpm. In order to appreciate the KERS contribution, it is assumed that the vehicle is proceeding at the maximum speed $ v = 315$ km/h. KERS is triggered at $30$ s so it starts to give power contribution from that instant on. This could be a realistic scenario because in Formula 1 steering wheel it is present a button that the pilot could press in order to activate "overtake modality" in order to have maximum acceleration contribution from KERS to overtake the opponent's vehicle. The control law used for the clutch engagement control is a PID with only proportional gain ($K_p = 50$). In Fig.\ref{fig: clutchengdis} it is shown the clutch engagement process.
+In order to simulate the joint power contribution of both KERS and internal combustion engine, it is assumed the KERS to be fully charged at the maximum angular speed $ \omega_f^{max}=64000$ rpm. In order to appreciate the KERS contribution, it is assumed that the vehicle is proceeding at the maximum speed $ v = 315$ km/h. KERS is triggered at $30$ [s] so it starts to give power contribution from that instant on. This could be a realistic scenario because in Formula 1 steering wheel there is a button that the pilot could press in order to activate \textit{overtake modality} in order to have maximum acceleration contribution from KERS to overtake the opponent's vehicle. The control law used for the clutch engagement control is a PID with only proportional gain ($K_p = 50$). In Fig.\ref{fig: clutchengdis} it is shown the clutch engagement process.
 
 \begin{figure}[H]
 	\centering
@@ -839,7 +875,7 @@ In order to simulate the joint power contribution of both KERS and internal comb
 	\label{fig: clutchengdis}
 \end{figure}
 
-It is possible to clearly see how the two clutch's plates start with angular velocities $\omega_{c,k} \neq \omega_{c,v}$ .At the end of the transient the no slipping condition is achieved and the engagement is completed. From the engagement instant on, the two plates will rotate at the same angular speed until the flywheel reaches $30\%$ of the maximum speed $w_f^{max}=64000$ rpm. At this point the KERS will be disingaged for efficiency reason (as it is also suggested in the patent taken as reference). Clutch's plates' engagement is controlled applying a suitable normal force to the clutch's disks. From control viewpoint it is important to look at the control effort in order to check if the requested control action is feasible otherwise, when control action would be applied, the system would fail.
+It is possible to clearly see how the two clutch plates start with angular velocities $\omega_{c,k} \neq \omega_{c,v}$. At the end of the transient the no--slipping condition is achieved and the engagement is completed. From the engagement instant on, the two plates will rotate at the same angular speed until the flywheel reaches $30\%$ of the maximum speed $w_f^{max}=64000$ rpm. At this point the KERS will be disengaged for efficiency reason (as it is also suggested in the patent taken as reference). The clutch plates engagement is controlled applying a suitable normal force to the clutch disks. From control viewpoint it is important to look at the control effort in order to check if the requested control action is feasible otherwise, when control action would be applied, the system would fail.
 
 \begin{figure}[H]
 	\centering
@@ -848,7 +884,7 @@ It is possible to clearly see how the two clutch's plates start with angular vel
 	\label{fig: controldis}
 \end{figure}
 
-In Fig.\,\ref{fig: controldis} control effort is shown and it is possible to see that the control acts only during the clutch engagement transient as it is expected. Infact the the orthogonal force over the plates aims to minimize the transient time, so once the transient end, the control action is null. Moreover, it is possible to note that the control effort is within the limits given by $u^{max} = 5000$ N.
+In Fig.~\ref{fig: controldis} control effort is shown and it is possible to see that the control acts only during the clutch engagement transient as it is expected. In fact, the orthogonal force over the plates aims to minimize the transient time, so once the transient end, the control action is null. Moreover, it is possible to note that the control effort is within the limits given by $u^{max} = 5000$ [N].
 
 \begin{figure}[H]
 	\centering
@@ -857,7 +893,7 @@ In Fig.\,\ref{fig: controldis} control effort is shown and it is possible to see
 	\label{fig: tororatiodis}
 \end{figure}
 
-In Fig.\,\ref{fig: tororatiodis} it is shown the torotrak transmission ratio $\tau_{cvt}$. From the moment in which the KERS is triggered by the pilot at $30$s, for all the duration of the transient $\tau_{cvt}$ stays constant. Then it starts to increase in order to guarantee the correct power flow from KERS to the wheel after the cluth engagement transient. For the sake of completeness also the gearbox transmission ratio is shown in Fig.\,\ref{fig: gbratiodis}. It is possible to see how as the vehicle's velocity increase the gear are shifted in order to have the best performances. In Fig.\,\ref{fig: kers vel plus vehicle vel} KERS' and vehicle's velocity profiles are shown.
+In Fig.~\ref{fig: tororatiodis} it is shown the Torotrak transmission ratio $\tau$. From the moment in which the KERS is triggered by the pilot at $30$s, for all the duration of the transient $\tau$ stays constant. Then it starts to increase in order to guarantee the correct power flow from KERS to the wheel after the clutch engagement transient. For the sake of completeness also the gearbox transmission ratio is shown in Fig.\,\ref{fig: gbratiodis}. It is possible to see how as the vehicle velocity increase the gear are shifted in order to have the best performances. In Fig.\,\ref{fig: kers vel plus vehicle vel} KERS and vehicle velocity profiles are shown.
 
 \begin{figure}[H]
 	\centering
@@ -876,11 +912,11 @@ In Fig.\,\ref{fig: tororatiodis} it is shown the torotrak transmission ratio $\t
 	\label{fig: kers vel plus vehicle vel}
 \end{figure}
 
-From these velocities profiles it is possible to see that as the flywheel's angular speed decreases, the vehicle gains extra velocity. This confirms the power exchange from the flywheel to the wheels. As it is expected the KERS stops to give power contribution when it reaches $30\%$ of maximum speed.
+From these velocities profiles it is possible to see that as the flywheel angular speed decreases, the vehicle gains extra velocity. This confirms the power exchange from the flywheel to the wheels. As it is expected the KERS stops to give power contribution when it reaches $30\%$ of maximum speed.
 
 \subsubsection{KERS discharge comparison}
 
-In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle's velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
+In order to analyze the importance of KERS contribution to improve sport performances it may be interesting to look at vehicle velocity profile and to compare the case in which the KERS is present and it gives a joint contribution together with the engine to the vehicle and the case in which the KERS is not present.
 
 \begin{figure}[H]
 	\centering
@@ -889,7 +925,7 @@ In order to analyze the importance of KERS contribution to improve sport perform
 	\label{fig: k vs nok}
 \end{figure}
 
-It is clear from Fig.\,\ref{fig: k vs nok} that using KERS it is possible to reach velocities that otherwise, with the only engine contribution, it would be impossible to reach. Once the importance of the KERS is confirmed through simulation data, then it could be interesting to investigate how different control strategies affect performances.
+It is clear from Fig.~\ref{fig: k vs nok} that, while using KERS, it is possible to reach velocities that otherwise, with the only engine contribution, it would be impossible to reach. Once the importance of the KERS is confirmed through simulation data, then it could be interesting to investigate how different control strategies affect performances.
 
 \begin{figure}[H]
 	\centering
@@ -901,7 +937,7 @@ It is clear from Fig.\,\ref{fig: k vs nok} that using KERS it is possible to rea
 	\label{fig: kers vel plus vehicle vel comp}
 \end{figure}
 
-In Fig.\,\ref{fig: kers vel plus vehicle vel comp} it is shown how KERS' discharge process changes when PID proportional term changes. The higher $K_p$ the faster is the discharge and the higher the peak vehicle's velocity.
+In Fig.\,\ref{fig: kers vel plus vehicle vel comp} it is shown how KERS discharge process changes when PID proportional term changes. The higher $K_p$ the faster is the discharge and the higher the peak vehicle velocity.
 
 \begin{figure}[H]
 	\centering
@@ -913,11 +949,25 @@ In Fig.\,\ref{fig: kers vel plus vehicle vel comp} it is shown how KERS' dischar
 	\label{fig: kforcediscomp}
 \end{figure}
 
-Until now it was only considered PID strategy with only proportional component for the clutch engagement control. What if clutch's plates are engaged with constant forces? In Fig.\,\ref{fig: kforcediscomp} it is possible to find the answer. From simulations it is possible to see that, if constant force is applied, in order to have results similar or better with respect to the PID, higher force is needed. The higher is the force the faster is the discharge and the higher is the maximum velocity reached by the vehicle. 
+Until now it was only considered PID strategy with only proportional component for the clutch engagement control. If clutch plates are engaged with constant forces (Fig.~\ref{fig: kforcediscomp}), one can appreciate that, in order to have results similar or better with respect to the PID, higher force is needed. The higher is the force the faster is the discharge and the higher is the maximum velocity reached by the vehicle. 
+
+\newpage
 
 \section{Conclusions}
 
-In this work Kinetic Energy Recovery System (KERS) was studied. Different implementations were taken into account and mechanical KERS was chosen to be investigated in more detail. KERS patent used as reference is the one developed by Flybrid\textsuperscript\textregistered. Analysis, modeling, simulation and control of KERS was developed in this work. In first approximation, static analysis was performed. Then a more complete model was considered, introducing clutch engagement dynamics and consistency between static and dynamic analysis was shown. Dynamic model was implemented in Simulink and different control strategies were applied to the clutch engagement process like PID and constant forces applied to clutch's plates.
+In this work a particular type of Kinetic Energy Recovery System (KERS) was studied. Different implementations widely used in literature and in real applications were taken into account and mechanical KERS was chosen to be investigated in more detail. MKERS turns out to have lesser cost than the other ones and it is preferable in the competition scenario, working with high velocity and relatively small car mass. Moreover, MKERS has a low cost with respect to the regenerative systems used for commercial vehicles or transportation systems (buses, trucks, and son on). 
+
+The patent used as reference is the one developed by Flybrid\textsuperscript\textregistered. The driveline is the one typical of a MKERS, with the special possibility to select eight fixed gear ratios which link the flywheel to the clutch.
+
+Analysis, modeling, simulation and control of KERS was developed in this work. First, static analysis was performed. This kind of study allows to state the performance of the regenerative braking without taking into account the whole dynamics of the process. Hence, the static analysis can be useful in order to evaluate the properties of the transmission line, highlighting the benefits and the disadvantages of using certain values for the limits of the CVT or, equivalently, for the final gearbox. 
+
+Afterwards, a dynamic model was considered. It has been built starting from a lagrangian formulation through which a conservative model has been obtained. After this, in order to complete the dynamics in the two phases (charge and discharge) the non--conservative fields have been included, such as braking, aerodynamic friction and clutch engagement dynamics. The latter allows, by means of an active system, to introduce a user--defined control action.
+
+The dynamic model has been validated according to the static analysis. All the simulations was implemented in Simulink and different feedback control strategies were applied to the clutch engagement process like PID and constant forces. 
+
+The results show that both KERS charge and discharge can be improved when using a large constant normal force or when using in a proper way a pure proportional controller, whose input is the clutch engagement error, i.e. the difference between the two velocities of the clutch plates.
+
+Eventually, it can be concluded that MKERS, together with the engine contribution, gives a high speed--up for several seconds to the F1 vehicle also when it has already reached its maximum velocity. This speed--up performance can be significantly improved with an active clutch engagement, because the vehicle receives the amount of energy stored in the flywheel in shorter time.  
 
 
 %Codice per inserire il codice
@@ -948,7 +998,7 @@ In this work Kinetic Energy Recovery System (KERS) was studied. Different implem
 	
 	%%%
 	\bibitem{a}
-	Chibulka J., (2009), \textit{Kinetic Energy Recovery system by means of Flywheel Energy 		    storage device}, Advanced Engineering, vol. 3, issue 1, pp. 27-38.
+	Chibulka J., (2009), \textit{Kinetic Energy Recovery system by means of Flywheel Energy storage device}, Advanced Engineering, vol. 3, issue 1, pp. 27-38.
 	
 	\bibitem{b}
 	Chicurel R., (2009),  \textit{A Compromise Solution for Energy Recovery in Vehicle Braking}, Energy, vol.24, pp. 1029-1034.
@@ -961,16 +1011,16 @@ In this work Kinetic Energy Recovery System (KERS) was studied. Different implem
 	Baer K. et al., (2020) \textit{Robustness and performance evaluations for simulation-based 		control and component parameter optimization for a series hydraulic hybrid vehicle}, Engineering Optimization, vol. 52, no. 3, pp. 446–464.	
 	
 	\bibitem{e}
-	Kim Y. J. et al., (2007), \textit{Simulation Study of a Series Hydraulic Hybrid Propulsion 					System for a Light Truck}, SAE International.
+	Kim Y. J. et al., (2007), \textit{Simulation Study of a Series Hydraulic Hybrid Propulsion System for a Light Truck}, SAE International.
 	
 	\bibitem{f}
-	Shan M., (2009), \textit{Modelling and Control Strategy for Series Hydraulic Hybrid 				Vehicles}, PhD thesis.
+	Shan M., (2009), \textit{Modelling and Control Strategy for Series Hydraulic Hybrid Vehicles}, PhD thesis.
 	
 	\bibitem{g}
 	Nishanth D., Mathews T., (2013), \textit{Flywheel based Kinetic Energy Recovery System(KERS) 	    integrated in vehicles}, International Journal of Engineering Science and Technology (IJEST), vol. 5 no.09.
 	
 	\bibitem{h}
-	Pipitone E., Vitale G., (2020), \textit{A regenerative braking system for 			internal combustion engine vehicles using supercapacitors as energy storage 		elements-Part 1 and 2: System analysis and modelling}, Journal of Power 			Sources 448, Palermo (Italy)     	
+	Pipitone E., Vitale G., (2020), \textit{A regenerative braking system for internal combustion engine vehicles using supercapacitors as energy storage 		elements-Part 1 and 2: System analysis and modelling}, Journal of Power Sources 448, Palermo (Italy).     	
 	
 	\bibitem{i}
 	Itani K., De Bernardinis A., Khatir Z, Jammal A., (2017),  							\textit{Comparative analysis of two hybrid energy storage systems used in a 		two front wheel driven electric vehicle during extreme start-up and 				regenerative braking operations},  Energy Conversion and Management, Beirut 		(Lebanon), pp. 69-87.
