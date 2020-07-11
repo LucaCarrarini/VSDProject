@@ -104,7 +104,7 @@ citecolor=black
 %Inizio dei capitoli
 \section{Introduction}
 
-The dependence of the transportation sector on non-renewable sources of energy as fossil fuels and the need for a rapid response to the global warming challenge has in the last two decades encouraged a strong effort for the development of fuel efficient vehicle propulsion systems. In this context, a particular attention has been devoted to the concept of regenerative breaking. 
+The dependence of the transportation sector on non-renewable sources of energy as fossil fuels and the need for a rapid response to the global warming challenge has in the last two decades encouraged a strong effort for the development of fuel efficient vehicle propulsion systems. In this context, a particular attention has been devoted to the concept of regenerative braking. 
 
 A regenerative brake is a mechanism that reduces the vehicle speed by converting some of its kinetic energy into some other kind of useful forms of energy, such as mechanical, electrical or hydraulic energy \cite{a}. The core devices of regenerative brakes are therefore reversible energy conversion components like electric motors/generators and hydraulic pumps/motors. For example, an electric regenerative brake makes use of an electric motor that acts as a generator. This device, which is usually connected to the vehicle wheels trough a gear train, is indeed able to generate electrical energy thanks to the previously received kinetic energy that is associated to the vehicle at the end of any acceleration phase. 
 A type of regenerative braking is called \textit{KERS}. 
@@ -117,13 +117,13 @@ Another important advantage that such a system introduces is the reduced service
 
 \section{Implementation alternatives}
 
-In this section, we give a description and a comparison of the principle KERS systems that have been proposed in the literature and on the market.
+In this section, we give a description and a comparison of the most important types of KERS systems that have been proposed in the literature and on the market.
 
 \subsection{Mechanical KERS}
 
 \subsubsection{Architecture and working principle}
 
-The Flywheel Hybrid System (FHS) is a type of KERS which consists of a rotating mass, or flywheel, as the energy storage device, a continous variable transmission system (CVT) to control and transfer the energy to and from the driveline and a clutch which connects this system to the primary shaft of the transmission (Fig. \ref{fig: FHS}). 
+The Flywheel Hybrid System (FHS) is a type of KERS which consists of a rotating mass, or flywheel, as the energy storage device, a continuous variable transmission system (CVT) to control and transfer the energy to and from the driveline and a clutch which connects this system to the primary shaft of the transmission (Fig. \ref{fig: FHS}). 
 
 \begin{figure}[H]
 \centering
@@ -184,7 +184,7 @@ There are different implementations in literature of electric KERS (e-KERS) and 
 	\label{ekersschemeuc}
 \end{figure}
 
-There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density(Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around $75–200$ [Wh/kg]) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. 
+There exists also the dual of this implementation which is the one in which there are only batteries used as storage system. These two implementations have several limitations. SC as single energy storage element can be used only when large spaces and weight were allowed (i.e. electric city rail, hybrid city bus). Batteries have high energy density (Li-ion batteries, that are the most installed batteries on electric vehicle, have specific energy density around $75–200$ [Wh/kg]) but low power density. For automotive applications, specifically in hard braking and traction maneuvers, batteries present several weaknesses related to the chemical reactions taking place while charging/discharging. 
 
 Li-Ion batteries cannot respond to high-dynamic power profiles resulting from an acceleration or a regenerative braking since charge transfer occurs through reduction and oxidation reactions. These profiles, if happened, will overstress the batteries which negatively affect the longevity of their lifespan. It is convenient to implement in the system a storage element characterized by its ability to provide the necessary power required by the traction and braking systems. This secondary storage element will substitute the battery during extreme power demand. Among all the existing storage elements, the supercapacitors are potential candidates to meet those requirements. This element has high power density and high cycle life. On the other hand, it presents a low energy density, a high acquisition cost and a high self-discharge. The hybrid energy storage system (HESS) will combine the high energy density storage element (Li-Ion battery), known as primary storage element, and the high power density storage element (supercapacitor). HESS implementation is described in Fig. \ref{ekersschemehybrid}
 
@@ -218,7 +218,7 @@ Other authors conclude that flywheel ensures a steady voltage and power level, w
 
 \subsection{Hydraulic KERS: Series Hydraulic Hybrid systems}
 
-Series Hydraulic Hybrid Systems(SHH) represent a type of KERS that makes use of hydraulic accumulators as energy storage units. Unlike the older \textit{parallel} implementations, the \textit{series} architecture is characterized by the fact that prime-mover and vehicle speeds are entirely decoupled through a continuously variable hybrid hydraulic transmission. In other words, the conventional mechanical driveline is completely removed.
+Series Hydraulic Hybrid Systems (SHH) represent a type of KERS that makes use of hydraulic accumulators as energy storage units. Unlike the older \textit{parallel} implementations, the \textit{series} architecture is characterized by the fact that prime-mover and vehicle speeds are entirely decoupled through a continuously variable hybrid hydraulic transmission. In other words, the conventional mechanical driveline is completely removed.
 
 \subsubsection{Architecture and working principle}
 
@@ -231,7 +231,7 @@ The system (Fig.~\ref{SHH_scheme}) is made of four principal components \cite{d}
 \label{SHH_scheme}
 \end{figure}
 
-The IC engine is mechanically coupled to the hydraulic pump/motor designated as P/M(gen). The P/M(gen) is used as a motor only when starting the engine. In all the other working conditions, the fluid pumped by P/M(gen) flows towards the P/M(prop-s) and the high pressure accumulator. Traction pumps/motors (P/Mprop-s) are connected to the wheels through a differential to provide propulsion. The pump/motor is a reversible energy conversion component. In particular, operating the P/M(prop) in the motor mode propels the vehicle, while regenerative braking requires switching to the pump mode. During the breaking phase, the hydro-pneumatic accumulator allows energy storage: as the P/M(prop), working as a pump, transfers the hydraulic fluid from the reservoir into the accumulator, the pressure of the gas sealed inside it increases, thus storing energy \cite{e}. 
+The IC engine is mechanically coupled to the hydraulic pump/motor designated as P/M(gen). The P/M(gen) is used as a motor only when starting the engine. In all the other working conditions, the fluid pumped by P/M(gen) flows towards the P/M(prop-s) and the high pressure accumulator. Traction pumps/motors (P/Mprop-s) are connected to the wheels through a differential to provide propulsion. The pump/motor is a reversible energy conversion component. In particular, operating the P/M(prop) in the motor mode propels the vehicle, while regenerative braking requires switching to the pump mode. During the braking phase, the hydro-pneumatic accumulator allows energy storage: as the P/M(prop), working as a pump, transfers the hydraulic fluid from the reservoir into the accumulator, the pressure of the gas sealed inside it increases, thus storing energy \cite{e}. 
 
 In the accumulator (Fig.~\ref{hydraulic_accumulator}), a bladder is used to separate the working fluid from the pressurized inert gas (e.g. nitrogen), which can be thus treated as a closed system. In a later acceleration event, the energy stored in the high pressure fluid contained in the accumulator is used, together with an amount delivered by the P/M(gen), to provide torque to the wheels. The pressure difference between the accumulator and the reservoir determines the maximum torque available from the hydraulic motor. In this phase, the working fluid is at least partially returned to the reservoir. 
 
@@ -598,7 +598,7 @@ dS = 0.
 
 Due to the definition of $S$, the~\eqref{minimum_action} is equivalent to write
 \[
-dS = \int_{t_1}^{t_2} \Biggl( \dfrac{\partial L}{\partial \bm{q}}d\bm{q} + \dfrac{\partial L}{\partial \dot{\bm{q}}}d\dot{\bm{q}}\Biggr) \, dt.
+0 = dS = \int_{t_1}^{t_2} \Biggl( \dfrac{\partial L}{\partial \bm{q}}d\bm{q} + \dfrac{\partial L}{\partial \dot{\bm{q}}}d\dot{\bm{q}}\Biggr) \, dt.
 \]
 
 After applying integration by parts, the problem reduces to solving the Euler--Lagrange equations, i.e.
@@ -613,7 +613,7 @@ Depending on the nature of the physical system, the lagrangian mechanics will fo
 
 \subsection{KERS dynamics}
 
-Using the lagrangian mechanics, the mathematical model of a KERS system has been built. This model needs to take into account the motion of the flywheel and the vehicle itself. Having this in mind, a straightforward choice is to pick $\omega_f$ and $\omega_w$ as generalized coordinates. Indeed, the system can be fully described using these two quantities, since the angular velocities of the other components can be obtained starting from the aforementioned two with some manipulations involving the transmission ratios and the efficiency. 
+Using the lagrangian mechanics, the mathematical model of a KERS system has been built. This model needs to take into account the motion of the flywheel and the vehicle itself. Having this in mind, a straightforward choice is to pick $\omega_f$ and $\omega_w$ as generalized coordinates. Indeed, the system can be fully described using these two quantities, since the angular velocities of the other components can be obtained starting from the aforementioned two with some manipulations involving the transmission ratios. 
 
 Under the hypothesis of flat road, the whole system does not have mechanical potential energy. So the lagrangian is given by the two kinetic energy contributions:
 \begin{equation}
@@ -955,15 +955,15 @@ Until now it was only considered PID strategy with only proportional component f
 
 \section{Conclusions}
 
-In this work a particular type of Kinetic Energy Recovery System (KERS) was studied. Different implementations widely used in literature and in real applications were taken into account and mechanical KERS was chosen to be investigated in more detail. MKERS turns out to have lesser cost than the other ones and it is preferable in the competition scenario, working with high velocity and relatively small car mass. Moreover, MKERS has a low cost with respect to the regenerative systems used for commercial vehicles or transportation systems (buses, trucks, and son on). 
+In this work a particular type of Kinetic Energy Recovery System (KERS) was studied. Different implementations widely used in literature and in real applications were taken into account and mechanical KERS was chosen to be investigated in more detail. MKERS turns out to be preferable in the competition scenario, working with high velocity and relatively small car mass. Moreover, MKERS has a low cost with respect to the regenerative systems used for commercial vehicles or transportation systems (buses, trucks, and son on). 
 
 The patent used as reference is the one developed by Flybrid\textsuperscript\textregistered. The driveline is the one typical of a MKERS, with the special possibility to select eight fixed gear ratios which link the flywheel to the clutch.
 
 Analysis, modeling, simulation and control of KERS was developed in this work. First, static analysis was performed. This kind of study allows to state the performance of the regenerative braking without taking into account the whole dynamics of the process. Hence, the static analysis can be useful in order to evaluate the properties of the transmission line, highlighting the benefits and the disadvantages of using certain values for the limits of the CVT or, equivalently, for the final gearbox. 
 
-Afterwards, a dynamic model was considered. It has been built starting from a lagrangian formulation through which a conservative model has been obtained. After this, in order to complete the dynamics in the two phases (charge and discharge) the non--conservative fields have been included, such as braking, aerodynamic friction and clutch engagement dynamics. The latter allows, by means of an active system, to introduce a user--defined control action.
+Afterwards, a dynamic model was considered. It has been built starting from a lagrangian formulation through which a conservative model has been obtained. After this, in order to complete the dynamics in the two phases (charge and discharge), the non--conservative fields have been included, such as braking, aerodynamic friction and clutch engagement dynamics. The latter allows, by means of an active system, to introduce a user--defined control action.
 
-The dynamic model has been validated according to the static analysis. All the simulations was implemented in Simulink and different feedback control strategies were applied to the clutch engagement process like PID and constant forces. 
+The dynamic model has been validated according to the static analysis. All the simulations was implemented in Simulink and different feedback control strategies were applied to the clutch engagement process like constant forces, PID and nonlinear ones. 
 
 The results show that both KERS charge and discharge can be improved when using a large constant normal force or when using in a proper way a pure proportional controller, whose input is the clutch engagement error, i.e. the difference between the two velocities of the clutch plates.
 
